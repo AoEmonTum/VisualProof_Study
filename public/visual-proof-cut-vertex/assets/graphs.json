@@ -1,0 +1,104 @@
+{
+  "graphs": [
+    {
+      "index": 1,
+      "filename": "cut_vertex_01.svg",
+      "source": "grafo10000.38.graphml",
+      "cut_vertex": "18",
+      "component_sizes": [
+        29,
+        8
+      ]
+    },
+    {
+      "index": 2,
+      "filename": "cut_vertex_02.svg",
+      "source": "grafo10001.32.graphml",
+      "cut_vertex": "6",
+      "component_sizes": [
+        11,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "filename": "cut_vertex_03.svg",
+      "source": "grafo10011.31.graphml",
+      "cut_vertex": "3",
+      "component_sizes": [
+        17,
+        13
+      ]
+    },
+    {
+      "index": 4,
+      "filename": "cut_vertex_04.svg",
+      "source": "grafo10012.40.graphml",
+      "cut_vertex": "23",
+      "component_sizes": [
+        31,
+        8
+      ]
+    },
+    {
+      "index": 5,
+      "filename": "cut_vertex_05.svg",
+      "source": "grafo10013.31.graphml",
+      "cut_vertex": "3",
+      "component_sizes": [
+        17,
+        13
+      ]
+    },
+    {
+      "index": 6,
+      "filename": "cut_vertex_06.svg",
+      "source": "grafo10022.31.graphml",
+      "cut_vertex": "3",
+      "component_sizes": [
+        17,
+        13
+      ]
+    },
+    {
+      "index": 7,
+      "filename": "cut_vertex_07.svg",
+      "source": "grafo10033.31.graphml",
+      "cut_vertex": "3",
+      "component_sizes": [
+        17,
+        13
+      ]
+    },
+    {
+      "index": 8,
+      "filename": "cut_vertex_08.svg",
+      "source": "grafo10036.31.graphml",
+      "cut_vertex": "3",
+      "component_sizes": [
+        17,
+        13
+      ]
+    },
+    {
+      "index": 9,
+      "filename": "cut_vertex_09.svg",
+      "source": "grafo10040.32.graphml",
+      "cut_vertex": "17",
+      "component_sizes": [
+        20,
+        11
+      ]
+    },
+    {
+      "index": 10,
+      "filename": "cut_vertex_10.svg",
+      "source": "grafo10044.38.graphml",
+      "cut_vertex": "9",
+      "component_sizes": [
+        31,
+        6
+      ]
+    }
+  ]
+}

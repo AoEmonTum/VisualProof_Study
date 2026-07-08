@@ -1,0 +1,1 @@
+<img src="visual-proof-hamiltonian-cycle/assets/graphs/hamiltonian_10_cyclic.svg" alt="Cyclic Hamiltonian cycle graph 10" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

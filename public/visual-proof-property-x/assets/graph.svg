@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Example graph visualization</title>
+  <desc id="desc">A placeholder graph with five labeled nodes and directed edges.</desc>
+  <rect width="720" height="420" fill="#f8fafc"/>
+  <g stroke="#334155" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M150 210 L285 120"/>
+    <path d="M285 120 L440 150"/>
+    <path d="M440 150 L565 245"/>
+    <path d="M285 120 L345 300"/>
+    <path d="M345 300 L565 245"/>
+    <path d="M150 210 L345 300"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+    <g>
+      <circle cx="150" cy="210" r="38" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="150" y="210" fill="#1e3a8a">A</text>
+    </g>
+    <g>
+      <circle cx="285" cy="120" r="38" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+      <text x="285" y="120" fill="#14532d">B</text>
+    </g>
+    <g>
+      <circle cx="440" cy="150" r="38" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+      <text x="440" y="150" fill="#78350f">C</text>
+    </g>
+    <g>
+      <circle cx="345" cy="300" r="38" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+      <text x="345" y="300" fill="#4c1d95">D</text>
+    </g>
+    <g>
+      <circle cx="565" cy="245" r="38" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+      <text x="565" y="245" fill="#7f1d1d">E</text>
+    </g>
+  </g>
+</svg>

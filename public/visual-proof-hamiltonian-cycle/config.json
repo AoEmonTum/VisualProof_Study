@@ -1,0 +1,1349 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Visual Proof Hamiltonian Cycle",
+    "version": "0.1.0",
+    "authors": [
+      "Visual Proof Study Team"
+    ],
+    "date": "2026-07-08",
+    "description": "Initial scaffold for a Hamiltonian-cycle verification study.",
+    "organizations": [
+      "Technische Universitat Munchen"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": true
+  },
+  "components": {
+    "verifyHamiltonianCycle_force_01": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_01.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_01",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_01": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_01",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_01": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_01.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_01",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_01": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_01",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_02": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_02.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_02",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_02": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_02",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_02": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_02.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_02",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_02": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_02",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_03": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_03.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_03",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_03": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_03",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_03": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_03.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_03",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_03": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_03",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_04": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_04.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_04",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_04": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_04",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_04": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_04.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_04",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_04": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_04",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_05": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_05.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_05",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_05": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_05",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_05": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_05.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_05",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_05": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_05",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_06": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_06.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_06",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_06": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_06",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_06": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_06.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_06",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_06": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_06",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_07": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_07.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_07",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_07": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_07",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_07": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_07.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_07",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_07": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_07",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_08": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_08.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_08",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_08": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_08",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_08": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_08.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_08",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_08": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_08",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_09": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_09.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_09",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_09": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_09",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_09": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_09.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_09",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_09": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_09",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "verifyHamiltonianCycle_force_10": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/force_10.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_force_10",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "confidence_force_10": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_10",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed"
+      }
+    },
+    "verifyHamiltonianCycle_cyclic_10": {
+      "type": "markdown",
+      "path": "visual-proof-hamiltonian-cycle/assets/cyclic_10.md",
+      "response": [
+        {
+          "id": "canVerifyHamiltonianCycle_cyclic_10",
+          "prompt": "Based on this visualization, can you verify that the graph has a Hamiltonian cycle?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    },
+    "confidence_cyclic_10": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_cyclic_10",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": {
+        "visualization": "cyclic"
+      }
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      {
+        "id": "trial_01",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_01",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_01",
+              "confidence_force_01"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_01",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_01",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_01"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_01",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_01",
+              "confidence_cyclic_01"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_01",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_01",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_02"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_02",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_02",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_02",
+              "confidence_force_02"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_02",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_02",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_02"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_02",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_02",
+              "confidence_cyclic_02"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_02",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_02",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_03"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_03",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_03",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_03",
+              "confidence_force_03"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_03",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_03",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_03"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_03",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_03",
+              "confidence_cyclic_03"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_03",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_03",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_04"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_04",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_04",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_04",
+              "confidence_force_04"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_04",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_04",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_04"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_04",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_04",
+              "confidence_cyclic_04"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_04",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_04",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_05"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_05",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_05",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_05",
+              "confidence_force_05"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_05",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_05",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_05"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_05",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_05",
+              "confidence_cyclic_05"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_05",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_05",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_06"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_06",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_06",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_06",
+              "confidence_force_06"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_06",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_06",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_06"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_06",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_06",
+              "confidence_cyclic_06"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_06",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_06",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_07"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_07",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_07",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_07",
+              "confidence_force_07"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_07",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_07",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_07"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_07",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_07",
+              "confidence_cyclic_07"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_07",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_07",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_08"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_08",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_08",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_08",
+              "confidence_force_08"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_08",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_08",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_08"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_08",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_08",
+              "confidence_cyclic_08"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_08",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_08",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_09"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_09",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_09",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_09",
+              "confidence_force_09"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_09",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_09",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_09"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_09",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_09",
+              "confidence_cyclic_09"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_09",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_09",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_10"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_10",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_10",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_force_10",
+              "confidence_force_10"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_force_10",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_force_10",
+                "value": "no",
+                "comparison": "equal",
+                "to": "cyclic_block_10"
+              }
+            ]
+          },
+          {
+            "id": "cyclic_block_10",
+            "order": "fixed",
+            "components": [
+              "verifyHamiltonianCycle_cyclic_10",
+              "confidence_cyclic_10"
+            ],
+            "skip": [
+              {
+                "name": "verifyHamiltonianCycle_cyclic_10",
+                "check": "response",
+                "responseId": "canVerifyHamiltonianCycle_cyclic_10",
+                "value": "no",
+                "comparison": "equal",
+                "to": "end"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
