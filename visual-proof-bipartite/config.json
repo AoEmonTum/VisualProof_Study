@@ -1,0 +1,596 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Visual Proof Bipartite Graphs",
+    "version": "0.1.0",
+    "authors": [
+      "Visual Proof Study Team"
+    ],
+    "date": "2026-07-08",
+    "description": "Bipartite graph verification study (derived from Hamiltonian study).",
+    "organizations": [
+      "Technische Universitat Munchen"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": true
+  },
+  "components": {
+    "verifyBipartite_force_01": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/force_01.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_force_01",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": {
+        "visualization": "force-directed",
+        "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" }
+      }
+    },
+    "confidence_force_01": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_01",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "force-directed" }
+    },
+    "verifyBipartite_line_01": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/line_01.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_line_01",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "line", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_line_01": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_line_01",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "line" }
+    },
+
+    "verifyBipartite_force_02": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/force_02.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_force_02",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "force-directed", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_force_02": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_02",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "force-directed" }
+    },
+    "verifyBipartite_line_02": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/line_02.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_line_02",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "line", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_line_02": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_line_02",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "line" }
+    },
+
+    "verifyBipartite_force_03": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/force_03.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_force_03",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "force-directed", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_force_03": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_03",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "force-directed" }
+    },
+    "verifyBipartite_line_03": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/line_03.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_line_03",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "line", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_line_03": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_line_03",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "line" }
+    },
+
+    "verifyBipartite_force_04": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/force_04.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_force_04",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "force-directed", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_force_04": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_04",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "force-directed" }
+    },
+    "verifyBipartite_line_04": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/line_04.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_line_04",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "line", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_line_04": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_line_04",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "line" }
+    },
+
+    "verifyBipartite_force_05": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/force_05.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_force_05",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "force-directed", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_force_05": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_force_05",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "force-directed" }
+    },
+    "verifyBipartite_line_05": {
+      "type": "markdown",
+      "path": "visual-proof-bipartite/assets/line_05.md",
+      "response": [
+        {
+          "id": "canVerifyBipartite_line_05",
+          "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "options": [
+            { "label": "Yes, I can verify", "value": "yes" },
+            { "label": "No, I cannot verify", "value": "no" }
+          ]
+        }
+      ],
+      "meta": { "visualization": "line", "nodeColors": { "A": "#7f9fb3", "B": "#bfa5a5" } }
+    },
+    "confidence_line_05": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence_line_05",
+          "prompt": "Rate your confidence on a scale of 1 to 5.",
+          "location": "aboveStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ],
+      "meta": { "visualization": "line" }
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      {
+        "id": "trial_01",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_01",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_force_01",
+              "confidence_force_01"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_force_01",
+                "check": "response",
+                "responseId": "canVerifyBipartite_force_01",
+                "value": "no",
+                "comparison": "equal",
+                "to": "line_block_01"
+              }
+            ]
+          },
+          {
+            "id": "line_block_01",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_line_01",
+              "confidence_line_01"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_line_01",
+                "check": "response",
+                "responseId": "canVerifyBipartite_line_01",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_02"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_02",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_02",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_force_02",
+              "confidence_force_02"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_force_02",
+                "check": "response",
+                "responseId": "canVerifyBipartite_force_02",
+                "value": "no",
+                "comparison": "equal",
+                "to": "line_block_02"
+              }
+            ]
+          },
+          {
+            "id": "line_block_02",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_line_02",
+              "confidence_line_02"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_line_02",
+                "check": "response",
+                "responseId": "canVerifyBipartite_line_02",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_03"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_03",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_03",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_force_03",
+              "confidence_force_03"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_force_03",
+                "check": "response",
+                "responseId": "canVerifyBipartite_force_03",
+                "value": "no",
+                "comparison": "equal",
+                "to": "line_block_03"
+              }
+            ]
+          },
+          {
+            "id": "line_block_03",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_line_03",
+              "confidence_line_03"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_line_03",
+                "check": "response",
+                "responseId": "canVerifyBipartite_line_03",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_04"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_04",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_04",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_force_04",
+              "confidence_force_04"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_force_04",
+                "check": "response",
+                "responseId": "canVerifyBipartite_force_04",
+                "value": "no",
+                "comparison": "equal",
+                "to": "line_block_04"
+              }
+            ]
+          },
+          {
+            "id": "line_block_04",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_line_04",
+              "confidence_line_04"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_line_04",
+                "check": "response",
+                "responseId": "canVerifyBipartite_line_04",
+                "value": "no",
+                "comparison": "equal",
+                "to": "trial_05"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trial_05",
+        "order": "fixed",
+        "components": [
+          {
+            "id": "force_block_05",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_force_05",
+              "confidence_force_05"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_force_05",
+                "check": "response",
+                "responseId": "canVerifyBipartite_force_05",
+                "value": "no",
+                "comparison": "equal",
+                "to": "line_block_05"
+              }
+            ]
+          },
+          {
+            "id": "line_block_05",
+            "order": "fixed",
+            "components": [
+              "verifyBipartite_line_05",
+              "confidence_line_05"
+            ],
+            "skip": [
+              {
+                "name": "verifyBipartite_line_05",
+                "check": "response",
+                "responseId": "canVerifyBipartite_line_05",
+                "value": "no",
+                "comparison": "equal",
+                "to": "end"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

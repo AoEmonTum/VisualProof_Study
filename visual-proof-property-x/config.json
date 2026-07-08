@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Visual Proof Property X",
+    "version": "0.1.0",
+    "authors": [
+      "Visual Proof Study Team"
+    ],
+    "date": "2026-06-30",
+    "description": "Initial scaffold for a graph property verification study.",
+    "organizations": [
+      "Technische Universitat Munchen"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": true
+  },
+  "components": {
+    "verifyProperty": {
+      "type": "markdown",
+      "path": "visual-proof-property-x/assets/visualization.md",
+      "response": [
+        {
+          "id": "canVerify",
+          "prompt": "Based on this visualization, can you verify that the graph has property X?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            {
+              "label": "Yes, I can verify",
+              "value": "yes"
+            },
+            {
+              "label": "No, I cannot verify",
+              "value": "no"
+            }
+          ]
+        }
+      ]
+    },
+    "confidence": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "confidence",
+          "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
+          "location": "belowStimulus",
+          "type": "likert",
+          "numItems": 5,
+          "start": 1,
+          "spacing": 1,
+          "leftLabel": "Very low confidence",
+          "rightLabel": "Very high confidence",
+          "labelLocation": "inline"
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "verifyProperty",
+      "confidence"
+    ],
+    "skip": [
+      {
+        "name": "verifyProperty",
+        "check": "response",
+        "responseId": "canVerify",
+        "value": "no",
+        "comparison": "equal",
+        "to": "end"
+      }
+    ]
+  }
+}
