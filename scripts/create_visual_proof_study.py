@@ -1,165 +1,106 @@
 #!/usr/bin/env python3
-"""Create the initial Visual Proof cut-vertex study."""
+"""Create the counterbalanced cut-vertex study with a custom introduction."""
 
-from __future__ import annotations
-
-import json
 from pathlib import Path
 
-from cut_vertex_graph_generator import generate_cut_vertex_svgs
+from create_graph_property_study import StudySettings, create_study
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DIR = ROOT / "public"
 STUDY_ID = "visual-proof-cut-vertex"
-OLD_STUDY_ID = "visual-proof-property-x"
-NUM_TRIALS = 10
-STUDY_DIR = PUBLIC_DIR / STUDY_ID
-ASSETS_DIR = STUDY_DIR / "assets"
-GRAPHS_DIR = ASSETS_DIR / "graphs"
-CONFIG_PATH = STUDY_DIR / "config.json"
-GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 
 
-def write_json(path: Path, data: dict) -> None:
-    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
+    """Write the cut-vertex-specific introduction; all other parts are shared."""
+    img = tutorial["graph_001"]["images"]
 
+    markdown = f"""
+<b style="font-size: 22px; font-weight: 650;">Cut vertex</b>
 
-def create_markdown_files(graph_metadata: list[dict]) -> None:
-    for item in graph_metadata:
-    index = item["index"]
-    # Use the same image sizing style as the Hamiltonian study
-    markdown = f'''<img src="{STUDY_ID}/assets/graphs/{item["filename"]}" alt="Cut vertex graph {index}" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />
-'''
-    (ASSETS_DIR / f"visualization_{index:02d}.md").write_text(markdown, encoding="utf-8")
+<style>
+.intro-content h3 {{ margin-top: 20px; font-size: 20px; font-weight: 650; }}
+</style>
 
+<div class="intro-content" style="max-width:1150px; margin-left: 20px; line-height:1.6;">
 
-def verify_component(index: int) -> dict:
-    return {
-        "type": "markdown",
-        "path": f"{STUDY_ID}/assets/visualization_{index:02d}.md",
-        "response": [
-            {
-                "id": f"canVerifyCutVertex_{index:02d}",
-                "prompt": "Based on this visualization, can you verify that the graph has a cut vertex?",
-                "location": "aboveStimulus",
-                "type": "radio",
-                "options": [
-                    {
-                        "label": "Yes, I can verify",
-                        "value": "yes",
-                    },
-                    {
-                        "label": "No, I cannot verify",
-                        "value": "no",
-                    },
-                ],
-            }
-        ],
-    }
+<p style="font-size:18px;">
+A <b>cut vertex</b> is a vertex whose removal disconnects the graph into two or more connected components.
+</p>
 
+<p style="font-size:17px;">
+You can recognize a cut vertex by the following property:
+</p>
 
-def confidence_component(index: int) -> dict:
-    return {
-        "type": "questionnaire",
-        "response": [
-            {
-                "id": f"confidence_{index:02d}",
-                "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
-                "location": "aboveStimulus",
-                "type": "likert",
-                "numItems": 5,
-                "start": 1,
-                "spacing": 1,
-                "leftLabel": "Very low confidence",
-                "rightLabel": "Very high confidence",
-                "labelLocation": "inline",
-            }
-        ],
-    }
+<div style="font-size:17px;margin-bottom:35px;line-height:1.9;">
+- If removing a vertex disconnects the graph into multiple connected components, then that vertex is a <b>cut vertex</b>.
+</div>
 
+<hr style="margin:35px 0;">
 
-def study_config(graph_metadata: list[dict]) -> dict:
-    components = {}
-    trial_blocks = []
+<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin-bottom:40px;">
 
-    for item in graph_metadata:
-        index = item["index"]
-        trial_id = f"trial_{index:02d}"
-        verify_id = f"verifyCutVertex_{index:02d}"
-        confidence_id = f"confidence_{index:02d}"
-        next_trial_id = f"trial_{index + 1:02d}" if index < len(graph_metadata) else "end"
+<div>
 
-        components[verify_id] = verify_component(index)
-        components[confidence_id] = confidence_component(index)
-        trial_blocks.append(
-            {
-                "id": trial_id,
-                "order": "fixed",
-                "components": [verify_id, confidence_id],
-                "skip": [
-                    {
-                        "name": verify_id,
-                        "check": "response",
-                        "responseId": f"canVerifyCutVertex_{index:02d}",
-                        "value": "no",
-                        "comparison": "equal",
-                        "to": next_trial_id,
-                    }
-                ],
-            }
-        )
+<h3 style="margin-top:0;">Example for a graph with a cut vertex</h3>
 
-    return {
-        "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
-        "studyMetadata": {
-            "title": "Visual Proof Cut Vertex",
-            "version": "0.1.0",
-            "authors": ["Visual Proof Study Team"],
-            "date": "2026-06-30",
-            "description": "Initial scaffold for a cut-vertex verification study.",
-            "organizations": ["Technische Universitat Munchen"],
-        },
-        "uiConfig": {
-            "contactEmail": "",
-            "logoPath": "revisitAssets/revisitLogoSquare.svg",
-            "withProgressBar": True,
-            "autoDownloadStudy": False,
-            "withSidebar": True,
-            "nextButtonLocation": "aboveStimulus",
-        },
-        "components": components,
-        "sequence": {
-            "order": "fixed",
-            "components": trial_blocks,
-        },
-    }
+<p>
+The highlighted vertex is a <b style="color: #d62728;">cut vertex</b>.
+</p>
 
+</div>
 
-def update_global_config() -> None:
-    global_config = json.loads(GLOBAL_CONFIG_PATH.read_text(encoding="utf-8"))
-    configs_list = global_config.setdefault("configsList", [])
-    configs = global_config.setdefault("configs", {})
+<div align="center">
+<img src="{study_id}/assets/graphs/{img["proof_property"]}"
+style="width:100%;max-height:290px;object-fit:contain;">
+</div>
 
-    if STUDY_ID not in configs_list:
-        configs_list.append(STUDY_ID)
+</div>
 
-    configs[STUDY_ID] = {"path": f"{STUDY_ID}/config.json"}
-    if OLD_STUDY_ID in configs_list:
-        configs_list.remove(OLD_STUDY_ID)
-    configs.pop(OLD_STUDY_ID, None)
-    write_json(GLOBAL_CONFIG_PATH, global_config)
+<hr>
 
+<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
 
-def main() -> None:
-    GRAPHS_DIR.mkdir(parents=True, exist_ok=True)
-    graph_metadata = generate_cut_vertex_svgs(GRAPHS_DIR, count=NUM_TRIALS)
-    create_markdown_files(graph_metadata)
-    write_json(ASSETS_DIR / "graphs.json", {"graphs": graph_metadata})
-    write_json(CONFIG_PATH, study_config(graph_metadata))
-    update_global_config()
-    print(f"Created study '{STUDY_ID}' at {STUDY_DIR}")
+<div>
+
+<h3 style="margin-top:0;">The same graph with that cut vertex removed</h3>
+
+<p>
+The graph is now disconnected. Therefore the removed edge was a cut vertex
+</p>
+
+</div>
+
+<div align="center">
+<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}"
+style="width:100%;max-height:290px;object-fit:contain;">
+</div>
+
+</div>
+
+<hr>
+
+<p style="margin-top:40px;text-align:center;font-size:18px;">
+You will now complete a short practice sequence before the main study.
+</p>
+
+</div>
+"""
+    (assets_dir / "intro.md").write_text(markdown, encoding="utf-8")
 
 
 if __name__ == "__main__":
-    main()
+    create_study(
+        Path(__file__),
+        StudySettings(
+            study_id=STUDY_ID,
+            stimulus_folder="cut_vertex",
+            title="Cut Vertex",
+            property_name="cut vertex",
+            property_definition="A cut vertex is a vertex whose removal disconnects the graph into separate parts.",
+            verification_prompt="Based on this visualization, does this graph have a cut vertex?",
+            response_prefix="canVerifyCutVertex",
+            yes_label="Yes, this graph has a cut vertex",
+            no_label="No, this graph does not have a cut vertex",
+            sidebar_explanation="A cut vertex is a vertex whose removal disconnects the graph into separate parts.",
+            write_intro=write_intro,
+        ),
+    )

@@ -1,1 +1,1 @@
-![Cut vertex graph 4](visual-proof-cut-vertex/assets/graphs/cut_vertex_04.svg)
+<img src="visual-proof-cut-vertex/assets/graphs/graph_004_proof_property.png" alt="Cut vertex graph 4" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

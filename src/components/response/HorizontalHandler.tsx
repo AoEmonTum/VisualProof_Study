@@ -9,7 +9,7 @@ export function HorizontalHandler({ horizontal, children, style }: { horizontal:
     );
   }
   return (
-    <Stack gap="md" style={style}>
+    <Stack gap="xs" style={style}>
       {children}
     </Stack>
   );

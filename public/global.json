@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
   "configsList": [
     "visual-proof-cut-vertex",
-    "visual-proof-hamiltonian-cycle"
+    "visual-proof-hamiltonian-cycle",
+    "visual-proof-bipartite",
+    "visual-proof-certificates-for-graph-properties"
   ],
   "configs": {
     "visual-proof-cut-vertex": {
@@ -13,6 +15,9 @@
     },
     "visual-proof-bipartite": {
       "path": "visual-proof-bipartite/config.json"
+    },
+    "visual-proof-certificates-for-graph-properties": {
+      "path": "visual-proof-certificates-for-graph-properties/config.json"
     }
   }
 }

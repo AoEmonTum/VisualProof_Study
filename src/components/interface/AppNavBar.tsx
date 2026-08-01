@@ -1,4 +1,4 @@
-import { Box, Text } from '@mantine/core';
+import { Box } from '@mantine/core';
 import { useMemo } from 'react';
 import { ReactMarkdownWrapper } from '../ReactMarkdownWrapper';
 import { useStudyConfig } from '../../store/hooks/useStudyConfig';
@@ -34,9 +34,6 @@ export function AppNavBar({ width, top, sidebarOpen }: { width: number, top: num
           bg="gray.3"
           p="md"
         >
-          <Text span c="orange.8" fw={700} inherit>
-            Task:
-          </Text>
           <ReactMarkdownWrapper text={instruction} />
         </Box>
       )}

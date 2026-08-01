@@ -1,190 +1,159 @@
 #!/usr/bin/env python3
-"""Create the Visual Proof Bipartite study using the bipartite generator."""
+"""Create the counterbalanced bipartite study with a custom introduction."""
 
-from __future__ import annotations
-
-import json
 from pathlib import Path
 
-from bipartite_graph_generator import generate_bipartite_svgs
+from create_graph_property_study import StudySettings, create_study
 
 
-ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DIR = ROOT / "public"
 STUDY_ID = "visual-proof-bipartite"
-NUM_TRIALS = 10
-STUDY_DIR = PUBLIC_DIR / STUDY_ID
-ASSETS_DIR = STUDY_DIR / "assets"
-GRAPHS_DIR = ASSETS_DIR / "graphs"
-CONFIG_PATH = STUDY_DIR / "config.json"
-GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 
 
-def write_json(path: Path, data: dict) -> None:
-    path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
+    """Write the bipartite-specific introduction; all other parts are shared."""
+    img = tutorial["graph_001"]["images"]
 
+    markdown = f"""
+<b style="font-size: 22px; font-weight: 650;">The bipartite property</b>
 
-def create_markdown_files(graph_metadata: list[dict]) -> None:
-    for stale_file in ASSETS_DIR.glob("force_*.md"):
-        stale_file.unlink()
-    for stale_file in ASSETS_DIR.glob("line_*.md"):
-        stale_file.unlink()
+<style>
+.example-title {{
+    margin-top: 20px;
+    padding: 3px 6px;
+    font-size: 20px;
+    font-weight: 650;
+}}
 
-    for item in graph_metadata:
-        index = item["index"]
-        force_markdown = f'''<img src="{STUDY_ID}/assets/graphs/{item["force_filename"]}" alt="Force-directed bipartite graph {index}" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />\n'''
-        line_markdown = f'''<img src="{STUDY_ID}/assets/graphs/{item["line_filename"]}" alt="Line bipartite graph {index}" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />\n'''
-        (ASSETS_DIR / f"force_{index:02d}.md").write_text(force_markdown, encoding="utf-8")
-        (ASSETS_DIR / f"line_{index:02d}.md").write_text(line_markdown, encoding="utf-8")
+.example-text {{
+    font-size: 16px;
+    line-height: 1.9;
+}}
 
+.code-line {{
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    
+    padding: 3px 6px;
+    line-height: 1.9;
+    font-size: 16px;
+}}
+</style>
 
-def verify_component(index: int, visualization: str) -> dict:
-    if visualization not in {"force", "line"}:
-        raise ValueError("Unknown visualization: {visualization}")
+<div style="max-width:1150px; margin-left: 20px; line-height:1.6;">
 
-    label = "force-directed" if visualization == "force" else "line"
-    return {
-        "type": "markdown",
-        "path": f"{STUDY_ID}/assets/{visualization}_{index:02d}.md",
-        "response": [
-            {
-                "id": f"canVerifyBipartite_{visualization}_{index:02d}",
-                "prompt": "Based on this visualization, can you verify that the graph is bipartite?",
-                "location": "aboveStimulus",
-                "type": "radio",
-                "options": [
-                    {"label": "Yes, I can verify", "value": "yes"},
-                    {"label": "No, I cannot verify", "value": "no"},
-                ],
-            }
-        ],
-        "meta": {"visualization": label},
-    }
+<p style="font-size:18px;">
+A <b>bipartite graph</b> is a graph whose vertices can be divided into two disjoint groups such that no edge connects two vertices belonging to the same group.
+</p>
 
+<p style="font-size:17px;">
+You can recognize a bipartite graph in several equivalent ways:
+</p>
 
-def confidence_component(index: int, visualization: str) -> dict:
-    return {
-        "type": "questionnaire",
-        "response": [
-            {
-                "id": f"confidence_{visualization}_{index:02d}",
-                "prompt": "Rate your confidence on a scale of 1 to 5. (1 being very low confidence and 5 being very high confidence)",
-                "location": "aboveStimulus",
-                "type": "likert",
-                "numItems": 5,
-                "start": 1,
-                "spacing": 1,
-                "leftLabel": "Very low confidence",
-                "rightLabel": "Very high confidence",
-                "labelLocation": "inline",
-            }
-        ],
-        "meta": {"visualization": "force-directed" if visualization == "force" else "line"},
-    }
+<div class="code-line">
+- The vertices can be divided into <b>two disjoint groups</b>.<br>
+- The graph can be colored using only <b>two colors</b> such that no two adjacent vertices have the same color.<br>
+- Every cycle has <b>even length</b>. Therefore, if a graph contains an <b>odd cycle</b>, it is <b>not bipartite</b>.
+</div>
 
+<hr style="margin:35px 0;">
 
-def study_config(graph_metadata: list[dict]) -> dict:
-    components = {}
-    trial_blocks = []
+<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin-bottom:40px;">
 
-    for item in graph_metadata:
-        index = item["index"]
-        trial_id = f"trial_{index:02d}"
-        force_block_id = f"force_block_{index:02d}"
-        line_block_id = f"line_block_{index:02d}"
-        force_verify_id = f"verifyBipartite_force_{index:02d}"
-        force_confidence_id = f"confidence_force_{index:02d}"
-        line_verify_id = f"verifyBipartite_line_{index:02d}"
-        line_confidence_id = f"confidence_line_{index:02d}"
-        next_trial_id = f"trial_{index + 1:02d}" if index < len(graph_metadata) else "end"
+<div>
 
-        components[force_verify_id] = verify_component(index, "force")
-        components[force_confidence_id] = confidence_component(index, "force")
-        components[line_verify_id] = verify_component(index, "line")
-        components[line_confidence_id] = confidence_component(index, "line")
-        trial_blocks.append(
-            {
-                "id": trial_id,
-                "order": "fixed",
-                "components": [
-                    {
-                        "id": force_block_id,
-                        "order": "fixed",
-                        "components": [force_verify_id, force_confidence_id],
-                        "skip": [
-                            {
-                                "name": force_verify_id,
-                                "check": "response",
-                                "responseId": f"canVerifyBipartite_force_{index:02d}",
-                                "value": "no",
-                                "comparison": "equal",
-                                "to": line_block_id,
-                            }
-                        ],
-                    },
-                    {
-                        "id": line_block_id,
-                        "order": "fixed",
-                        "components": [line_verify_id, line_confidence_id],
-                        "skip": [
-                            {
-                                "name": line_verify_id,
-                                "check": "response",
-                                "responseId": f"canVerifyBipartite_line_{index:02d}",
-                                "value": "no",
-                                "comparison": "equal",
-                                "to": next_trial_id,
-                            }
-                        ],
-                    },
-                ],
-            }
-        )
+<h3 class="example-title">
+Partition into two groups
+</h3>
 
-    return {
-        "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
-        "studyMetadata": {
-            "title": "Visual Proof Bipartite Graphs",
-            "version": "0.1.0",
-            "authors": ["Visual Proof Study Team"],
-            "date": "2026-07-08",
-            "description": "Bipartite graph verification study (derived from Hamiltonian study).",
-            "organizations": ["Technische Universitat Munchen"],
-        },
-        "uiConfig": {
-            "contactEmail": "",
-            "logoPath": "revisitAssets/revisitLogoSquare.svg",
-            "withProgressBar": True,
-            "autoDownloadStudy": False,
-            "withSidebar": True,
-            "nextButtonLocation": "aboveStimulus",
-        },
-        "components": components,
-        "sequence": {"order": "fixed", "components": trial_blocks},
-    }
+<div class="example-text">
+<div class="code-line">
+This graph can be divided into <b>two disjoint groups</b> of vertices.<br>
+Every edge connects a vertex from one group with a vertex from the other group.
+</div>
+</div>
 
+</div>
 
-def update_global_config() -> None:
-    global_config = json.loads(GLOBAL_CONFIG_PATH.read_text(encoding="utf-8"))
-    configs_list = global_config.setdefault("configsList", [])
-    configs = global_config.setdefault("configs", {})
+<div align="center">
+<img src="{study_id}/assets/graphs/{img["proof_property"]}"
+style="width:100%;max-height:290px;object-fit:contain;">
+</div>
 
-    if STUDY_ID not in configs_list:
-        configs_list.append(STUDY_ID)
+</div>
 
-    configs[STUDY_ID] = {"path": f"{STUDY_ID}/config.json"}
-    write_json(GLOBAL_CONFIG_PATH, global_config)
+<hr>
 
+<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0">
 
-def main() -> None:
-    GRAPHS_DIR.mkdir(parents=True, exist_ok=True)
-    graph_metadata = generate_bipartite_svgs(GRAPHS_DIR, count=NUM_TRIALS)
-    create_markdown_files(graph_metadata)
-    write_json(ASSETS_DIR / "graphs.json", {"graphs": graph_metadata})
-    write_json(CONFIG_PATH, study_config(graph_metadata))
-    update_global_config()
-    print(f"Created study '{STUDY_ID}' at {STUDY_DIR}")
+<div>
+
+<h3 class="example-title">
+Two-coloring
+</h3>
+
+<div class="example-text">
+<div class="code-line">
+The graph can be colored using only <b>two colors</b>.<br>
+No edge connects two vertices of the same color.
+</div>
+</div>
+
+</div>
+
+<div align="center">
+<img src="{study_id}/assets/graphs/{img["noproof_property"]}"
+style="width:100%;max-height:290px;object-fit:contain;">
+</div>
+
+</div>
+
+<hr>
+
+<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
+
+<div>
+
+<h3 class="example-title">
+Odd cycle
+</h3>
+
+<div class="example-text">
+<div class="code-line">
+This graph contains an <b>odd cycle</b>.<br>
+Since bipartite graphs contain only cycles of even length, the graph is <b>not bipartite</b>.
+</div>
+</div>
+
+</div>
+
+<div align="center">
+<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
+style="width:100%;max-height:290px;object-fit:contain;">
+</div>
+
+</div>
+<hr style="margin: 0 0 40px 0;">
+</div>
+"""
+
+    (assets_dir / "intro.md").write_text(markdown, encoding="utf-8")
 
 
 if __name__ == "__main__":
-    main()
+    create_study(
+        Path(__file__),
+        StudySettings(
+            study_id=STUDY_ID,
+            stimulus_folder="bipartite",
+            title="Visual Proof Bipartite Graphs",
+            property_name="bipartite",
+            property_definition="A bipartite graph is a graph whose vertices can be split into two groups so that no edge connects two vertices from the same group.",
+            verification_prompt="Based on this visualization, is this graph bipartite?",
+            response_prefix="canVerifyBipartite",
+            yes_label="Yes, this graph is bipartite",
+            no_label="No, this graph is not bipartite",
+            sidebar_explanation="A bipartite graph is a graph whose vertices can be split into two groups so that no edge connects two vertices from the same group.",
+            write_intro=write_intro,
+        ),
+    )

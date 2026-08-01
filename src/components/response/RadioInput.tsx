@@ -72,7 +72,7 @@ export function RadioInput({
           {rightLabel && <Text>{rightLabel}</Text>}
         </Group>
       )}
-      <Group gap="lg" align="flex-end" mt={horizontal ? 0 : 'sm'}>
+      <Group gap="lg" align="flex-end" mt={horizontal ? 0 : 'xs'}>
         {horizontal && label === 'inline' && leftLabel && <Text>{leftLabel}</Text>}
         <HorizontalHandler horizontal={!!horizontal} style={{ flexGrow: 1 }}>
           {orderedOptions.map((radio) => (
@@ -92,6 +92,7 @@ export function RadioInput({
                 value={radio.value}
                 label={<OptionLabel label={radio.label} infoText={radio.infoText} />}
                 styles={{
+                  root: !horizontal ? { paddingTop: rem(4), paddingBottom: rem(4) } : undefined,
                   label: { display: !horizontal ? 'initial' : 'none' },
                 }}
                 onChange={() => setOtherSelected(false)}

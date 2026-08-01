@@ -1,4 +1,6 @@
-import { AppShell, Button, Flex } from '@mantine/core';
+import {
+  AppShell, Box, Button, Flex,
+} from '@mantine/core';
 import { Outlet } from 'react-router';
 import {
   useEffect, useMemo, useRef,
@@ -200,7 +202,7 @@ export function StepRenderer() {
                   display: 'flex',
                   flexDirection: 'column',
                 }}
-                w={sidebarOpen ? `calc(100% - ${sidebarWidth}px - 10px)` : '100%'}
+                w={sidebarOpen ? `calc(100% - ${2 * sidebarWidth}px - 20px)` : '100%'}
               >
                 {!showTitleBar && !showStudyBrowser && developmentModeEnabled && (
                 <Button
@@ -215,6 +217,7 @@ export function StepRenderer() {
                 )}
                 <Outlet />
               </AppShell.Main>
+              {sidebarOpen && <Box w={sidebarWidth} miw={sidebarWidth} bg="gray.1" />}
             </Flex>
             {isAnalysis && (
             <AnalysisFooter setHasAudio={setHasAudio} key={currentComponent} />
