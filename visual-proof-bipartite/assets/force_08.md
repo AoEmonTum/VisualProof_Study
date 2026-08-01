@@ -1,0 +1,1 @@
+<img src="visual-proof-bipartite/assets/graphs/graph_008_proof_property.png" alt="Bipartite graph with visual proof 8" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

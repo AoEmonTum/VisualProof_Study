@@ -1,1 +1,1 @@
-<img src="visual-proof-hamiltonian-cycle/assets/graphs/hamiltonian_05_force.svg" alt="Force-directed Hamiltonian cycle graph 5" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />
+<img src="visual-proof-hamiltonian-cycle/assets/graphs/graph_005_proof_property.png" alt="Hamiltonian cycle graph with visual proof 5" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

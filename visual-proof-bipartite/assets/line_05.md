@@ -1,1 +1,1 @@
-![Bipartite line 5](visual-proof-bipartite/assets/graphs/bipartite_line_05.svg)
+<img src="visual-proof-bipartite/assets/graphs/graph_005_noproof_property.png" alt="Bipartite graph without visual proof 5" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

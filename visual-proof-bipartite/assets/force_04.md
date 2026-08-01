@@ -1,1 +1,1 @@
-![Bipartite force 4](visual-proof-bipartite/assets/graphs/bipartite_force_04.svg)
+<img src="visual-proof-bipartite/assets/graphs/graph_004_proof_property.png" alt="Bipartite graph with visual proof 4" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />
