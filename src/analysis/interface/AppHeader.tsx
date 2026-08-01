@@ -4,7 +4,7 @@ import {
 
 import { useLocation, useNavigate, useParams } from 'react-router';
 
-import { IconListCheck, IconSettings } from '@tabler/icons-react';
+import { IconListCheck } from '@tabler/icons-react';
 import { PREFIX } from '../../utils/Prefix';
 
 export function AppHeader({
@@ -57,8 +57,6 @@ export function AppHeader({
                 </Button>
               </>
             )}
-
-            <IconSettings onClick={() => navigate('/settings')} style={{ cursor: 'pointer', marginTop: inAnalysis ? 6 : undefined }} />
           </Flex>
         </Grid.Col>
       </Grid>

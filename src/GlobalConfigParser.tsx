@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { ModalsProvider } from '@mantine/modals';
-import { AppShell } from '@mantine/core';
-import { ConfigSwitcher } from './components/ConfigSwitcher';
+import {
+  AppShell, Button, Center, Flex, Image, Text,
+} from '@mantine/core';
 import { Shell } from './components/Shell';
 import { parseGlobalConfig } from './parser/parser';
 import {
-  GlobalConfig, Nullable, ParsedConfig, StudyConfig,
+  GlobalConfig, Nullable,
 } from './parser/types';
 import { StudyAnalysisTabs } from './analysis/individualStudy/StudyAnalysisTabs';
 import { PREFIX } from './utils/Prefix';
@@ -16,7 +17,6 @@ import { AuthProvider } from './store/hooks/useAuth';
 import { GlobalSettings } from './components/settings/GlobalSettings';
 import { NavigateWithParams } from './utils/NavigateWithParams';
 import { AppHeader } from './analysis/interface/AppHeader';
-import { fetchStudyConfigs } from './utils/fetchConfig';
 import { initializeStorageEngine } from './storage/initialize';
 import { useStorageEngine } from './storage/storageEngineHooks';
 import { PageTitle } from './utils/PageTitle';
@@ -29,37 +29,30 @@ async function fetchGlobalConfigArray() {
 }
 
 function HomeRoute({ globalConfig }: { globalConfig: GlobalConfig }) {
-  const [studyConfigs, setStudyConfigs] = useState<Record<string, ParsedConfig<StudyConfig> | null>>({});
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function fetchData(currentGlobalConfig: GlobalConfig) {
-      const configs = await fetchStudyConfigs(currentGlobalConfig);
-      if (!cancelled) {
-        setStudyConfigs(configs);
-      }
-    }
-
-    fetchData(globalConfig);
-
-    return () => {
-      cancelled = true;
-    };
-  }, [globalConfig]);
-
   return (
     <>
       <PageTitle title="ReVISit | Home" />
       <AppShell
         padding="md"
         header={{ height: 70 }}
+        footer={{ height: 64 }}
       >
         <AppHeader studyIds={globalConfig.configsList} />
-        <ConfigSwitcher
-          globalConfig={globalConfig}
-          studyConfigs={studyConfigs}
-        />
+        <AppShell.Main>
+          <Center h="calc(100dvh - 134px)">
+            <Flex direction="column" align="center" gap="xl">
+              <Image w={180} src={`${PREFIX}revisitAssets/revisitLogoSquare.svg`} alt="ReVISit Logo" />
+              <Button component="a" href={`${PREFIX}visual-proof-certificates-for-graph-properties`} size="md">
+                Go to Study
+              </Button>
+            </Flex>
+          </Center>
+        </AppShell.Main>
+        <AppShell.Footer p="md">
+          <Center h="100%">
+            <Text size="sm" c="dimmed">Questions or need help? Contact max.macanas@tum.de</Text>
+          </Center>
+        </AppShell.Footer>
       </AppShell>
     </>
   );
