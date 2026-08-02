@@ -4,21 +4,154 @@
 from __future__ import annotations
 
 import json
-from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
+import random
 from shutil import copy2
 from typing import Callable
 
 
 CONDITIONS = ("proof_property", "noproof_property", "proof_noproperty", "noproof_noproperty")
 SIZES = ("small", "medium", "large")
-TRIALS_PER_SIZE = 8
-TRIALS_PER_CONDITION = 6
-MAIN_TRIALS = 24
+GRAPHS_PER_SIZE = 6
+BLOCKS_PER_PARTICIPANT = 3
+TRIALS_PER_BLOCK = 6
+TRIALS_PER_BLOCK_SIZE = 2
+MAIN_TRIALS = 18
+PARTICIPANT_LISTS = 4
 RESPONSE_TIME_MS = 6_000
 # Set to True before generation to automatically continue when the timer ends.
 AUTO_ADVANCE_ON_TIMEOUT = False
+
+
+def select_graphs(graphs: list[dict], rng: random.Random) -> list[dict]:
+    """Select six unique graphs from each size group.
+
+    Keeping this policy separate makes it straightforward to substitute a
+    different graph-selection strategy later.
+    """
+    selected = []
+    for size in SIZES:
+        size_graphs = [graph for graph in graphs if graph["size"] == size]
+        if len(size_graphs) < GRAPHS_PER_SIZE:
+            raise ValueError(f"Expected at least {GRAPHS_PER_SIZE} {size} graphs, found {len(size_graphs)}")
+        selected.extend(rng.sample(size_graphs, GRAPHS_PER_SIZE))
+    return selected
+
+
+def assign_visualizations(selected_graphs: list[dict], rng: random.Random) -> list[dict]:
+    """Give every selected graph one balanced visualization variant.
+
+    Every size group receives all four variants at least once. The final
+    18-trial distribution is a shuffled 5/5/4/4 allocation.
+    """
+    by_size = {size: [graph for graph in selected_graphs if graph["size"] == size] for size in SIZES}
+    if any(len(graphs) != GRAPHS_PER_SIZE for graphs in by_size.values()):
+        raise ValueError("Visualization assignment requires six graphs per size group")
+
+    target_conditions = list(CONDITIONS)
+    rng.shuffle(target_conditions)
+    target_counts = {condition: 5 if condition in target_conditions[:2] else 4 for condition in CONDITIONS}
+    remaining_extras = {condition: target_counts[condition] - len(SIZES) for condition in CONDITIONS}
+
+    # Allocate the two extra slots in each size group while meeting the global
+    # 5/5/4/4 target. A small randomized backtracking search keeps this robust.
+    extra_pairs = [(first, second) for first in CONDITIONS for second in CONDITIONS]
+    rng.shuffle(extra_pairs)
+    size_extras: dict[str, tuple[str, str]] = {}
+
+    def allocate_extras(size_index: int) -> bool:
+        if size_index == len(SIZES):
+            return all(count == 0 for count in remaining_extras.values())
+        size = SIZES[size_index]
+        for first, second in extra_pairs:
+            needed = {condition: (first, second).count(condition) for condition in CONDITIONS}
+            if any(needed[condition] > remaining_extras[condition] for condition in CONDITIONS):
+                continue
+            for condition in CONDITIONS:
+                remaining_extras[condition] -= needed[condition]
+            size_extras[size] = (first, second)
+            if allocate_extras(size_index + 1):
+                return True
+            for condition in CONDITIONS:
+                remaining_extras[condition] += needed[condition]
+            del size_extras[size]
+        return False
+
+    if not allocate_extras(0):
+        raise RuntimeError("Could not construct a balanced visualization assignment")
+
+    trials = []
+    for size in SIZES:
+        graphs = list(by_size[size])
+        rng.shuffle(graphs)
+        assigned_conditions = [*CONDITIONS, *size_extras[size]]
+        rng.shuffle(assigned_conditions)
+        trials.extend({
+            "source": graph["source"],
+            "size": graph["size"],
+            "vertices": graph["vertices"],
+            "condition": condition,
+            "image": graph["images"][condition],
+        } for graph, condition in zip(graphs, assigned_conditions))
+    return trials
+
+
+def build_blocks(trials: list[dict], rng: random.Random) -> list[list[dict]] | None:
+    """Arrange trials into three balanced blocks, or return None if impossible."""
+    remaining = {size: [trial for trial in trials if trial["size"] == size] for size in SIZES}
+    slots = []
+    for block_index in range(BLOCKS_PER_PARTICIPANT):
+        block_sizes = [size for size in SIZES for _ in range(TRIALS_PER_BLOCK_SIZE)]
+        rng.shuffle(block_sizes)
+        slots.extend((block_index, size) for size in block_sizes)
+    blocks = [[] for _ in range(BLOCKS_PER_PARTICIPANT)]
+    block_conditions = [set() for _ in range(BLOCKS_PER_PARTICIPANT)]
+
+    def fill(slot_index: int) -> bool:
+        if slot_index == len(slots):
+            return all(len(conditions) == len(CONDITIONS) for conditions in block_conditions)
+        block_index, size = slots[slot_index]
+        candidates = list(remaining[size])
+        rng.shuffle(candidates)
+        candidates.sort(key=lambda trial: trial["condition"] in block_conditions[block_index])
+        for trial in candidates:
+            remaining[size].remove(trial)
+            blocks[block_index].append(trial)
+            previous_conditions = set(block_conditions[block_index])
+            block_conditions[block_index].add(trial["condition"])
+
+            future_slots = [future_size for future_block, future_size in slots[slot_index + 1:] if future_block == block_index]
+            missing = set(CONDITIONS) - block_conditions[block_index]
+            feasible = len(missing) <= len(future_slots)
+            for condition in missing:
+                if not any(candidate["condition"] == condition for future_size in future_slots for candidate in remaining[future_size]):
+                    feasible = False
+                    break
+            if feasible and fill(slot_index + 1):
+                return True
+
+            block_conditions[block_index] = previous_conditions
+            blocks[block_index].pop()
+            remaining[size].append(trial)
+        return False
+
+    return blocks if fill(0) else None
+
+
+def generate_trial_order(graphs: list[dict], rng: random.Random, list_index: int) -> list[list[dict]]:
+    """Select graphs, assign variants, and create the constrained trial blocks."""
+    for _ in range(100):
+        trials = assign_visualizations(select_graphs(graphs, rng), rng)
+        blocks = build_blocks(trials, rng)
+        if blocks is None:
+            continue
+        for block_index, block in enumerate(blocks, start=1):
+            rng.shuffle(block)
+            for trial_index, trial in enumerate(block, start=1):
+                trial["id"] = f"list_{list_index}_block_{block_index}_trial_{trial_index:02d}"
+        return blocks
+    raise RuntimeError("Could not build balanced trial blocks after 100 attempts")
 
 
 @dataclass(frozen=True)
@@ -93,36 +226,30 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
             images[condition] = target_name
         return {"graph_001": {"source": "graph_001", "images": images}}
 
-    def select_graphs(graphs: list[dict], list_index: int) -> list[dict]:
-        selected = []
-        for size in SIZES:
-            size_graphs = [graph for graph in graphs if graph["size"] == size]
-            if len(size_graphs) < 10:
-                raise ValueError(f"Expected at least 10 {size} graphs, found {len(size_graphs)}")
-            omitted = {(2 * list_index) % len(size_graphs), (2 * list_index + 1) % len(size_graphs)}
-            selected.extend(graph for index, graph in enumerate(size_graphs) if index not in omitted)
-        return selected
-
-    def latin_square_trials(graphs: list[dict]) -> list[list[dict]]:
+    def latin_square_trials(graphs: list[dict]) -> list[list[list[dict]]]:
+        """Create reproducible, independently randomized participant lists."""
         trial_lists = []
-        for list_index in range(len(CONDITIONS)):
-            selected = select_graphs(graphs, list_index)
-            trials = [
-                {
-                    "id": f"list_{list_index + 1}_trial_{trial_index + 1:02d}",
-                    "source": graph["source"], "size": graph["size"], "vertices": graph["vertices"],
-                    "condition": CONDITIONS[(trial_index + list_index) % len(CONDITIONS)],
-                    "image": graph["images"][CONDITIONS[(trial_index + list_index) % len(CONDITIONS)]],
-                }
-                for trial_index, graph in enumerate(selected)
-            ]
-            if len(trials) != MAIN_TRIALS or len({trial["source"] for trial in trials}) != MAIN_TRIALS:
-                raise ValueError("A participant list must contain 24 unique graphs")
-            if Counter(trial["condition"] for trial in trials) != {condition: TRIALS_PER_CONDITION for condition in CONDITIONS}:
-                raise ValueError("A participant list must contain six trials per visualization")
-            if Counter(trial["size"] for trial in trials) != {size: TRIALS_PER_SIZE for size in SIZES}:
-                raise ValueError("A participant list must contain eight trials per graph size")
-            trial_lists.append(trials)
+        study_seed = sum(ord(character) for character in settings.study_id)
+        for list_index in range(1, PARTICIPANT_LISTS + 1):
+            blocks = generate_trial_order(graphs, random.Random(20_260_800 + study_seed + list_index), list_index)
+            flattened = [trial for block in blocks for trial in block]
+            if len(flattened) != MAIN_TRIALS or len({trial["source"] for trial in flattened}) != MAIN_TRIALS:
+                raise ValueError("A participant list must contain 18 unique graphs")
+            if {size: sum(trial["size"] == size for trial in flattened) for size in SIZES} != {size: GRAPHS_PER_SIZE for size in SIZES}:
+                raise ValueError("A participant list must contain six graphs per size")
+            if any(sum(trial["condition"] == condition for trial in flattened) > 5 for condition in CONDITIONS):
+                raise ValueError("No visualization may occur more than five times")
+            for size in SIZES:
+                if set(trial["condition"] for trial in flattened if trial["size"] == size) != set(CONDITIONS):
+                    raise ValueError("Every visualization must occur in every graph-size group")
+            for block in blocks:
+                if len(block) != TRIALS_PER_BLOCK:
+                    raise ValueError("Each trial block must contain six trials")
+                if {size: sum(trial["size"] == size for trial in block) for size in SIZES} != {size: TRIALS_PER_BLOCK_SIZE for size in SIZES}:
+                    raise ValueError("Each trial block must contain two graphs per size")
+                if set(trial["condition"] for trial in block) != set(CONDITIONS):
+                    raise ValueError("Each trial block must contain every visualization type")
+            trial_lists.append(blocks)
         return trial_lists
 
     def create_intro(tutorial: dict[str, dict]) -> None:
@@ -156,7 +283,7 @@ What will happen?
 
 
 <div class="code-line">
-- You will be shown 24 graphs, one after another.<br>
+- You will be shown 18 graphs, one after another.<br>
 - For every graph, you will answer the same question by selecting Yes or No.<br>
 - Please answer as quickly as possible while trying to be as accurate as you can.
 </div>
@@ -191,7 +318,7 @@ When you are ready, press Next to begin.
 {settings.sidebar_explanation}
 '''
 
-    def write_markdown_files(trial_lists: list[list[dict]]) -> None:
+    def write_markdown_files(trial_lists: list[list[list[dict]]]) -> None:
         for pattern in ("list_*_trial_*.md", "tutorial_graph_*_*.md"):
             for stale_file in assets_dir.glob(pattern):
                 stale_file.unlink()
@@ -206,8 +333,9 @@ When you are ready, press Next to begin.
                 f'''{timer}<img src="{settings.study_id}/assets/graphs/{trial["image"]}" alt="{settings.title} graph {trial["source"]}" style="display: block; max-width: min(100%, 800px); max-height: 64vh; margin: 12px auto 0; object-fit: contain; {image_animation}" />\n''', encoding="utf-8")
 
         for trial_list in trial_lists:
-            for trial in trial_list:
-                write_stimulus(trial, f'{trial["id"]}.md', timed=True)
+            for block in trial_list:
+                for trial in block:
+                    write_stimulus(trial, f'{trial["id"]}.md', timed=True)
 
     def timing_options() -> dict:
         return {"nextButtonAutoAdvanceTime": RESPONSE_TIME_MS, "nextButtonAutoAdvanceWarningTime": 0} if AUTO_ADVANCE_ON_TIMEOUT else {}
@@ -251,10 +379,24 @@ When you are ready, press Next to begin.
         "intro": {"type": "markdown", "path": f"{settings.study_id}/assets/intro.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
         "study_start": {"type": "markdown", "path": f"{settings.study_id}/assets/study_start.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
     }
-    main_lists = [{"id": f"latin_list_{index}", "order": "random", "components": [trial_block(trial, components, False) for trial in trial_list]} for index, trial_list in enumerate(trial_lists, start=1)]
+    main_lists = [
+        {
+            "id": f"latin_list_{list_index}",
+            "order": "fixed",
+            "components": [
+                {
+                    "id": f"list_{list_index}_block_{block_index}",
+                    "order": "random",
+                    "components": [trial_block(trial, components, False) for trial in block],
+                }
+                for block_index, block in enumerate(trial_list, start=1)
+            ],
+        }
+        for list_index, trial_list in enumerate(trial_lists, start=1)
+    ]
     config = {
         "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
-        "studyMetadata": {"title": settings.title, "version": "0.2.0", "authors": ["Visual Proof Study Team"], "date": "2026-07-28", "description": f"Counterbalanced {settings.property_name} graph verification study with a tutorial.", "organizations": ["Technische Universitat Munchen"]},
+        "studyMetadata": {"title": settings.title, "version": "0.2.0", "authors": ["Visual Proof Study Team"], "date": "2026-07-28", "description": f"Counterbalanced {settings.property_name} graph verification study.", "organizations": ["Technische Universitat Munchen"]},
         "uiConfig": {"contactEmail": "", "logoPath": "revisitAssets/revisitLogoSquare.svg", "withProgressBar": True, "autoDownloadStudy": False, "withSidebar": True, "nextButtonLocation": "belowStimulus"},
         "components": components,
         "sequence": {"order": "fixed", "components": ["intro", "study_start", {"id": "participant_list", "order": "latinSquare", "numSamples": 1, "components": main_lists}]},

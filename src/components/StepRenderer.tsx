@@ -94,11 +94,6 @@ export function StepRenderer() {
       windowEvents.current.push([Date.now(), 'resize', [window.innerWidth, window.innerHeight]]);
     }, windowEventDebounceTime, { maxWait: windowEventDebounceTime });
 
-    // Mouse movement
-    const mouseMoveListener = debounce((e: MouseEvent) => {
-      windowEvents.current.push([Date.now(), 'mousemove', [e.clientX, e.clientY]]);
-    }, windowEventDebounceTime, { maxWait: windowEventDebounceTime });
-
     // Scroll
     const scrollListener = debounce(() => {
       windowEvents.current.push([Date.now(), 'scroll', [window.scrollX, window.scrollY]]);
@@ -116,7 +111,6 @@ export function StepRenderer() {
     window.addEventListener('mousedown', mouseDownListener);
     window.addEventListener('mouseup', mouseUpListener);
     window.addEventListener('resize', resizeListener);
-    window.addEventListener('mousemove', mouseMoveListener);
     window.addEventListener('scroll', scrollListener);
     document.addEventListener('visibilitychange', visibilityListener);
 
@@ -128,7 +122,6 @@ export function StepRenderer() {
       window.removeEventListener('mousedown', mouseDownListener);
       window.removeEventListener('mouseup', mouseUpListener);
       window.removeEventListener('resize', resizeListener);
-      window.removeEventListener('mousemove', mouseMoveListener);
       window.removeEventListener('scroll', scrollListener);
       document.removeEventListener('visibilitychange', visibilityListener);
     };

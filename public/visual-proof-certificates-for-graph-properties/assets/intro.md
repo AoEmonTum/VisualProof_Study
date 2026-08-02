@@ -8,6 +8,6 @@ In this study, you will work through three graph properties:
 - Hamiltonian cycles, and
 - cut vertices.
 
-Each section explains its property before presenting the graph trials. The order of graph trials within every section is counterbalanced with a Latin-square design.
+Each section explains its property before presenting 18 graph trials. Both the order of the three property sections and the graph trials within each section are counterbalanced.
 
 Press **Next** to begin.

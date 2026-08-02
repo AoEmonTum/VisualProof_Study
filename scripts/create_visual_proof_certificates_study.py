@@ -79,7 +79,7 @@ In this study, you will work through three graph properties:
 - Hamiltonian cycles, and
 - cut vertices.
 
-Each section explains its property before presenting the graph trials. The order of graph trials within every section is counterbalanced with a Latin-square design.
+Each section explains its property before presenting 18 graph trials. Both the order of the three property sections and the graph trials within each section are counterbalanced.
 
 Press **Next** to begin.
 """,
@@ -116,15 +116,26 @@ def main() -> None:
             "nextButtonLocation": "belowStimulus",
         },
     }
-    sections = []
+    sections_by_property = {}
     for prefix, source_study_id in PROPERTY_STUDIES:
         namespace = f"{prefix}_"
         source_components, source_sequence = load_property_section(namespace, source_study_id)
         components.update(source_components)
-        sections.append({
+        sections_by_property[prefix] = {
             "id": f"{prefix}_section",
             "order": "fixed",
             "components": source_sequence,
+        }
+
+    # The three cyclic permutations form a Latin Square for property order.
+    property_names = [prefix for prefix, _ in PROPERTY_STUDIES]
+    property_order_lists = []
+    for order_index in range(len(property_names)):
+        ordered_properties = property_names[order_index:] + property_names[:order_index]
+        property_order_lists.append({
+            "id": f"property_order_{order_index + 1}",
+            "order": "fixed",
+            "components": [sections_by_property[property_name] for property_name in ordered_properties],
         })
 
     config = {
@@ -148,7 +159,16 @@ def main() -> None:
         "components": components,
         "sequence": {
             "order": "fixed",
-            "components": ["intro", *sections, "outro"],
+            "components": [
+                "intro",
+                {
+                    "id": "property_order",
+                    "order": "latinSquare",
+                    "numSamples": 1,
+                    "components": property_order_lists,
+                },
+                "outro",
+            ],
         },
     }
     write_json(CONFIG_PATH, config)
