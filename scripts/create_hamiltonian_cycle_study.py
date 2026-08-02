@@ -14,98 +14,146 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
     img = tutorial["graph_001"]["images"]
 
     markdown = f"""
-<b style="font-size: 22px; font-weight: 650;">Hamiltonian cycle</b>
+<div style="max-width:1100px; margin:40px auto;">
 
-<style>
-.intro-content h3 {{ margin-top: 20px; font-size: 20px; font-weight: 650; }}
-</style>
+<h1 style="margin-bottom:12px;">
+Hamiltonian Cycles
+</h1>
 
-<div class="intro-content" style="max-width:1150px; margin-left: 20px; line-height:1.6;">
-
-<p style="font-size:18px;">
-A <b>Hamiltonian cycle</b> is a cycle that visits <b>every vertex exactly once</b> and returns to the starting vertex.
+<p style="font-size:18px; line-height:1.7; color:#555; margin-bottom:28px;">
+A <strong>Hamiltonian cycle</strong> is a cycle that visits
+<strong>every vertex exactly once</strong> before returning to the starting
+vertex.
 </p>
 
-<p style="font-size:17px;">
-You can recognize a Hamiltonian cycle by the following properties:
-</p>
+<div style="
+background:#f8fafc;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:36px;
+">
 
-<div style="font-size:17px;margin-bottom:35px;line-height:1.9;">
-- The cycle visits <b>every vertex exactly once</b> before returning to the starting vertex.<br>
-- If <b>even one vertex is missing</b>, it is <b>not</b> a Hamiltonian cycle.<br>
-- If a <b>vertex or edge is used more than once</b> (except returning to the starting vertex), it is <b>not</b> a Hamiltonian cycle.
+<h2 style="margin-top:0;">How to recognize a Hamiltonian cycle</h2>
+
+<ul style="font-size:17px; line-height:1.9; padding-left:22px; margin-bottom:0;">
+<li>The cycle visits <strong>every vertex exactly once</strong> before returning to the starting vertex.</li>
+<li>If <strong>even one vertex is missing</strong>, it is <strong>not</strong> a Hamiltonian cycle.</li>
+<li>If a <strong>vertex or edge is used more than once</strong> (except for returning to the starting vertex), it is <strong>not</strong> a Hamiltonian cycle.</li>
+</ul>
+
 </div>
 
-<hr style="margin:35px 0;">
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:28px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin-bottom:40px;">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 style="margin-top:0;">Hamiltonian cycle</h3>
+<h2 style="margin-top:0;">Hamiltonian cycle</h2>
 
-<p>
+<p style="line-height:1.8;">
 This graph contains a Hamiltonian cycle.
-The highlighted cycle visits every vertex exactly once before returning to the starting vertex.
+The highlighted cycle visits every vertex exactly once before returning to its starting vertex.
 </p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["proof_property"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["proof_property"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
+</div>
+
 </div>
 
 </div>
 
-<hr>
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:28px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 style="margin-top:0;">Missing a vertex</h3>
+<h2 style="margin-top:0;">Missing a vertex</h2>
 
-<p>
-The highlighted cycle does <b>not</b> visit every vertex.
-Since one vertex is missing, it is <b>not</b> a Hamiltonian cycle.
+<p style="line-height:1.8;">
+The highlighted cycle does <strong>not</strong> visit every vertex.
+Since one vertex is missing, it is <strong>not</strong> a Hamiltonian cycle.
 </p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["proof_noproperty"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
+</div>
+
 </div>
 
 </div>
 
-<hr>
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 style="margin-top:0;">No Hamiltonian cycle</h3>
+<h2 style="margin-top:0;">No Hamiltonian cycle</h2>
 
-<p>
-This graph does <b>not</b> contain a Hamiltonian cycle as one edge has to be used twice.
+<p style="line-height:1.8;">
+This graph does <strong>not</strong> contain a Hamiltonian cycle because one edge would have to be traversed twice.
 </p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
+</div>
+
 </div>
 
 </div>
 
-<hr>
+<div style="
+margin-top:36px;
+padding:18px;
+background:#ecfdf5;
+border:1px solid #10b981;
+border-radius:12px;
+text-align:center;
+font-size:18px;
+">
 
-<p style="margin-top:40px;text-align:center;font-size:18px;">
 You will now complete a short practice sequence before the main study.
-</p>
+
+</div>
 
 </div>
 """

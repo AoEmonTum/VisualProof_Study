@@ -14,126 +14,148 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
     img = tutorial["graph_001"]["images"]
 
     markdown = f"""
-<b style="font-size: 22px; font-weight: 650;">The bipartite property</b>
+<div style="max-width:1100px; margin:40px auto;">
 
-<style>
-.example-title {{
-    margin-top: 20px;
-    padding: 3px 6px;
-    font-size: 20px;
-    font-weight: 650;
-}}
+<h1 style="margin-bottom:12px;">
+Bipartite Graphs
+</h1>
 
-.example-text {{
-    font-size: 16px;
-    line-height: 1.9;
-}}
-
-.code-line {{
-    display: inline;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    
-    padding: 3px 6px;
-    line-height: 1.9;
-    font-size: 16px;
-}}
-</style>
-
-<div style="max-width:1150px; margin-left: 20px; line-height:1.6;">
-
-<p style="font-size:18px;">
-A <b>bipartite graph</b> is a graph whose vertices can be divided into two disjoint groups such that no edge connects two vertices belonging to the same group.
+<p style="font-size:18px; line-height:1.7; color:#555; margin-bottom:28px;">
+A <strong>bipartite graph</strong> is a graph whose vertices can be divided
+into two disjoint groups such that no edge connects two vertices belonging to
+the same group.
 </p>
 
-<p style="font-size:17px;">
-You can recognize a bipartite graph in several equivalent ways:
-</p>
+<div style="
+background:#f8fafc;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:36px;
+">
 
-<div class="code-line">
-- The vertices can be divided into <b>two disjoint groups</b>.<br>
-- The graph can be colored using only <b>two colors</b> such that no two adjacent vertices have the same color.<br>
-- Every cycle has <b>even length</b>. Therefore, if a graph contains an <b>odd cycle</b>, it is <b>not bipartite</b>.
+<h2 style="margin-top:0;">How to recognize a bipartite graph</h2>
+
+<ul style="font-size:17px; line-height:1.9; padding-left:22px; margin-bottom:0;">
+<li>The vertices can be divided into <strong>two disjoint groups</strong>.</li>
+<li>The graph can be colored using only <strong>two colors</strong> such that no two adjacent vertices have the same color.</li>
+<li>Every cycle has <strong>even length</strong>. Therefore, if a graph contains an <strong>odd cycle</strong>, it is <strong>not bipartite</strong>.</li>
+</ul>
+
 </div>
 
-<hr style="margin:35px 0;">
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:28px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin-bottom:40px;">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 class="example-title">
-Partition into two groups
-</h3>
+<h2 style="margin-top:0;">Partition into two groups</h2>
 
-<div class="example-text">
-<div class="code-line">
-This graph can be divided into <b>two disjoint groups</b> of vertices.<br>
+<p style="line-height:1.8;">
+This graph can be divided into <strong>two disjoint groups</strong> of vertices.
 Every edge connects a vertex from one group with a vertex from the other group.
-</div>
-</div>
+</p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["proof_property"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["proof_property"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
+</div>
+
 </div>
 
 </div>
 
-<hr>
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+margin-bottom:28px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 class="example-title">
-Two-coloring
-</h3>
+<h2 style="margin-top:0;">Two-coloring</h2>
 
-<div class="example-text">
-<div class="code-line">
-The graph can be colored using only <b>two colors</b>.<br>
+<p style="line-height:1.8;">
+The graph can be colored using only <strong>two colors</strong>.
 No edge connects two vertices of the same color.
-</div>
-</div>
+</p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["noproof_property"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["noproof_property"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
+</div>
+
 </div>
 
 </div>
 
-<hr>
+<div style="
+background:white;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:24px;
+">
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
+<div style="display:grid;grid-template-columns:42% 58%;gap:32px;align-items:center;">
 
 <div>
 
-<h3 class="example-title">
-Odd cycle
-</h3>
+<h2 style="margin-top:0;">Odd cycle</h2>
 
-<div class="example-text">
-<div class="code-line">
-This graph contains an <b>odd cycle</b>.<br>
-Since bipartite graphs contain only cycles of even length, the graph is <b>not bipartite</b>.
-</div>
-</div>
+<p style="line-height:1.8;">
+This graph contains an <strong>odd cycle</strong>.
+Since bipartite graphs contain only cycles of even length, the graph is <strong>not bipartite</strong>.
+</p>
 
 </div>
 
 <div align="center">
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
+
+<img
+src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
+style="width:100%;max-height:300px;object-fit:contain;">
+
 </div>
 
 </div>
-<hr style="margin: 0 0 40px 0;">
+
+</div>
+
+<div style="
+margin-top:36px;
+padding:18px;
+background:#ecfdf5;
+border:1px solid #10b981;
+border-radius:12px;
+text-align:center;
+font-size:18px;
+">
+
+You will now complete a short practice sequence before the main study.
+
+</div>
+
 </div>
 """
 
