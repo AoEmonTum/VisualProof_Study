@@ -26,7 +26,7 @@ What will happen?
 
 
 <div class="code-line">
-- You will be shown 24 graphs, one after another.<br>
+- You will be shown 18 graphs, one after another.<br>
 - For every graph, you will answer the same question by selecting Yes or No.<br>
 - Please answer as quickly as possible while trying to be as accurate as you can.
 </div>
