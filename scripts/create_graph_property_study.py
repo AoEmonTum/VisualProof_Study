@@ -149,7 +149,8 @@ def generate_trial_order(graphs: list[dict], rng: random.Random, list_index: int
         for block_index, block in enumerate(blocks, start=1):
             rng.shuffle(block)
             for trial_index, trial in enumerate(block, start=1):
-                trial["id"] = f"list_{list_index}_block_{block_index}_trial_{trial_index:02d}"
+                trial_number = (block_index - 1) * TRIALS_PER_BLOCK + trial_index
+                trial["id"] = f"list_{list_index}_trial_{trial_number:02d}"
         return blocks
     raise RuntimeError("Could not build balanced trial blocks after 100 attempts")
 

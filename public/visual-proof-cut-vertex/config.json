@@ -35,15 +35,15 @@
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
-    "verify_list_1_block_1_trial_01": {
+    "verify_list_1_trial_01": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_01.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_01",
+          "id": "canVerifyCutVertex_list_1_trial_01",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -65,13 +65,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_01": {
+    "confidence_list_1_trial_01": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_01",
+          "id": "confidence_list_1_trial_01",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -89,15 +89,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_1_trial_02": {
+    "verify_list_1_trial_02": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_02.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_02",
+          "id": "canVerifyCutVertex_list_1_trial_02",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -119,13 +119,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_02": {
+    "confidence_list_1_trial_02": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_02",
+          "id": "confidence_list_1_trial_02",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -143,15 +143,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_1_trial_03": {
+    "verify_list_1_trial_03": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_03.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_03",
+          "id": "canVerifyCutVertex_list_1_trial_03",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -173,13 +173,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_03": {
+    "confidence_list_1_trial_03": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_03",
+          "id": "confidence_list_1_trial_03",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -197,15 +197,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_1_trial_04": {
+    "verify_list_1_trial_04": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_04.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_04",
+          "id": "canVerifyCutVertex_list_1_trial_04",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -227,13 +227,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_04": {
+    "confidence_list_1_trial_04": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_04",
+          "id": "confidence_list_1_trial_04",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -251,15 +251,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_1_trial_05": {
+    "verify_list_1_trial_05": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_05.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_05",
+          "id": "canVerifyCutVertex_list_1_trial_05",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -281,13 +281,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_05": {
+    "confidence_list_1_trial_05": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_05",
+          "id": "confidence_list_1_trial_05",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -305,15 +305,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_1_trial_06": {
+    "verify_list_1_trial_06": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_1_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_06.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_1_trial_06",
+          "id": "canVerifyCutVertex_list_1_trial_06",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -335,13 +335,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_1_trial_06": {
+    "confidence_list_1_trial_06": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_1_trial_06",
+          "id": "confidence_list_1_trial_06",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -359,15 +359,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_01": {
+    "verify_list_1_trial_07": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_07.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_01",
+          "id": "canVerifyCutVertex_list_1_trial_07",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -389,13 +389,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_01": {
+    "confidence_list_1_trial_07": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_01",
+          "id": "confidence_list_1_trial_07",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -413,15 +413,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_02": {
+    "verify_list_1_trial_08": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_08.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_02",
+          "id": "canVerifyCutVertex_list_1_trial_08",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -443,13 +443,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_02": {
+    "confidence_list_1_trial_08": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_02",
+          "id": "confidence_list_1_trial_08",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -467,15 +467,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_03": {
+    "verify_list_1_trial_09": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_09.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_03",
+          "id": "canVerifyCutVertex_list_1_trial_09",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -497,13 +497,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_03": {
+    "confidence_list_1_trial_09": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_03",
+          "id": "confidence_list_1_trial_09",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -521,15 +521,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_04": {
+    "verify_list_1_trial_10": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_10.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_04",
+          "id": "canVerifyCutVertex_list_1_trial_10",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -551,13 +551,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_04": {
+    "confidence_list_1_trial_10": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_04",
+          "id": "confidence_list_1_trial_10",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -575,15 +575,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_05": {
+    "verify_list_1_trial_11": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_11.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_05",
+          "id": "canVerifyCutVertex_list_1_trial_11",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -605,13 +605,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_05": {
+    "confidence_list_1_trial_11": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_05",
+          "id": "confidence_list_1_trial_11",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -629,15 +629,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_2_trial_06": {
+    "verify_list_1_trial_12": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_2_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_12.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_2_trial_06",
+          "id": "canVerifyCutVertex_list_1_trial_12",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -659,13 +659,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_2_trial_06": {
+    "confidence_list_1_trial_12": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_2_trial_06",
+          "id": "confidence_list_1_trial_12",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -683,15 +683,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_01": {
+    "verify_list_1_trial_13": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_13.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_01",
+          "id": "canVerifyCutVertex_list_1_trial_13",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -713,13 +713,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_01": {
+    "confidence_list_1_trial_13": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_01",
+          "id": "confidence_list_1_trial_13",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -737,15 +737,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_02": {
+    "verify_list_1_trial_14": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_14.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_02",
+          "id": "canVerifyCutVertex_list_1_trial_14",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -767,13 +767,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_02": {
+    "confidence_list_1_trial_14": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_02",
+          "id": "confidence_list_1_trial_14",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -791,15 +791,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_03": {
+    "verify_list_1_trial_15": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_15.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_03",
+          "id": "canVerifyCutVertex_list_1_trial_15",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -821,13 +821,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_03": {
+    "confidence_list_1_trial_15": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_03",
+          "id": "confidence_list_1_trial_15",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -845,15 +845,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_04": {
+    "verify_list_1_trial_16": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_16.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_04",
+          "id": "canVerifyCutVertex_list_1_trial_16",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -875,13 +875,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_04": {
+    "confidence_list_1_trial_16": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_04",
+          "id": "confidence_list_1_trial_16",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -899,15 +899,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_05": {
+    "verify_list_1_trial_17": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_17.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_05",
+          "id": "canVerifyCutVertex_list_1_trial_17",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -929,13 +929,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_05": {
+    "confidence_list_1_trial_17": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_05",
+          "id": "confidence_list_1_trial_17",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -953,15 +953,15 @@
         "phase": "study"
       }
     },
-    "verify_list_1_block_3_trial_06": {
+    "verify_list_1_trial_18": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_1_block_3_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_1_trial_18.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_1_block_3_trial_06",
+          "id": "canVerifyCutVertex_list_1_trial_18",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -983,13 +983,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_1_block_3_trial_06": {
+    "confidence_list_1_trial_18": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_1_block_3_trial_06",
+          "id": "confidence_list_1_trial_18",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1007,15 +1007,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_01": {
+    "verify_list_2_trial_01": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_01.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_01",
+          "id": "canVerifyCutVertex_list_2_trial_01",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1037,13 +1037,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_01": {
+    "confidence_list_2_trial_01": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_01",
+          "id": "confidence_list_2_trial_01",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1061,15 +1061,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_02": {
+    "verify_list_2_trial_02": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_02.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_02",
+          "id": "canVerifyCutVertex_list_2_trial_02",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1091,13 +1091,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_02": {
+    "confidence_list_2_trial_02": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_02",
+          "id": "confidence_list_2_trial_02",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1115,15 +1115,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_03": {
+    "verify_list_2_trial_03": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_03.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_03",
+          "id": "canVerifyCutVertex_list_2_trial_03",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1145,13 +1145,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_03": {
+    "confidence_list_2_trial_03": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_03",
+          "id": "confidence_list_2_trial_03",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1169,15 +1169,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_04": {
+    "verify_list_2_trial_04": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_04.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_04",
+          "id": "canVerifyCutVertex_list_2_trial_04",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1199,13 +1199,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_04": {
+    "confidence_list_2_trial_04": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_04",
+          "id": "confidence_list_2_trial_04",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1223,15 +1223,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_05": {
+    "verify_list_2_trial_05": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_05.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_05",
+          "id": "canVerifyCutVertex_list_2_trial_05",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1253,13 +1253,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_05": {
+    "confidence_list_2_trial_05": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_05",
+          "id": "confidence_list_2_trial_05",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1277,15 +1277,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_1_trial_06": {
+    "verify_list_2_trial_06": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_1_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_06.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_1_trial_06",
+          "id": "canVerifyCutVertex_list_2_trial_06",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1307,13 +1307,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_1_trial_06": {
+    "confidence_list_2_trial_06": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_1_trial_06",
+          "id": "confidence_list_2_trial_06",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1331,15 +1331,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_01": {
+    "verify_list_2_trial_07": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_07.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_01",
+          "id": "canVerifyCutVertex_list_2_trial_07",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1361,13 +1361,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_01": {
+    "confidence_list_2_trial_07": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_01",
+          "id": "confidence_list_2_trial_07",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1385,15 +1385,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_02": {
+    "verify_list_2_trial_08": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_08.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_02",
+          "id": "canVerifyCutVertex_list_2_trial_08",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1415,13 +1415,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_02": {
+    "confidence_list_2_trial_08": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_02",
+          "id": "confidence_list_2_trial_08",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1439,15 +1439,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_03": {
+    "verify_list_2_trial_09": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_09.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_03",
+          "id": "canVerifyCutVertex_list_2_trial_09",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1469,13 +1469,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_03": {
+    "confidence_list_2_trial_09": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_03",
+          "id": "confidence_list_2_trial_09",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1493,15 +1493,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_04": {
+    "verify_list_2_trial_10": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_10.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_04",
+          "id": "canVerifyCutVertex_list_2_trial_10",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1523,13 +1523,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_04": {
+    "confidence_list_2_trial_10": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_04",
+          "id": "confidence_list_2_trial_10",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1547,15 +1547,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_05": {
+    "verify_list_2_trial_11": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_11.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_05",
+          "id": "canVerifyCutVertex_list_2_trial_11",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1577,13 +1577,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_05": {
+    "confidence_list_2_trial_11": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_05",
+          "id": "confidence_list_2_trial_11",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1601,15 +1601,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_2_trial_06": {
+    "verify_list_2_trial_12": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_2_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_12.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_2_trial_06",
+          "id": "canVerifyCutVertex_list_2_trial_12",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1631,13 +1631,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_2_trial_06": {
+    "confidence_list_2_trial_12": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_2_trial_06",
+          "id": "confidence_list_2_trial_12",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1655,15 +1655,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_01": {
+    "verify_list_2_trial_13": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_13.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_01",
+          "id": "canVerifyCutVertex_list_2_trial_13",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1685,13 +1685,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_01": {
+    "confidence_list_2_trial_13": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_01",
+          "id": "confidence_list_2_trial_13",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1709,15 +1709,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_02": {
+    "verify_list_2_trial_14": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_14.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_02",
+          "id": "canVerifyCutVertex_list_2_trial_14",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1739,13 +1739,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_02": {
+    "confidence_list_2_trial_14": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_02",
+          "id": "confidence_list_2_trial_14",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1763,15 +1763,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_03": {
+    "verify_list_2_trial_15": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_15.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_03",
+          "id": "canVerifyCutVertex_list_2_trial_15",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1793,13 +1793,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_03": {
+    "confidence_list_2_trial_15": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_03",
+          "id": "confidence_list_2_trial_15",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1817,15 +1817,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_04": {
+    "verify_list_2_trial_16": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_16.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_04",
+          "id": "canVerifyCutVertex_list_2_trial_16",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1847,13 +1847,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_04": {
+    "confidence_list_2_trial_16": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_04",
+          "id": "confidence_list_2_trial_16",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1871,15 +1871,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_05": {
+    "verify_list_2_trial_17": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_17.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_05",
+          "id": "canVerifyCutVertex_list_2_trial_17",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1901,13 +1901,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_05": {
+    "confidence_list_2_trial_17": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_05",
+          "id": "confidence_list_2_trial_17",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1925,15 +1925,15 @@
         "phase": "study"
       }
     },
-    "verify_list_2_block_3_trial_06": {
+    "verify_list_2_trial_18": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_2_block_3_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_2_trial_18.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_2_block_3_trial_06",
+          "id": "canVerifyCutVertex_list_2_trial_18",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -1955,13 +1955,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_2_block_3_trial_06": {
+    "confidence_list_2_trial_18": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_2_block_3_trial_06",
+          "id": "confidence_list_2_trial_18",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -1979,15 +1979,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_01": {
+    "verify_list_3_trial_01": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_01.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_01",
+          "id": "canVerifyCutVertex_list_3_trial_01",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2009,13 +2009,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_01": {
+    "confidence_list_3_trial_01": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_01",
+          "id": "confidence_list_3_trial_01",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2033,15 +2033,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_02": {
+    "verify_list_3_trial_02": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_02.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_02",
+          "id": "canVerifyCutVertex_list_3_trial_02",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2063,13 +2063,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_02": {
+    "confidence_list_3_trial_02": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_02",
+          "id": "confidence_list_3_trial_02",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2087,15 +2087,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_03": {
+    "verify_list_3_trial_03": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_03.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_03",
+          "id": "canVerifyCutVertex_list_3_trial_03",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2117,13 +2117,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_03": {
+    "confidence_list_3_trial_03": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_03",
+          "id": "confidence_list_3_trial_03",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2141,15 +2141,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_04": {
+    "verify_list_3_trial_04": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_04.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_04",
+          "id": "canVerifyCutVertex_list_3_trial_04",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2171,13 +2171,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_04": {
+    "confidence_list_3_trial_04": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_04",
+          "id": "confidence_list_3_trial_04",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2195,15 +2195,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_05": {
+    "verify_list_3_trial_05": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_05.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_05",
+          "id": "canVerifyCutVertex_list_3_trial_05",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2225,13 +2225,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_05": {
+    "confidence_list_3_trial_05": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_05",
+          "id": "confidence_list_3_trial_05",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2249,15 +2249,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_1_trial_06": {
+    "verify_list_3_trial_06": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_1_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_06.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_1_trial_06",
+          "id": "canVerifyCutVertex_list_3_trial_06",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2279,13 +2279,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_1_trial_06": {
+    "confidence_list_3_trial_06": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_1_trial_06",
+          "id": "confidence_list_3_trial_06",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2303,15 +2303,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_01": {
+    "verify_list_3_trial_07": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_07.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_01",
+          "id": "canVerifyCutVertex_list_3_trial_07",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2333,13 +2333,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_01": {
+    "confidence_list_3_trial_07": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_01",
+          "id": "confidence_list_3_trial_07",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2357,15 +2357,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_02": {
+    "verify_list_3_trial_08": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_08.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_02",
+          "id": "canVerifyCutVertex_list_3_trial_08",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2387,13 +2387,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_02": {
+    "confidence_list_3_trial_08": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_02",
+          "id": "confidence_list_3_trial_08",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2411,15 +2411,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_03": {
+    "verify_list_3_trial_09": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_09.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_03",
+          "id": "canVerifyCutVertex_list_3_trial_09",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2441,13 +2441,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_03": {
+    "confidence_list_3_trial_09": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_03",
+          "id": "confidence_list_3_trial_09",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2465,15 +2465,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_04": {
+    "verify_list_3_trial_10": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_10.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_04",
+          "id": "canVerifyCutVertex_list_3_trial_10",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2495,13 +2495,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_04": {
+    "confidence_list_3_trial_10": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_04",
+          "id": "confidence_list_3_trial_10",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2519,15 +2519,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_05": {
+    "verify_list_3_trial_11": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_11.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_05",
+          "id": "canVerifyCutVertex_list_3_trial_11",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2549,13 +2549,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_05": {
+    "confidence_list_3_trial_11": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_05",
+          "id": "confidence_list_3_trial_11",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2573,15 +2573,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_2_trial_06": {
+    "verify_list_3_trial_12": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_2_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_12.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_2_trial_06",
+          "id": "canVerifyCutVertex_list_3_trial_12",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2603,13 +2603,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_2_trial_06": {
+    "confidence_list_3_trial_12": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_2_trial_06",
+          "id": "confidence_list_3_trial_12",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2627,15 +2627,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_01": {
+    "verify_list_3_trial_13": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_13.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_01",
+          "id": "canVerifyCutVertex_list_3_trial_13",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2657,13 +2657,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_01": {
+    "confidence_list_3_trial_13": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_01",
+          "id": "confidence_list_3_trial_13",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2681,15 +2681,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_02": {
+    "verify_list_3_trial_14": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_14.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_02",
+          "id": "canVerifyCutVertex_list_3_trial_14",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2711,13 +2711,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_02": {
+    "confidence_list_3_trial_14": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_02",
+          "id": "confidence_list_3_trial_14",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2735,15 +2735,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_03": {
+    "verify_list_3_trial_15": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_15.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_03",
+          "id": "canVerifyCutVertex_list_3_trial_15",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2765,13 +2765,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_03": {
+    "confidence_list_3_trial_15": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_03",
+          "id": "confidence_list_3_trial_15",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2789,15 +2789,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_04": {
+    "verify_list_3_trial_16": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_16.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_04",
+          "id": "canVerifyCutVertex_list_3_trial_16",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2819,13 +2819,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_04": {
+    "confidence_list_3_trial_16": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_04",
+          "id": "confidence_list_3_trial_16",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2843,15 +2843,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_05": {
+    "verify_list_3_trial_17": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_17.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_05",
+          "id": "canVerifyCutVertex_list_3_trial_17",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2873,13 +2873,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_05": {
+    "confidence_list_3_trial_17": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_05",
+          "id": "confidence_list_3_trial_17",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2897,15 +2897,15 @@
         "phase": "study"
       }
     },
-    "verify_list_3_block_3_trial_06": {
+    "verify_list_3_trial_18": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_3_block_3_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_3_trial_18.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_3_block_3_trial_06",
+          "id": "canVerifyCutVertex_list_3_trial_18",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2927,13 +2927,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_3_block_3_trial_06": {
+    "confidence_list_3_trial_18": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_3_block_3_trial_06",
+          "id": "confidence_list_3_trial_18",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -2951,15 +2951,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_01": {
+    "verify_list_4_trial_01": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_01.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_01",
+          "id": "canVerifyCutVertex_list_4_trial_01",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -2981,13 +2981,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_01": {
+    "confidence_list_4_trial_01": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_01",
+          "id": "confidence_list_4_trial_01",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3005,15 +3005,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_02": {
+    "verify_list_4_trial_02": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_02.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_02",
+          "id": "canVerifyCutVertex_list_4_trial_02",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3035,13 +3035,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_02": {
+    "confidence_list_4_trial_02": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_02",
+          "id": "confidence_list_4_trial_02",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3059,15 +3059,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_03": {
+    "verify_list_4_trial_03": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_03.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_03",
+          "id": "canVerifyCutVertex_list_4_trial_03",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3089,13 +3089,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_03": {
+    "confidence_list_4_trial_03": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_03",
+          "id": "confidence_list_4_trial_03",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3113,15 +3113,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_04": {
+    "verify_list_4_trial_04": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_04.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_04",
+          "id": "canVerifyCutVertex_list_4_trial_04",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3143,13 +3143,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_04": {
+    "confidence_list_4_trial_04": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_04",
+          "id": "confidence_list_4_trial_04",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3167,15 +3167,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_05": {
+    "verify_list_4_trial_05": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_05.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_05",
+          "id": "canVerifyCutVertex_list_4_trial_05",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3197,13 +3197,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_05": {
+    "confidence_list_4_trial_05": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_05",
+          "id": "confidence_list_4_trial_05",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3221,15 +3221,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_1_trial_06": {
+    "verify_list_4_trial_06": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_1_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_06.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_1_trial_06",
+          "id": "canVerifyCutVertex_list_4_trial_06",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3251,13 +3251,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_1_trial_06": {
+    "confidence_list_4_trial_06": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_1_trial_06",
+          "id": "confidence_list_4_trial_06",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3275,15 +3275,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_01": {
+    "verify_list_4_trial_07": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_07.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_01",
+          "id": "canVerifyCutVertex_list_4_trial_07",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3305,13 +3305,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_01": {
+    "confidence_list_4_trial_07": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_01",
+          "id": "confidence_list_4_trial_07",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3329,15 +3329,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_02": {
+    "verify_list_4_trial_08": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_08.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_02",
+          "id": "canVerifyCutVertex_list_4_trial_08",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3359,13 +3359,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_02": {
+    "confidence_list_4_trial_08": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_02",
+          "id": "confidence_list_4_trial_08",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3383,15 +3383,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_03": {
+    "verify_list_4_trial_09": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_09.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_03",
+          "id": "canVerifyCutVertex_list_4_trial_09",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3413,13 +3413,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_03": {
+    "confidence_list_4_trial_09": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_03",
+          "id": "confidence_list_4_trial_09",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3437,15 +3437,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_04": {
+    "verify_list_4_trial_10": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_10.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_04",
+          "id": "canVerifyCutVertex_list_4_trial_10",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3467,13 +3467,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_04": {
+    "confidence_list_4_trial_10": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_04",
+          "id": "confidence_list_4_trial_10",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3491,15 +3491,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_05": {
+    "verify_list_4_trial_11": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_11.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_05",
+          "id": "canVerifyCutVertex_list_4_trial_11",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3521,13 +3521,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_05": {
+    "confidence_list_4_trial_11": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_05",
+          "id": "confidence_list_4_trial_11",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3545,15 +3545,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_2_trial_06": {
+    "verify_list_4_trial_12": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_2_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_12.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_2_trial_06",
+          "id": "canVerifyCutVertex_list_4_trial_12",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3575,13 +3575,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_2_trial_06": {
+    "confidence_list_4_trial_12": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_2_trial_06",
+          "id": "confidence_list_4_trial_12",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3599,15 +3599,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_01": {
+    "verify_list_4_trial_13": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_01.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_13.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_01",
+          "id": "canVerifyCutVertex_list_4_trial_13",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3629,13 +3629,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_01": {
+    "confidence_list_4_trial_13": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_01",
+          "id": "confidence_list_4_trial_13",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3653,15 +3653,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_02": {
+    "verify_list_4_trial_14": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_02.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_14.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_02",
+          "id": "canVerifyCutVertex_list_4_trial_14",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3683,13 +3683,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_02": {
+    "confidence_list_4_trial_14": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_02",
+          "id": "confidence_list_4_trial_14",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3707,15 +3707,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_03": {
+    "verify_list_4_trial_15": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_03.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_15.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_03",
+          "id": "canVerifyCutVertex_list_4_trial_15",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3737,13 +3737,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_03": {
+    "confidence_list_4_trial_15": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_03",
+          "id": "confidence_list_4_trial_15",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3761,15 +3761,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_04": {
+    "verify_list_4_trial_16": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_04.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_16.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_04",
+          "id": "canVerifyCutVertex_list_4_trial_16",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3791,13 +3791,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_04": {
+    "confidence_list_4_trial_16": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_04",
+          "id": "confidence_list_4_trial_16",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3815,15 +3815,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_05": {
+    "verify_list_4_trial_17": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_05.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_17.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_05",
+          "id": "canVerifyCutVertex_list_4_trial_17",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3845,13 +3845,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_05": {
+    "confidence_list_4_trial_17": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_05",
+          "id": "confidence_list_4_trial_17",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3869,15 +3869,15 @@
         "phase": "study"
       }
     },
-    "verify_list_4_block_3_trial_06": {
+    "verify_list_4_trial_18": {
       "type": "markdown",
-      "path": "visual-proof-cut-vertex/assets/list_4_block_3_trial_06.md",
+      "path": "visual-proof-cut-vertex/assets/list_4_trial_18.md",
       "nextButtonLocation": "belowStimulus",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "canVerifyCutVertex_list_4_block_3_trial_06",
+          "id": "canVerifyCutVertex_list_4_trial_18",
           "prompt": "Based on this visualization, does this graph have a cut vertex?",
           "location": "belowStimulus",
           "type": "radio",
@@ -3899,13 +3899,13 @@
         "phase": "study"
       }
     },
-    "confidence_list_4_block_3_trial_06": {
+    "confidence_list_4_trial_18": {
       "type": "questionnaire",
       "instruction": "## Reminder: cut vertex\n\nA cut vertex is a vertex whose removal disconnects the graph into separate parts.\n",
       "instructionLocation": "sidebar",
       "response": [
         {
-          "id": "confidence_list_4_block_3_trial_06",
+          "id": "confidence_list_4_trial_18",
           "prompt": "Rate your confidence on a scale of 1 to 5.",
           "location": "aboveStimulus",
           "type": "likert",
@@ -3943,51 +3943,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_1_block_1_trial_01",
+                    "id": "list_1_trial_01",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_01",
-                      "confidence_list_1_block_1_trial_01"
+                      "verify_list_1_trial_01",
+                      "confidence_list_1_trial_01"
                     ]
                   },
                   {
-                    "id": "list_1_block_1_trial_02",
+                    "id": "list_1_trial_02",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_02",
-                      "confidence_list_1_block_1_trial_02"
+                      "verify_list_1_trial_02",
+                      "confidence_list_1_trial_02"
                     ]
                   },
                   {
-                    "id": "list_1_block_1_trial_03",
+                    "id": "list_1_trial_03",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_03",
-                      "confidence_list_1_block_1_trial_03"
+                      "verify_list_1_trial_03",
+                      "confidence_list_1_trial_03"
                     ]
                   },
                   {
-                    "id": "list_1_block_1_trial_04",
+                    "id": "list_1_trial_04",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_04",
-                      "confidence_list_1_block_1_trial_04"
+                      "verify_list_1_trial_04",
+                      "confidence_list_1_trial_04"
                     ]
                   },
                   {
-                    "id": "list_1_block_1_trial_05",
+                    "id": "list_1_trial_05",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_05",
-                      "confidence_list_1_block_1_trial_05"
+                      "verify_list_1_trial_05",
+                      "confidence_list_1_trial_05"
                     ]
                   },
                   {
-                    "id": "list_1_block_1_trial_06",
+                    "id": "list_1_trial_06",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_1_trial_06",
-                      "confidence_list_1_block_1_trial_06"
+                      "verify_list_1_trial_06",
+                      "confidence_list_1_trial_06"
                     ]
                   }
                 ]
@@ -3997,51 +3997,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_1_block_2_trial_01",
+                    "id": "list_1_trial_07",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_01",
-                      "confidence_list_1_block_2_trial_01"
+                      "verify_list_1_trial_07",
+                      "confidence_list_1_trial_07"
                     ]
                   },
                   {
-                    "id": "list_1_block_2_trial_02",
+                    "id": "list_1_trial_08",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_02",
-                      "confidence_list_1_block_2_trial_02"
+                      "verify_list_1_trial_08",
+                      "confidence_list_1_trial_08"
                     ]
                   },
                   {
-                    "id": "list_1_block_2_trial_03",
+                    "id": "list_1_trial_09",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_03",
-                      "confidence_list_1_block_2_trial_03"
+                      "verify_list_1_trial_09",
+                      "confidence_list_1_trial_09"
                     ]
                   },
                   {
-                    "id": "list_1_block_2_trial_04",
+                    "id": "list_1_trial_10",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_04",
-                      "confidence_list_1_block_2_trial_04"
+                      "verify_list_1_trial_10",
+                      "confidence_list_1_trial_10"
                     ]
                   },
                   {
-                    "id": "list_1_block_2_trial_05",
+                    "id": "list_1_trial_11",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_05",
-                      "confidence_list_1_block_2_trial_05"
+                      "verify_list_1_trial_11",
+                      "confidence_list_1_trial_11"
                     ]
                   },
                   {
-                    "id": "list_1_block_2_trial_06",
+                    "id": "list_1_trial_12",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_2_trial_06",
-                      "confidence_list_1_block_2_trial_06"
+                      "verify_list_1_trial_12",
+                      "confidence_list_1_trial_12"
                     ]
                   }
                 ]
@@ -4051,51 +4051,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_1_block_3_trial_01",
+                    "id": "list_1_trial_13",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_01",
-                      "confidence_list_1_block_3_trial_01"
+                      "verify_list_1_trial_13",
+                      "confidence_list_1_trial_13"
                     ]
                   },
                   {
-                    "id": "list_1_block_3_trial_02",
+                    "id": "list_1_trial_14",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_02",
-                      "confidence_list_1_block_3_trial_02"
+                      "verify_list_1_trial_14",
+                      "confidence_list_1_trial_14"
                     ]
                   },
                   {
-                    "id": "list_1_block_3_trial_03",
+                    "id": "list_1_trial_15",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_03",
-                      "confidence_list_1_block_3_trial_03"
+                      "verify_list_1_trial_15",
+                      "confidence_list_1_trial_15"
                     ]
                   },
                   {
-                    "id": "list_1_block_3_trial_04",
+                    "id": "list_1_trial_16",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_04",
-                      "confidence_list_1_block_3_trial_04"
+                      "verify_list_1_trial_16",
+                      "confidence_list_1_trial_16"
                     ]
                   },
                   {
-                    "id": "list_1_block_3_trial_05",
+                    "id": "list_1_trial_17",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_05",
-                      "confidence_list_1_block_3_trial_05"
+                      "verify_list_1_trial_17",
+                      "confidence_list_1_trial_17"
                     ]
                   },
                   {
-                    "id": "list_1_block_3_trial_06",
+                    "id": "list_1_trial_18",
                     "order": "fixed",
                     "components": [
-                      "verify_list_1_block_3_trial_06",
-                      "confidence_list_1_block_3_trial_06"
+                      "verify_list_1_trial_18",
+                      "confidence_list_1_trial_18"
                     ]
                   }
                 ]
@@ -4111,51 +4111,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_2_block_1_trial_01",
+                    "id": "list_2_trial_01",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_01",
-                      "confidence_list_2_block_1_trial_01"
+                      "verify_list_2_trial_01",
+                      "confidence_list_2_trial_01"
                     ]
                   },
                   {
-                    "id": "list_2_block_1_trial_02",
+                    "id": "list_2_trial_02",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_02",
-                      "confidence_list_2_block_1_trial_02"
+                      "verify_list_2_trial_02",
+                      "confidence_list_2_trial_02"
                     ]
                   },
                   {
-                    "id": "list_2_block_1_trial_03",
+                    "id": "list_2_trial_03",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_03",
-                      "confidence_list_2_block_1_trial_03"
+                      "verify_list_2_trial_03",
+                      "confidence_list_2_trial_03"
                     ]
                   },
                   {
-                    "id": "list_2_block_1_trial_04",
+                    "id": "list_2_trial_04",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_04",
-                      "confidence_list_2_block_1_trial_04"
+                      "verify_list_2_trial_04",
+                      "confidence_list_2_trial_04"
                     ]
                   },
                   {
-                    "id": "list_2_block_1_trial_05",
+                    "id": "list_2_trial_05",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_05",
-                      "confidence_list_2_block_1_trial_05"
+                      "verify_list_2_trial_05",
+                      "confidence_list_2_trial_05"
                     ]
                   },
                   {
-                    "id": "list_2_block_1_trial_06",
+                    "id": "list_2_trial_06",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_1_trial_06",
-                      "confidence_list_2_block_1_trial_06"
+                      "verify_list_2_trial_06",
+                      "confidence_list_2_trial_06"
                     ]
                   }
                 ]
@@ -4165,51 +4165,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_2_block_2_trial_01",
+                    "id": "list_2_trial_07",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_01",
-                      "confidence_list_2_block_2_trial_01"
+                      "verify_list_2_trial_07",
+                      "confidence_list_2_trial_07"
                     ]
                   },
                   {
-                    "id": "list_2_block_2_trial_02",
+                    "id": "list_2_trial_08",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_02",
-                      "confidence_list_2_block_2_trial_02"
+                      "verify_list_2_trial_08",
+                      "confidence_list_2_trial_08"
                     ]
                   },
                   {
-                    "id": "list_2_block_2_trial_03",
+                    "id": "list_2_trial_09",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_03",
-                      "confidence_list_2_block_2_trial_03"
+                      "verify_list_2_trial_09",
+                      "confidence_list_2_trial_09"
                     ]
                   },
                   {
-                    "id": "list_2_block_2_trial_04",
+                    "id": "list_2_trial_10",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_04",
-                      "confidence_list_2_block_2_trial_04"
+                      "verify_list_2_trial_10",
+                      "confidence_list_2_trial_10"
                     ]
                   },
                   {
-                    "id": "list_2_block_2_trial_05",
+                    "id": "list_2_trial_11",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_05",
-                      "confidence_list_2_block_2_trial_05"
+                      "verify_list_2_trial_11",
+                      "confidence_list_2_trial_11"
                     ]
                   },
                   {
-                    "id": "list_2_block_2_trial_06",
+                    "id": "list_2_trial_12",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_2_trial_06",
-                      "confidence_list_2_block_2_trial_06"
+                      "verify_list_2_trial_12",
+                      "confidence_list_2_trial_12"
                     ]
                   }
                 ]
@@ -4219,51 +4219,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_2_block_3_trial_01",
+                    "id": "list_2_trial_13",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_01",
-                      "confidence_list_2_block_3_trial_01"
+                      "verify_list_2_trial_13",
+                      "confidence_list_2_trial_13"
                     ]
                   },
                   {
-                    "id": "list_2_block_3_trial_02",
+                    "id": "list_2_trial_14",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_02",
-                      "confidence_list_2_block_3_trial_02"
+                      "verify_list_2_trial_14",
+                      "confidence_list_2_trial_14"
                     ]
                   },
                   {
-                    "id": "list_2_block_3_trial_03",
+                    "id": "list_2_trial_15",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_03",
-                      "confidence_list_2_block_3_trial_03"
+                      "verify_list_2_trial_15",
+                      "confidence_list_2_trial_15"
                     ]
                   },
                   {
-                    "id": "list_2_block_3_trial_04",
+                    "id": "list_2_trial_16",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_04",
-                      "confidence_list_2_block_3_trial_04"
+                      "verify_list_2_trial_16",
+                      "confidence_list_2_trial_16"
                     ]
                   },
                   {
-                    "id": "list_2_block_3_trial_05",
+                    "id": "list_2_trial_17",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_05",
-                      "confidence_list_2_block_3_trial_05"
+                      "verify_list_2_trial_17",
+                      "confidence_list_2_trial_17"
                     ]
                   },
                   {
-                    "id": "list_2_block_3_trial_06",
+                    "id": "list_2_trial_18",
                     "order": "fixed",
                     "components": [
-                      "verify_list_2_block_3_trial_06",
-                      "confidence_list_2_block_3_trial_06"
+                      "verify_list_2_trial_18",
+                      "confidence_list_2_trial_18"
                     ]
                   }
                 ]
@@ -4279,51 +4279,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_3_block_1_trial_01",
+                    "id": "list_3_trial_01",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_01",
-                      "confidence_list_3_block_1_trial_01"
+                      "verify_list_3_trial_01",
+                      "confidence_list_3_trial_01"
                     ]
                   },
                   {
-                    "id": "list_3_block_1_trial_02",
+                    "id": "list_3_trial_02",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_02",
-                      "confidence_list_3_block_1_trial_02"
+                      "verify_list_3_trial_02",
+                      "confidence_list_3_trial_02"
                     ]
                   },
                   {
-                    "id": "list_3_block_1_trial_03",
+                    "id": "list_3_trial_03",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_03",
-                      "confidence_list_3_block_1_trial_03"
+                      "verify_list_3_trial_03",
+                      "confidence_list_3_trial_03"
                     ]
                   },
                   {
-                    "id": "list_3_block_1_trial_04",
+                    "id": "list_3_trial_04",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_04",
-                      "confidence_list_3_block_1_trial_04"
+                      "verify_list_3_trial_04",
+                      "confidence_list_3_trial_04"
                     ]
                   },
                   {
-                    "id": "list_3_block_1_trial_05",
+                    "id": "list_3_trial_05",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_05",
-                      "confidence_list_3_block_1_trial_05"
+                      "verify_list_3_trial_05",
+                      "confidence_list_3_trial_05"
                     ]
                   },
                   {
-                    "id": "list_3_block_1_trial_06",
+                    "id": "list_3_trial_06",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_1_trial_06",
-                      "confidence_list_3_block_1_trial_06"
+                      "verify_list_3_trial_06",
+                      "confidence_list_3_trial_06"
                     ]
                   }
                 ]
@@ -4333,51 +4333,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_3_block_2_trial_01",
+                    "id": "list_3_trial_07",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_01",
-                      "confidence_list_3_block_2_trial_01"
+                      "verify_list_3_trial_07",
+                      "confidence_list_3_trial_07"
                     ]
                   },
                   {
-                    "id": "list_3_block_2_trial_02",
+                    "id": "list_3_trial_08",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_02",
-                      "confidence_list_3_block_2_trial_02"
+                      "verify_list_3_trial_08",
+                      "confidence_list_3_trial_08"
                     ]
                   },
                   {
-                    "id": "list_3_block_2_trial_03",
+                    "id": "list_3_trial_09",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_03",
-                      "confidence_list_3_block_2_trial_03"
+                      "verify_list_3_trial_09",
+                      "confidence_list_3_trial_09"
                     ]
                   },
                   {
-                    "id": "list_3_block_2_trial_04",
+                    "id": "list_3_trial_10",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_04",
-                      "confidence_list_3_block_2_trial_04"
+                      "verify_list_3_trial_10",
+                      "confidence_list_3_trial_10"
                     ]
                   },
                   {
-                    "id": "list_3_block_2_trial_05",
+                    "id": "list_3_trial_11",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_05",
-                      "confidence_list_3_block_2_trial_05"
+                      "verify_list_3_trial_11",
+                      "confidence_list_3_trial_11"
                     ]
                   },
                   {
-                    "id": "list_3_block_2_trial_06",
+                    "id": "list_3_trial_12",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_2_trial_06",
-                      "confidence_list_3_block_2_trial_06"
+                      "verify_list_3_trial_12",
+                      "confidence_list_3_trial_12"
                     ]
                   }
                 ]
@@ -4387,51 +4387,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_3_block_3_trial_01",
+                    "id": "list_3_trial_13",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_01",
-                      "confidence_list_3_block_3_trial_01"
+                      "verify_list_3_trial_13",
+                      "confidence_list_3_trial_13"
                     ]
                   },
                   {
-                    "id": "list_3_block_3_trial_02",
+                    "id": "list_3_trial_14",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_02",
-                      "confidence_list_3_block_3_trial_02"
+                      "verify_list_3_trial_14",
+                      "confidence_list_3_trial_14"
                     ]
                   },
                   {
-                    "id": "list_3_block_3_trial_03",
+                    "id": "list_3_trial_15",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_03",
-                      "confidence_list_3_block_3_trial_03"
+                      "verify_list_3_trial_15",
+                      "confidence_list_3_trial_15"
                     ]
                   },
                   {
-                    "id": "list_3_block_3_trial_04",
+                    "id": "list_3_trial_16",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_04",
-                      "confidence_list_3_block_3_trial_04"
+                      "verify_list_3_trial_16",
+                      "confidence_list_3_trial_16"
                     ]
                   },
                   {
-                    "id": "list_3_block_3_trial_05",
+                    "id": "list_3_trial_17",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_05",
-                      "confidence_list_3_block_3_trial_05"
+                      "verify_list_3_trial_17",
+                      "confidence_list_3_trial_17"
                     ]
                   },
                   {
-                    "id": "list_3_block_3_trial_06",
+                    "id": "list_3_trial_18",
                     "order": "fixed",
                     "components": [
-                      "verify_list_3_block_3_trial_06",
-                      "confidence_list_3_block_3_trial_06"
+                      "verify_list_3_trial_18",
+                      "confidence_list_3_trial_18"
                     ]
                   }
                 ]
@@ -4447,51 +4447,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_4_block_1_trial_01",
+                    "id": "list_4_trial_01",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_01",
-                      "confidence_list_4_block_1_trial_01"
+                      "verify_list_4_trial_01",
+                      "confidence_list_4_trial_01"
                     ]
                   },
                   {
-                    "id": "list_4_block_1_trial_02",
+                    "id": "list_4_trial_02",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_02",
-                      "confidence_list_4_block_1_trial_02"
+                      "verify_list_4_trial_02",
+                      "confidence_list_4_trial_02"
                     ]
                   },
                   {
-                    "id": "list_4_block_1_trial_03",
+                    "id": "list_4_trial_03",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_03",
-                      "confidence_list_4_block_1_trial_03"
+                      "verify_list_4_trial_03",
+                      "confidence_list_4_trial_03"
                     ]
                   },
                   {
-                    "id": "list_4_block_1_trial_04",
+                    "id": "list_4_trial_04",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_04",
-                      "confidence_list_4_block_1_trial_04"
+                      "verify_list_4_trial_04",
+                      "confidence_list_4_trial_04"
                     ]
                   },
                   {
-                    "id": "list_4_block_1_trial_05",
+                    "id": "list_4_trial_05",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_05",
-                      "confidence_list_4_block_1_trial_05"
+                      "verify_list_4_trial_05",
+                      "confidence_list_4_trial_05"
                     ]
                   },
                   {
-                    "id": "list_4_block_1_trial_06",
+                    "id": "list_4_trial_06",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_1_trial_06",
-                      "confidence_list_4_block_1_trial_06"
+                      "verify_list_4_trial_06",
+                      "confidence_list_4_trial_06"
                     ]
                   }
                 ]
@@ -4501,51 +4501,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_4_block_2_trial_01",
+                    "id": "list_4_trial_07",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_01",
-                      "confidence_list_4_block_2_trial_01"
+                      "verify_list_4_trial_07",
+                      "confidence_list_4_trial_07"
                     ]
                   },
                   {
-                    "id": "list_4_block_2_trial_02",
+                    "id": "list_4_trial_08",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_02",
-                      "confidence_list_4_block_2_trial_02"
+                      "verify_list_4_trial_08",
+                      "confidence_list_4_trial_08"
                     ]
                   },
                   {
-                    "id": "list_4_block_2_trial_03",
+                    "id": "list_4_trial_09",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_03",
-                      "confidence_list_4_block_2_trial_03"
+                      "verify_list_4_trial_09",
+                      "confidence_list_4_trial_09"
                     ]
                   },
                   {
-                    "id": "list_4_block_2_trial_04",
+                    "id": "list_4_trial_10",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_04",
-                      "confidence_list_4_block_2_trial_04"
+                      "verify_list_4_trial_10",
+                      "confidence_list_4_trial_10"
                     ]
                   },
                   {
-                    "id": "list_4_block_2_trial_05",
+                    "id": "list_4_trial_11",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_05",
-                      "confidence_list_4_block_2_trial_05"
+                      "verify_list_4_trial_11",
+                      "confidence_list_4_trial_11"
                     ]
                   },
                   {
-                    "id": "list_4_block_2_trial_06",
+                    "id": "list_4_trial_12",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_2_trial_06",
-                      "confidence_list_4_block_2_trial_06"
+                      "verify_list_4_trial_12",
+                      "confidence_list_4_trial_12"
                     ]
                   }
                 ]
@@ -4555,51 +4555,51 @@
                 "order": "random",
                 "components": [
                   {
-                    "id": "list_4_block_3_trial_01",
+                    "id": "list_4_trial_13",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_01",
-                      "confidence_list_4_block_3_trial_01"
+                      "verify_list_4_trial_13",
+                      "confidence_list_4_trial_13"
                     ]
                   },
                   {
-                    "id": "list_4_block_3_trial_02",
+                    "id": "list_4_trial_14",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_02",
-                      "confidence_list_4_block_3_trial_02"
+                      "verify_list_4_trial_14",
+                      "confidence_list_4_trial_14"
                     ]
                   },
                   {
-                    "id": "list_4_block_3_trial_03",
+                    "id": "list_4_trial_15",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_03",
-                      "confidence_list_4_block_3_trial_03"
+                      "verify_list_4_trial_15",
+                      "confidence_list_4_trial_15"
                     ]
                   },
                   {
-                    "id": "list_4_block_3_trial_04",
+                    "id": "list_4_trial_16",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_04",
-                      "confidence_list_4_block_3_trial_04"
+                      "verify_list_4_trial_16",
+                      "confidence_list_4_trial_16"
                     ]
                   },
                   {
-                    "id": "list_4_block_3_trial_05",
+                    "id": "list_4_trial_17",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_05",
-                      "confidence_list_4_block_3_trial_05"
+                      "verify_list_4_trial_17",
+                      "confidence_list_4_trial_17"
                     ]
                   },
                   {
-                    "id": "list_4_block_3_trial_06",
+                    "id": "list_4_trial_18",
                     "order": "fixed",
                     "components": [
-                      "verify_list_4_block_3_trial_06",
-                      "confidence_list_4_block_3_trial_06"
+                      "verify_list_4_trial_18",
+                      "confidence_list_4_trial_18"
                     ]
                   }
                 ]
