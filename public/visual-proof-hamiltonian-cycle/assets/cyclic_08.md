@@ -1,1 +1,0 @@
-<img src="visual-proof-hamiltonian-cycle/assets/graphs/graph_008_noproof_property.png" alt="Hamiltonian cycle graph without visual proof 8" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />

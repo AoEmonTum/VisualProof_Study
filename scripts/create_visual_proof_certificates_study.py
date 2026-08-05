@@ -36,8 +36,13 @@ def prefix_component(component: dict, prefix: str) -> dict:
 
 
 def prefix_block(block: dict, prefix: str) -> dict:
-    """Namespace a reVISit sequence block recursively."""
+    """Namespace traditional sequence blocks without changing Dynamic Blocks."""
     result = copy.deepcopy(block)
+    # Dynamic Blocks are leaves: they have functionPath/parameters, but no
+    # child components to namespace. Keeping them unchanged also preserves the
+    # runtime function's block identifier and parameters.
+    if "components" not in result:
+        return result
     if "id" in result:
         result["id"] = f"{prefix}{result['id']}"
     result["components"] = [
