@@ -1,1 +1,0 @@
-<img src="visual-proof-bipartite/assets/graphs/graph_003_noproof_property.png" alt="Bipartite graph without visual proof 3" style="display: block; max-width: min(100%, 720px); max-height: 58vh; margin: 0 auto; object-fit: contain;" />
