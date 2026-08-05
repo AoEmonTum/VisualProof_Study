@@ -15,7 +15,6 @@ type DynamicInput = {
 
 const CONDITIONS: Condition[] = ['proof_property', 'noproof_property', 'proof_noproperty', 'noproof_noproperty'];
 const SIZES: Size[] = ['small', 'medium', 'large'];
-const TRIALS_PER_BLOCK = 6;
 const BLOCKS_PER_PARTICIPANT = 3;
 
 function shuffle<T>(items: T[]): T[] {
@@ -40,11 +39,12 @@ function assignVisualizations(graphs: BaseGraph[]): Trial[] {
     if (sizeIndex === SIZES.length) return CONDITIONS.every((condition) => remainingExtras[condition] === 0);
     for (const [first, second] of candidatePairs) {
       const needed = Object.fromEntries(CONDITIONS.map((condition) => [condition, Number(first === condition) + Number(second === condition)])) as Record<Condition, number>;
-      if (CONDITIONS.some((condition) => needed[condition] > remainingExtras[condition])) continue;
-      CONDITIONS.forEach((condition) => { remainingExtras[condition] -= needed[condition]; });
-      extras[SIZES[sizeIndex]] = [first, second];
-      if (allocateExtras(sizeIndex + 1)) return true;
-      CONDITIONS.forEach((condition) => { remainingExtras[condition] += needed[condition]; });
+      if (!CONDITIONS.some((condition) => needed[condition] > remainingExtras[condition])) {
+        CONDITIONS.forEach((condition) => { remainingExtras[condition] -= needed[condition]; });
+        extras[SIZES[sizeIndex]] = [first, second];
+        if (allocateExtras(sizeIndex + 1)) return true;
+        CONDITIONS.forEach((condition) => { remainingExtras[condition] += needed[condition]; });
+      }
     }
     return false;
   }
@@ -88,12 +88,13 @@ function buildBlocks(trials: Trial[]): Trial[][] | null {
 function createPlan(parameters: DynamicParameters): TrialPlan {
   for (let attempt = 0; attempt < 100; attempt += 1) {
     const blocks = buildBlocks(assignVisualizations(parameters.graphs));
-    if (!blocks) continue;
-    const componentIds = blocks.flatMap((block) => block.flatMap((trial) => {
-      const trialId = `${parameters.listId}_${trial.source}_${trial.condition}`;
-      return [`verify_${trialId}`, `confidence_${trialId}`];
-    }));
-    return { componentIds, blocks };
+    if (blocks) {
+      const componentIds = blocks.flatMap((block) => block.flatMap((trial) => {
+        const trialId = `${parameters.listId}_${trial.source}_${trial.condition}`;
+        return [`verify_${trialId}`, `confidence_${trialId}`];
+      }));
+      return { componentIds, blocks };
+    }
   }
   throw new Error('Could not construct balanced graph-trial blocks');
 }
