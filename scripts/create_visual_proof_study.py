@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "visual-proof-cut-vertex"
+STUDY_ID = "cut-vertex-study"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:

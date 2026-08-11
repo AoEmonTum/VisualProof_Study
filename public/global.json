@@ -1,23 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "visual-proof-cut-vertex",
-    "visual-proof-hamiltonian-cycle",
-    "visual-proof-bipartite",
-    "visual-proof-certificates-for-graph-properties"
+    "bipartite-study",
+    "hamiltonian-cycle-study",
+    "cut-vertex-study",
+    "visual-proof-studies"
   ],
   "configs": {
-    "visual-proof-cut-vertex": {
-      "path": "visual-proof-cut-vertex/config.json"
+    "bipartite-study": {
+      "path": "bipartite-study/config.json"
     },
-    "visual-proof-hamiltonian-cycle": {
-      "path": "visual-proof-hamiltonian-cycle/config.json"
+    "hamiltonian-cycle-study": {
+      "path": "hamiltonian-cycle-study/config.json"
     },
-    "visual-proof-bipartite": {
-      "path": "visual-proof-bipartite/config.json"
+    "cut-vertex-study": {
+      "path": "cut-vertex-study/config.json"
     },
-    "visual-proof-certificates-for-graph-properties": {
-      "path": "visual-proof-certificates-for-graph-properties/config.json"
+    "visual-proof-studies": {
+      "path": "visual-proof-studies/components_config.json"
     }
   }
 }

@@ -42,7 +42,7 @@ function HomeRoute({ globalConfig }: { globalConfig: GlobalConfig }) {
           <Center h="calc(100dvh - 134px)">
             <Flex direction="column" align="center" gap="xl">
               <Image w={180} src={`${PREFIX}revisitAssets/revisitLogoSquare.svg`} alt="ReVISit Logo" />
-              <Button component="a" href={`${PREFIX}visual-proof-certificates-for-graph-properties`} size="md">
+              <Button component="a" href={`${PREFIX}visual-proof-studies`} size="md">
                 Go to Study
               </Button>
             </Flex>
