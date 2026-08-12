@@ -157,7 +157,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
         >
           {graphVisible ? (
             <img
-              src={`/${parameters.graphPath}`}
+              src={parameters.graphPath}
               alt={parameters.graphLabel}
               style={{
                 display: 'block',
