@@ -103,58 +103,51 @@
 
 <div class="study-shell">
   <div class="study-hero">
-    <div class="study-kicker">Hamiltonian Cycle</div>
-    <div class="study-title">The Hamiltonian Cycle Property</div>
+    <div class="study-kicker">Cut vertex</div>
+    <div class="study-title">The cut vertex property</div>
     <p class="study-lead">
-      A graph has a Hamiltonian cycle if there exists a cycle that visits every node exactly once and then returns to the starting node.
-      If a node is skipped, repeated, or the same link is used twice, the graph does not contain a Hamiltonian cycle.
+      A cut vertex is a node whose removal splits the graph into two or more connected components. A connected component is a group of nodes that are all connected to each other by paths of links.
     </p>
 
-<div class="study-grid">
+ <div class="study-grid">
       <div class="study-card">
-        <h3>What makes it Hamiltonian?</h3>
-        <ul>
-          <li>Every node appears exactly once in the cycle.</li>
-          <li>The cycle closes by returning to the starting node.</li>
-          <li>A link is used at most once.</li>
-        </ul>
+        <h3>What is a connected component?</h3>
+        <p>
+          It is a group of nodes that are all connected to each other by paths of links.
+        </p>
       </div>
-    <div class="study-card">
-        <h3>What makes it not Hamiltonian?</h3>
-        <ul>
-          <li>A node is left out of the cycle.</li>
-          <li>A node is visited more than once.</li>
-          <li>A link is used more than once.</li>
-        </ul>
+      <div class="study-card">
+        <h3>What makes a node a cut vertex?</h3>
+        <p>
+          If removing that node makes the graph split into separate parts, the node is a cut vertex.
+        </p>
       </div>
     </div>
 
-<div class="study-note">
-      The key idea is simple: follow one closed path that touches every node once and only once and use each link at most once.
+ <div class="study-note">
+      You can think of a cut vertex as a train station where all routes between two regions pass through. If the station closes, passengers can no longer travel between the regions.
     </div>
 
 <div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A Hamiltonian cycle</h3>
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A graph with a cut vertex.</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The highlighted cycle visits every node exactly once.
+        The highlighted node connects two parts of the graph that would otherwise be separate.
       </p>
-<img src="assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a Hamiltonian cycle">
+<img src="visual-proof-study-pilot-8/assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a graph with a cut vertex">
     </div>
 
 <div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A known example for a graph without a Hamiltonian cycle</h3>
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">After removing the highlighted node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        In this graph it is impossible to find a cycle that visits every node exactly once and returns to the starting node. So this graph does not contain a Hamiltonian cycle. (Try to find one yourself :)
+        The graph now has separate connected components. The graph is no longer connected, so the removed node was a cut vertex.
       </p>
-<img src="assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a cycle that skips a node">
+<img src="visual-proof-study-pilot-8/assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Graph after removing the splitting node">
     </div>
-
 <div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Looks like a Hamiltonian cycle but does not contain one</h3>
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing some other node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        Reusing a link means the cycle is not Hamiltonian. One node has only one link so to reach it you have to use it and then there is no way to leave it without using the same link twice. So this graph does not contain a Hamiltonian cycle.
+        The graph now still is connected. So this node was not a cut vertex.
       </p>
-<img src="assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a non-Hamiltonian cycle">
+<img src="visual-proof-study-pilot-8/assets/cut-vertex-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Graph after removing a random node">
     </div>
   </div>
-</div>

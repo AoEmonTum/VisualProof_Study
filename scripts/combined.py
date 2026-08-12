@@ -17,7 +17,7 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "visual-proof-study-pilot-7"
+STUDY_ID = "visual-proof-study-pilot-8"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
@@ -80,7 +80,7 @@ def load_section(section: str, source_study_id: str) -> tuple[dict, list]:
     for markdown_path in target_assets_dir.rglob("*.md"):
         markdown_path.write_text(
             markdown_path.read_text(encoding="utf-8").replace(
-                f"{source_study_id}/assets/", f"assets/{source_study_id}/"
+                f"{source_study_id}/assets/", f"{STUDY_ID}/assets/{source_study_id}/"
             ),
             encoding="utf-8",
         )

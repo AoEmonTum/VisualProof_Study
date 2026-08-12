@@ -23,21 +23,21 @@
   "components": {
     "consent": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-7/assets/consent.md",
+      "path": "visual-proof-study-pilot-8/assets/consent.md",
       "response": [],
       "nextButtonText": "I agree",
       "nextButtonLocation": "belowStimulus"
     },
     "intro": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-7/assets/intro.md",
+      "path": "visual-proof-study-pilot-8/assets/intro.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
     "outro": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-7/assets/outro.md",
+      "path": "visual-proof-study-pilot-8/assets/outro.md",
       "response": [],
       "nextButtonText": "Finish",
       "nextButtonLocation": "belowStimulus"

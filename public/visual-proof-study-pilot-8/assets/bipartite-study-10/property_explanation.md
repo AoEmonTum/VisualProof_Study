@@ -123,7 +123,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         Every link goes from one side to the other. There is no link that connects two nodes on the same side.
       </p>
-<img src="assets/bipartite-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a bipartite graph">
+<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a bipartite graph">
     </div>
 
 <div class="study-figure">
@@ -131,7 +131,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The graph can be colored with two colors so that no two linked nodes have the same color.
       </p>
-<img src="assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_property.png" alt="Example of a graph that is not bipartite">
+<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_property.png" alt="Example of a graph that is not bipartite">
     </div>
 
 <div class="study-figure">
@@ -139,7 +139,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The highlighted nodes and links form a loop with an odd number of nodes. Since bipartite graphs contain only even loops, this graph is not bipartite.
       </p>
-<img src="assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of an odd loop">
+<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of an odd loop">
     </div>
   </div>
 </div>
