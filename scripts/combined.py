@@ -22,9 +22,9 @@ STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite", "bipartite-study-4"),
-    ("hamiltonian", "hamiltonian-cycle-study-4"),
-    ("cut_vertex", "cut-vertex-study-4"),
+    ("bipartite-study-4", "bipartite-study-4"),
+    ("hamiltonian-cycle-study-4", "hamiltonian-cycle-study-4"),
+    ("cut-vertex-study-4", "cut-vertex-study-4"),
 )
 
 
