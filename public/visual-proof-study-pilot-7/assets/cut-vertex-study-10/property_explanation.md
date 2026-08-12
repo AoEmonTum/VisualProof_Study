@@ -1,94 +1,79 @@
-#!/usr/bin/env python3
-"""Create the counterbalanced cut-vertex study with a custom introduction."""
 
-from pathlib import Path
-
-from create_graph_property_study import StudySettings, create_study
-
-
-STUDY_ID = "cut-vertex-study-10"
-
-
-def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
-    """Write the cut-vertex-specific section introduction."""
-    img = tutorial["graph_001"]["images"]
-
-    markdown = f"""
 <style>
-.study-shell {{
+.study-shell {
     max-width: 1120px;
     margin: 0 auto;
     padding: 8px 20px 36px;
     color: #1f2937;
-}}
+}
 
-.study-hero {{
+.study-hero {
     padding: 28px 30px;
     border-radius: 24px;
     background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%);
     border: 1px solid #dce7f5;
     box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
-}}
+}
 
-.study-kicker {{
+.study-kicker {
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #3461d9;
-}}
+}
 
-.study-title {{
+.study-title {
     margin: 10px 0 10px;
     font-size: 34px;
     line-height: 1.1;
     font-weight: 750;
     color: #10213a;
-}}
+}
 
-.study-lead {{
+.study-lead {
     margin: 0;
     font-size: 17px;
     line-height: 1.8;
     color: #354255;
     max-width: 72ch;
-}}
+}
 
-.study-grid {{
+.study-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     margin-top: 22px;
-}}
+}
 
-.study-card {{
+.study-card {
     padding: 18px 20px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #dce7f5;
-}}
+}
 
-.study-card h3 {{
+.study-card h3 {
     margin: 0 0 8px;
     font-size: 18px;
     line-height: 1.3;
     color: #10213a;
-}}
+}
 
 .study-card p,
-.study-card li {{
+.study-card li {
     margin: 0;
     font-size: 15px;
     line-height: 1.75;
     color: #445469;
-}}
+}
 
-.study-card ul {{
+.study-card ul {
     margin: 0;
     padding-left: 18px;
-}}
+}
 
-.study-note {{
+.study-note {
     margin-top: 18px;
     padding: 16px 18px;
     border-radius: 16px;
@@ -97,23 +82,23 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
     font-size: 15px;
     line-height: 1.7;
     color: #344457;
-}}
+}
 
-.study-figure {{
+.study-figure {
     margin-top: 22px;
     padding: 18px 20px;
     border-radius: 20px;
     background: white;
     border: 1px solid #dce7f5;
-}}
+}
 
-.study-figure img {{
+.study-figure img {
     width: 100%;
     max-height: 280px;
     object-fit: contain;
     display: block;
     margin-top: 16px;
-}}
+}
 </style>
 
 <div class="study-shell">
@@ -148,7 +133,7 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The highlighted node connects two parts of the graph that would otherwise be separate.
       </p>
-<img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a graph with a cut vertex">
+<img src="assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a graph with a cut vertex">
     </div>
 
 <div class="study-figure">
@@ -156,34 +141,13 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The graph now has separate connected components. The graph is no longer connected, so the removed node was a cut vertex.
       </p>
-<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Graph after removing the splitting node">
+<img src="assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Graph after removing the splitting node">
     </div>
 <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing some other node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The graph now still is connected. So this node was not a cut vertex.
       </p>
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Graph after removing a random node">
+<img src="assets/cut-vertex-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Graph after removing a random node">
     </div>
   </div>
-"""
-    (assets_dir / "property_explanation.md").write_text(markdown, encoding="utf-8")
-
-
-if __name__ == "__main__":
-    create_study(
-        Path(__file__),
-        StudySettings(
-            study_id=STUDY_ID,
-            stimulus_folder="cut_vertex",
-            title="Cut Vertex",
-            property_name="cut vertex",
-            property_definition="A cut vertex is a node whose removal splits a connected component into two or more connected components.",
-            verification_prompt="Based on this visualization, does this graph have a cut vertex?",
-            response_prefix="canVerifyCutVertex",
-            yes_label="Yes",
-            no_label="No",
-            sidebar_explanation="A cut vertex is a node whose removal splits a connected component into two or more connected components.",
-            write_intro=write_intro,
-        ),
-    )

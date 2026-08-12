@@ -17,14 +17,14 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "visual-proof-study-pilot-6"
+STUDY_ID = "visual-proof-study-pilot-7"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite-study-9", "bipartite-study-9"),
-    ("hamiltonian-cycle-study-9", "hamiltonian-cycle-study-9"),
-    ("cut-vertex-study-9", "cut-vertex-study-9"),
+    ("bipartite-study-10", "bipartite-study-10"),
+    ("hamiltonian-cycle-study-10", "hamiltonian-cycle-study-10"),
+    ("cut-vertex-study-10", "cut-vertex-study-10"),
 )
 
 
@@ -52,7 +52,7 @@ def rewrite_asset_paths(value: object, source_study_id: str, section: str) -> ob
     """Point copied source-study assets at this combined study's assets."""
     if isinstance(value, str):
         return value.replace(
-            f"{source_study_id}/assets/", f"{STUDY_ID}/assets/{section}/"
+            f"{source_study_id}/assets/", f"assets/{section}/"
         )
     if isinstance(value, list):
         return [rewrite_asset_paths(item, source_study_id, section) for item in value]
