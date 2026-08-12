@@ -6,110 +6,175 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "hamiltonian-cycle-study"
+STUDY_ID = "hamiltonian-cycle-study-4"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
-    """Write the Hamiltonian-cycle-specific introduction; all other parts are shared."""
+    """Write the Hamiltonian-cycle-specific section introduction."""
     img = tutorial["graph_001"]["images"]
 
     markdown = f"""
-<b style="font-size: 22px; font-weight: 650;">Hamiltonian cycle</b>
-
 <style>
-.intro-content h3 {{ margin-top: 20px; font-size: 20px; font-weight: 650; }}
+.study-shell {{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8px 20px 36px;
+    color: #1f2937;
+}}
+
+.study-hero {{
+    padding: 28px 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%);
+    border: 1px solid #dce7f5;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+}}
+
+.study-kicker {{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #3461d9;
+}}
+
+.study-title {{
+    margin: 10px 0 10px;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 750;
+    color: #10213a;
+}}
+
+.study-lead {{
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #354255;
+    max-width: 72ch;
+}}
+
+.study-grid {{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}}
+
+.study-card {{
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dce7f5;
+}}
+
+.study-card h3 {{
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #10213a;
+}}
+
+.study-card p,
+.study-card li {{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #445469;
+}}
+
+.study-card ul {{
+    margin: 0;
+    padding-left: 18px;
+}}
+
+.study-note {{
+    margin-top: 18px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: #f5f8fc;
+    border-left: 4px solid #3461d9;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #344457;
+}}
+
+.study-figure {{
+    margin-top: 22px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #dce7f5;
+}}
+
+.study-figure img {{
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    display: block;
+    margin-top: 16px;
+}}
 </style>
 
-<div class="intro-content" style="max-width:1150px; margin-left: 20px; line-height:1.6;">
+<div class="study-shell">
+  <div class="study-hero">
+    <div class="study-kicker">Hamiltonian Cycle</div>
+    <div class="study-title">The Hamiltonian Cycle Property</div>
+    <p class="study-lead">
+      A graph has a Hamiltonian cycle if there exists a cycle that visits every node exactly once and then returns to the starting node.
+      If a node is skipped, repeated, or the same link is used twice, the graph does not contain a Hamiltonian cycle.
+    </p>
 
-<p style="font-size:18px;">
-A <b>Hamiltonian cycle</b> is a cycle that visits <b>every vertex exactly once</b> and returns to the starting vertex.
-</p>
+<div class="study-grid">
+      <div class="study-card">
+        <h3>What makes it Hamiltonian?</h3>
+        <ul>
+          <li>Every node appears exactly once in the cycle.</li>
+          <li>The cycle closes by returning to the starting node.</li>
+          <li>A link is used at most once.</li>
+        </ul>
+      </div>
+    <div class="study-card">
+        <h3>What makes it not Hamiltonian?</h3>
+        <ul>
+          <li>A node is left out of the cycle.</li>
+          <li>A node is visited more than once.</li>
+          <li>A link is used more than once.</li>
+        </ul>
+      </div>
+    </div>
 
-<p style="font-size:17px;">
-You can recognize a Hamiltonian cycle by the following properties:
-</p>
+<div class="study-note">
+      The key idea is simple: follow one closed path that touches every node once and only once and use each link at most once.
+    </div>
 
-<div style="font-size:17px;margin-bottom:35px;line-height:1.9;">
-- The cycle visits <b>every vertex exactly once</b> before returning to the starting vertex.<br>
-- If <b>even one vertex is missing</b>, it is <b>not</b> a Hamiltonian cycle.<br>
-- If a <b>vertex or edge is used more than once</b> (except returning to the starting vertex), it is <b>not</b> a Hamiltonian cycle.
-</div>
+<div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A Hamiltonian cycle</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
+        The highlighted cycle visits every node exactly once.
+      </p>
+<img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a Hamiltonian cycle">
+    </div>
 
-<hr style="margin:35px 0;">
+<div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A known example for a graph without a Hamiltonian cycle</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
+        In this graph it is impossible to find a cycle that visits every node exactly once and returns to the starting node. So this graph does not contain a Hamiltonian cycle. (Try to find one yourself :)
+      </p>
+<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Example of a cycle that skips a node">
+    </div>
 
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin-bottom:40px;">
-
-<div>
-
-<h3 style="margin-top:0;">Hamiltonian cycle</h3>
-
-<p>
-This graph contains a Hamiltonian cycle.
-The highlighted cycle visits every vertex exactly once before returning to the starting vertex.
-</p>
-
-</div>
-
-<div align="center">
-<img src="{study_id}/assets/graphs/{img["proof_property"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
-</div>
-
-</div>
-
-<hr>
-
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
-
-<div>
-
-<h3 style="margin-top:0;">Missing a vertex</h3>
-
-<p>
-The highlighted cycle does <b>not</b> visit every vertex.
-Since one vertex is missing, it is <b>not</b> a Hamiltonian cycle.
-</p>
-
-</div>
-
-<div align="center">
-<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
-</div>
-
-</div>
-
-<hr>
-
-<div style="display:grid;grid-template-columns:42% 58%;gap:35px;align-items:center;margin:40px 0;">
-
-<div>
-
-<h3 style="margin-top:0;">No Hamiltonian cycle</h3>
-
-<p>
-This graph does <b>not</b> contain a Hamiltonian cycle as one edge has to be used twice.
-</p>
-
-</div>
-
-<div align="center">
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}"
-style="width:100%;max-height:290px;object-fit:contain;">
-</div>
-
-</div>
-
-<hr>
-
-<p style="margin-top:40px;text-align:center;font-size:18px;">
-You will now complete a short practice sequence before the main study.
-</p>
-
+<div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Looks like a Hamiltonian cycle but does not contain one</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
+        Reusing a link means the cycle is not Hamiltonian. One node has only one link so to reach it you have to use it and then there is no way to leave it without using the same link twice. So this graph does not contain a Hamiltonian cycle.
+      </p>
+<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Example of a non-Hamiltonian cycle">
+    </div>
+  </div>
 </div>
 """
-    (assets_dir / "intro.md").write_text(markdown, encoding="utf-8")
+    (assets_dir / "property_explanation.md").write_text(markdown, encoding="utf-8")
 
 
 if __name__ == "__main__":
@@ -120,12 +185,12 @@ if __name__ == "__main__":
             stimulus_folder="hamiltonian",
             title="Visual Proof Hamiltonian Cycle",
             property_name="Hamiltonian cycle",
-            property_definition="A Hamiltonian cycle is a closed path that visits every vertex exactly once and returns to its starting vertex.",
-            verification_prompt="Based on this visualization, does this graph have a Hamiltonian cycle?",
+            property_definition="A Hamiltonian cycle is a closed path that visits every node exactly once and returns to its starting node.",
+            verification_prompt="Based on this visualization, does this graph contain a Hamiltonian cycle?",
             response_prefix="canVerifyHamiltonianCycle",
-            yes_label="Yes, this graph has a Hamiltonian cycle",
-            no_label="No, this graph does not have a Hamiltonian cycle",
-            sidebar_explanation="A Hamiltonian cycle is a cycle that visits every vertex exactly once and returns to the starting vertex.",
+            yes_label="Yes",
+            no_label="No",
+            sidebar_explanation="A Hamiltonian cycle is a cycle that visits every node exactly once and returns to the starting node.",
             write_intro=write_intro,
         ),
     )

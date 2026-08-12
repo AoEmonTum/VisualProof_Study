@@ -7,7 +7,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 import random
-from shutil import copy2
+from shutil import copy2, rmtree
 from typing import Callable
 
 RESPONSE_TIME_MS = 6_000
@@ -21,6 +21,7 @@ VISUALIZATIONS = (
     "proof_noproperty",
     "noproof_noproperty",
 )
+TRIAL_COMPONENT_PATH = "graph-property-study/assets/GraphTrial.tsx"
 
 @dataclass(frozen=True)
 class StudySettings:
@@ -54,9 +55,18 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
             return "small"
         if 34 <= vertices <= 66:
             return "medium"
-        if 64 <= vertices <= 100:
+        if 67 <= vertices <= 100:
             return "large"
-        raise ValueError(f"Graph with {vertices} vertices is outside the configured size ranges")
+        raise ValueError(f"Graph with {vertices} nodes is outside the configured size ranges")
+
+    def graph_duration_ms(vertices: int) -> int:
+        if 10 <= vertices <= 33:
+            return 6_000
+        if 34 <= vertices <= 66:
+            return 8_000
+        if 67 <= vertices <= 100:
+            return 11_000
+        raise ValueError(f"Graph with {vertices} nodes is outside the configured size ranges")
 
     def load_available_graphs() -> list[dict]:
         graphs = []
@@ -157,159 +167,169 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 
         return {"graph_001": {"source": "graph_001", "images": images}}
 
-    def create_intro(tutorial: dict[str, dict]) -> None:
-        settings.write_intro(assets_dir, settings.study_id, tutorial)
-        (assets_dir / "study_start.md").write_text(
-    f"""
-
+    def write_intro(tutorial: dict[str, dict]) -> None:
+        study_start_markdown = f"""
 <style>
-.info-title {{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 650;
+.study-shell {{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8px 20px 36px;
+    color: #1f2937;
 }}
 
-.code-line {{
-    display: inline;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    padding: 3px 6px;
-    line-height: 1.9;
-    font-size: 16px;
+.study-hero {{
+    padding: 28px 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%);
+    border: 1px solid #dce7f5;
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
+}}
+
+.study-kicker {{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #3461d9;
+}}
+
+.study-title {{
+    margin: 10px 0 10px;
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 750;
+    color: #10213a;
+}}
+
+.study-lead {{
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #354255;
+    max-width: 72ch;
+}}
+
+.study-stack {{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+}}
+
+.study-card {{
+    padding: 14px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dce7f5;
+}}
+
+.study-card h3 {{
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #10213a;
+}}
+
+.study-card p,
+.study-card li {{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #445469;
+}}
+
+.study-card ul {{
+    margin: 0;
+    padding-left: 18px;
+}}
+
+.study-note {{
+    margin-top: 18px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: #f5f8fc;
+    border-left: 4px solid #3461d9;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #344457;
 }}
 </style>
-<b style="font-size: 22px; font-weight: 650;">The {settings.property_name} part of the study begins now</b>
 
-<div style="max-width:1150px; margin-left: 20px;line-height:1.6;">
+<div class="study-shell">
+  <div class="study-hero">
+    <div class="study-kicker">Study Start</div>
+    <div class="study-title">The {settings.property_name} part of the study begins now</div>
+    <p class="study-lead">
+      In this part, you will decide whether each graph has the {settings.property_name} property. Please answer as quickly as possible while trying to be as accurate as you can.
+    </p>
 
-<div class="info-title">
-What will happen?
-</div>
+<div class="study-stack">
+      <div class="study-card">
+        <h3>What will happen?</h3>
+        <ul>
+          <li>You will be shown <strong>18 graphs</strong>, one after another.</li>
+          <li>For every graph, you will answer the same question by selecting <strong>Yes</strong> or <strong>No</strong>.</li>
+          <li>Please answer as quickly as possible while trying to be as accurate as you can.</li>
+        </ul>
+      </div>
 
-
-<div class="code-line">
-- You will be shown 18 graphs, one after another.<br>
-- For every graph, you will answer the same question by selecting Yes or No.<br>
-- Please answer as quickly as possible while trying to be as accurate as you can.
-</div>
-
-
-<div class="info-title">
-Time limit
-</div>
-
-<div class="code-line">
-- Each graph will be displayed for {RESPONSE_TIME_MS // 1000} seconds.<br>
-- After the graph disappears, you will still have time to answer the question.<br>
-- After answering, you will be asked how confident you are that your answer was correct.
-</div>
-
-
-<div class="info-title">
-Ready?
-</div>
-
-<div class="code-line">
-When you are ready, press Next to begin.
-</div>
-
-</div>
-""",
-    encoding="utf-8",
-)
-
-    sidebar_instruction = f'''## Reminder: {settings.property_name}
-
-{settings.sidebar_explanation}
-'''
-
-    def write_markdown_files(versions: list[list[dict]]) -> None:
-        for pattern in ("trial_*.md",):
-            for stale_file in assets_dir.glob(pattern):
-                stale_file.unlink()
-
-        def write_stimulus(trial: dict, filename: str, timed: bool) -> None:
-            timer = ""
-            image_animation = ""
-
-            if timed:
-                timer = f'''<div aria-label="Six-second response timer"
-        style="height: 8px; width: min(100%, 720px); margin: 12px auto 0;
-                background: #e9ecef; border-radius: 4px; overflow: hidden;">
-        <div style="height: 100%; width: 100%; background: #228be6;
-                    transform-origin: left;
-                    animation: visual-proof-countdown {RESPONSE_TIME_MS / 1000:g}s linear forwards;">
-        </div>
+<div class="study-card">
+        <h3>Time limit</h3>
+        <ul>
+          <li>Each graph will be displayed for <strong>6-11 seconds</strong> depending on its size.</li>
+          <li>After the graph disappears, but you will still be able to answer the question.</li>
+          <li>After answering, you will be asked how confident you are that your answer was correct.</li>
+        </ul>
+      </div>
     </div>
 
-<style>
-    @keyframes visual-proof-countdown {{
-        from {{ transform: scaleX(1); }}
-        to   {{ transform: scaleX(0); }}
-    }}
+<div class="study-note">
+      <strong>Ready?</strong><br>
+      When you are ready, press <strong>Next</strong> to begin.
+    </div>
+  </div>
+</div>
+"""
+        (assets_dir / "study_start.md").write_text(study_start_markdown, encoding="utf-8")
+        settings.write_intro(assets_dir, settings.study_id, tutorial)
 
-    @keyframes visual-proof-hide-graph {{
-        from {{ opacity: 1; }}
-        to   {{ opacity: 0; }}
-    }}
-    </style>
-    '''
-
-                image_animation = (
-                    f"animation: visual-proof-hide-graph 0s steps(1, end) "
-                    f"{RESPONSE_TIME_MS / 1000:g}s forwards;"
-                )
-
-            (assets_dir / filename).write_text(
-                f'''{timer}
-<img src="{settings.study_id}/assets/graphs/{trial["image"]}" alt="{settings.title} graph {trial["source"]}"
-    style="display: block;
-            max-width: min(100%, 800px);
-            max-height: 64vh;
-            margin: 12px auto 0;
-            object-fit: contain;
-        {image_animation}" />
-    ''',
-                encoding="utf-8",
-            )
-
-        for version in versions:
-            for group in version:
-                for trial in group:
-                    write_stimulus(trial, f'{trial["id"]}.md', timed=True)
-
-    def timing_options() -> dict:
-        return {"nextButtonAutoAdvanceTime": RESPONSE_TIME_MS, "nextButtonAutoAdvanceWarningTime": 0} if AUTO_ADVANCE_ON_TIMEOUT else {}
-
-    def verify_component(trial: dict, tutorial: bool) -> dict:
-        component = {
-            "type": "markdown", "path": f'{settings.study_id}/assets/{trial["id"]}.md', "nextButtonLocation": "belowStimulus",
-            "instruction": sidebar_instruction, "instructionLocation": "sidebar",
-            "response": [{"id": f'{settings.response_prefix}_{trial["id"]}', "prompt": settings.verification_prompt, "location": "belowStimulus", "type": "radio", "options": [{"label": settings.yes_label, "value": "yes"}, {"label": settings.no_label, "value": "no"}]}],
+    def trial_component(trial: dict, tutorial: bool) -> dict:
+        return {
+            "type": "react-component",
+            "path": TRIAL_COMPONENT_PATH,
+            "response": [],
+            "parameters": {
+                "componentName": trial["id"],
+                "trialId": trial["id"],
+                "propertyName": settings.property_name,
+                "propertyDefinition": settings.property_definition,
+                "verificationPrompt": settings.verification_prompt,
+                "yesLabel": settings.yes_label,
+                "noLabel": settings.no_label,
+                "graphPath": f'{settings.study_id}/assets/graphs/{trial["image"]}',
+                "graphLabel": f'{settings.title} graph {trial["source"]}',
+                "durationMs": graph_duration_ms(trial["vertices"]),
+                "nodeCount": trial["vertices"],
+                "graphSize": trial["size"],
+                "visualization": trial["condition"],
+                "sourceGraph": trial["source"],
+                "phase": "tutorial" if tutorial else "study",
+            },
             "meta": {
                 "condition": trial["condition"],
                 "sourceGraph": trial["source"],
                 "phase": "tutorial" if tutorial else "study",
             },
         }
-        if not tutorial:
-            component.update(timing_options())
-        return component
-
-    def confidence_component(trial: dict, tutorial: bool) -> dict:
-        return {"type": "questionnaire", "instruction": sidebar_instruction, "instructionLocation": "sidebar", "response": [{"id": f'confidence_{trial["id"]}', "prompt": "Rate your confidence on a scale of 1 to 5.", "location": "aboveStimulus", "type": "likert", "numItems": 5, "start": 1, "spacing": 1, "leftLabel": "Very low confidence", "rightLabel": "Very high confidence", "labelLocation": "inline"}], "meta": {
-                    "condition": trial["condition"],
-                    "sourceGraph": trial["source"],
-                    "phase": "tutorial" if tutorial else "study",
-                }}
-
-    def trial_block(trial: dict, components: dict, tutorial: bool) -> dict:
-        verify_id, confidence_id = f'verify_{trial["id"]}', f'confidence_{trial["id"]}'
-        components[verify_id] = verify_component(trial, tutorial)
-        components[confidence_id] = confidence_component(trial, tutorial)
-        return {"id": trial["id"], "order": "fixed", "components": [verify_id, confidence_id]}
 
     graphs_dir.mkdir(parents=True, exist_ok=True)
+    for stale_dir in (assets_dir, graphs_dir):
+        for stale_file in stale_dir.glob("trial_*.md"):
+            stale_file.unlink(missing_ok=True)
+        for stale_file in stale_dir.glob("version_*.md"):
+            stale_file.unlink(missing_ok=True)
+    for stale_file in (assets_dir / "property_explanation.md", assets_dir / "study_start.md"):
+        stale_file.unlink(missing_ok=True)
     # Remove generated practice-only assets from earlier versions of the studies.
     for stale_file in (
         *assets_dir.glob("tutorial_graph_002_*.md"),
@@ -317,17 +337,15 @@ When you are ready, press Next to begin.
         *graphs_dir.glob("tutorial_graph_002_*.png"),
         *graphs_dir.glob("tutorial_graph_003_*.png"),
         assets_dir / "tutorial_start.md",
-        assets_dir / "study_start.md",
     ):
         stale_file.unlink(missing_ok=True)
     available_graphs = load_available_graphs()
     versions = create_versions(available_graphs)
     copy_main_stimuli(versions)
     tutorial = copy_reference_stimuli()
-    create_intro(tutorial)
-    write_markdown_files(versions)
+    write_intro(tutorial)
     components: dict = {
-        "intro": {"type": "markdown", "path": f"{settings.study_id}/assets/intro.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
+        "property_explanation": {"type": "markdown", "path": f"{settings.study_id}/assets/property_explanation.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
         "study_start": {"type": "markdown", "path": f"{settings.study_id}/assets/study_start.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
     }
     version_blocks = []
@@ -337,13 +355,17 @@ When you are ready, press Next to begin.
             group_blocks.append({
                 "id": f"version_{version_index:02d}_group_{group_index}",
                 "order": "random",
-                "components": [trial_block(trial, components, False) for trial in group],
+                "components": [trial["id"] for trial in group],
             })
         version_blocks.append({
             "id": f"version_{version_index:02d}",
             "order": "random",
             "components": group_blocks,
         })
+    for version in versions:
+        for group in version:
+            for trial in group:
+                components[trial["id"]] = trial_component(trial, False)
     config = {
         "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
         "studyMetadata": {"title": settings.title, "version": "0.2.0", "authors": ["Visual Proof Study Team"], "date": "2026-07-28", "description": f"Counterbalanced {settings.property_name} graph verification study.", "organizations": ["Technische Universitat Munchen"]},
@@ -352,7 +374,7 @@ When you are ready, press Next to begin.
         "sequence": {
             "order": "fixed",
             "components": [
-                "intro",
+                "property_explanation",
                 "study_start",
                 {"id": "study_version", "order": "random", "numSamples": 1, "components": version_blocks},
             ],
