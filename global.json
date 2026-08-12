@@ -1,23 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "bipartite-study-9",
-    "hamiltonian-cycle-study-9",
-    "cut-vertex-study-9",
-    "visual-proof-study-pilot-6"
+    "bipartite-study-10",
+    "hamiltonian-cycle-study-10",
+    "cut-vertex-study-10",
+    "visual-proof-study-pilot-7"
   ],
   "configs": {
-    "bipartite-study-9": {
-      "path": "bipartite-study-9/config.json"
+    "bipartite-study-10": {
+      "path": "bipartite-study-10/config.json"
     },
-    "hamiltonian-cycle-study-9": {
-      "path": "hamiltonian-cycle-study-9/config.json"
+    "hamiltonian-cycle-study-10": {
+      "path": "hamiltonian-cycle-study-10/config.json"
     },
-    "cut-vertex-study-9": {
-      "path": "cut-vertex-study-9/config.json"
+    "cut-vertex-study-10": {
+      "path": "cut-vertex-study-10/config.json"
     },
-    "visual-proof-study-pilot-6": {
-      "path": "visual-proof-study-pilot-6/components_config.json"
+    "visual-proof-study-pilot-7": {
+      "path": "visual-proof-study-pilot-7/components_config.json"
     }
   }
 }
