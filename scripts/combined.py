@@ -17,14 +17,14 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "visual-proof-study-pilot-1"
+STUDY_ID = "visual-proof-study-pilot-2"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite-study-4", "bipartite-study-4"),
-    ("hamiltonian-cycle-study-4", "hamiltonian-cycle-study-4"),
-    ("cut-vertex-study-4", "cut-vertex-study-4"),
+    ("bipartite-study-5", "bipartite-study-5"),
+    ("hamiltonian-cycle-study-5", "hamiltonian-cycle-study-5"),
+    ("cut-vertex-study-5", "cut-vertex-study-5"),
 )
 
 
