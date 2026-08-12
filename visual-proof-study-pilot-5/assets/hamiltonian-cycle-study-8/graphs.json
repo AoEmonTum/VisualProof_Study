@@ -1,0 +1,1524 @@
+{
+  "versions": [
+    [
+      [
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_010_proof_property.png",
+          "id": "version_01_small_01"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_006_noproof_property.png",
+          "id": "version_01_small_06"
+        },
+        {
+          "source": "graph_002",
+          "vertices": 33,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_002_noproof_noproperty.png",
+          "id": "version_01_small_03"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_014_proof_noproperty.png",
+          "id": "version_01_medium_01"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_017_noproof_noproperty.png",
+          "id": "version_01_medium_02"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_019_noproof_property.png",
+          "id": "version_01_medium_05"
+        }
+      ],
+      [
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_008_proof_noproperty.png",
+          "id": "version_01_small_05"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_001_noproof_property.png",
+          "id": "version_01_small_02"
+        },
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_004_proof_property.png",
+          "id": "version_01_small_04"
+        },
+        {
+          "source": "graph_028",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_028_noproof_noproperty.png",
+          "id": "version_01_large_05"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_029_proof_noproperty.png",
+          "id": "version_01_large_03"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_021_proof_property.png",
+          "id": "version_01_large_01"
+        }
+      ],
+      [
+        {
+          "source": "graph_016",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_016_noproof_property.png",
+          "id": "version_01_medium_03"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_011_proof_property.png",
+          "id": "version_01_medium_06"
+        },
+        {
+          "source": "graph_012",
+          "vertices": 58,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_012_proof_property.png",
+          "id": "version_01_medium_04"
+        },
+        {
+          "source": "graph_022",
+          "vertices": 79,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_022_noproof_noproperty.png",
+          "id": "version_01_large_04"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_023_proof_noproperty.png",
+          "id": "version_01_large_06"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_025_noproof_property.png",
+          "id": "version_01_large_02"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_003",
+          "vertices": 25,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_003_proof_noproperty.png",
+          "id": "version_02_small_06"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_001_noproof_noproperty.png",
+          "id": "version_02_small_02"
+        },
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_010_proof_property.png",
+          "id": "version_02_small_03"
+        },
+        {
+          "source": "graph_012",
+          "vertices": 58,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_012_noproof_property.png",
+          "id": "version_02_medium_02"
+        },
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_015_proof_property.png",
+          "id": "version_02_medium_04"
+        },
+        {
+          "source": "graph_013",
+          "vertices": 39,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_013_proof_noproperty.png",
+          "id": "version_02_medium_03"
+        }
+      ],
+      [
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_005_noproof_property.png",
+          "id": "version_02_small_01"
+        },
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_004_noproof_noproperty.png",
+          "id": "version_02_small_05"
+        },
+        {
+          "source": "graph_002",
+          "vertices": 33,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_002_proof_property.png",
+          "id": "version_02_small_04"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_030_proof_property.png",
+          "id": "version_02_large_03"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_023_proof_noproperty.png",
+          "id": "version_02_large_06"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_024_noproof_property.png",
+          "id": "version_02_large_05"
+        }
+      ],
+      [
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_017_proof_noproperty.png",
+          "id": "version_02_medium_01"
+        },
+        {
+          "source": "graph_016",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_016_noproof_noproperty.png",
+          "id": "version_02_medium_05"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_020_noproof_property.png",
+          "id": "version_02_medium_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_027_noproof_property.png",
+          "id": "version_02_large_04"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_025_proof_property.png",
+          "id": "version_02_large_02"
+        },
+        {
+          "source": "graph_026",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_026_noproof_noproperty.png",
+          "id": "version_02_large_01"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_009",
+          "vertices": 12,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_009_proof_property.png",
+          "id": "version_03_small_04"
+        },
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_010_noproof_property.png",
+          "id": "version_03_small_02"
+        },
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_004_noproof_noproperty.png",
+          "id": "version_03_small_03"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_019_proof_noproperty.png",
+          "id": "version_03_medium_01"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_017_proof_noproperty.png",
+          "id": "version_03_medium_05"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_014_noproof_property.png",
+          "id": "version_03_medium_06"
+        }
+      ],
+      [
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_005_noproof_noproperty.png",
+          "id": "version_03_small_05"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_006_noproof_property.png",
+          "id": "version_03_small_01"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_001_proof_noproperty.png",
+          "id": "version_03_small_06"
+        },
+        {
+          "source": "graph_022",
+          "vertices": 79,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_022_proof_noproperty.png",
+          "id": "version_03_large_03"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_030_proof_property.png",
+          "id": "version_03_large_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_027_proof_property.png",
+          "id": "version_03_large_04"
+        }
+      ],
+      [
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_015_proof_property.png",
+          "id": "version_03_medium_02"
+        },
+        {
+          "source": "graph_012",
+          "vertices": 58,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_012_noproof_noproperty.png",
+          "id": "version_03_medium_04"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_020_noproof_property.png",
+          "id": "version_03_medium_03"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_021_proof_noproperty.png",
+          "id": "version_03_large_01"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_025_noproof_noproperty.png",
+          "id": "version_03_large_02"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_029_noproof_property.png",
+          "id": "version_03_large_05"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_004_proof_property.png",
+          "id": "version_04_small_02"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_001_proof_noproperty.png",
+          "id": "version_04_small_01"
+        },
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_008_noproof_noproperty.png",
+          "id": "version_04_small_04"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_011_proof_noproperty.png",
+          "id": "version_04_medium_03"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_014_proof_property.png",
+          "id": "version_04_medium_01"
+        },
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_015_noproof_property.png",
+          "id": "version_04_medium_06"
+        }
+      ],
+      [
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_005_noproof_noproperty.png",
+          "id": "version_04_small_05"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_006_noproof_property.png",
+          "id": "version_04_small_03"
+        },
+        {
+          "source": "graph_009",
+          "vertices": 12,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_009_proof_property.png",
+          "id": "version_04_small_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_027_noproof_property.png",
+          "id": "version_04_large_04"
+        },
+        {
+          "source": "graph_022",
+          "vertices": 79,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_022_proof_noproperty.png",
+          "id": "version_04_large_03"
+        },
+        {
+          "source": "graph_028",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_028_noproof_noproperty.png",
+          "id": "version_04_large_06"
+        }
+      ],
+      [
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_019_noproof_property.png",
+          "id": "version_04_medium_05"
+        },
+        {
+          "source": "graph_013",
+          "vertices": 39,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_013_proof_property.png",
+          "id": "version_04_medium_04"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_017_noproof_noproperty.png",
+          "id": "version_04_medium_02"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_021_proof_property.png",
+          "id": "version_04_large_05"
+        },
+        {
+          "source": "graph_026",
+          "vertices": 70,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_026_proof_noproperty.png",
+          "id": "version_04_large_02"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_025_noproof_noproperty.png",
+          "id": "version_04_large_01"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_004_proof_property.png",
+          "id": "version_05_small_04"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_001_noproof_property.png",
+          "id": "version_05_small_03"
+        },
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_010_proof_property.png",
+          "id": "version_05_small_06"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_020_noproof_property.png",
+          "id": "version_05_medium_06"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_017_noproof_noproperty.png",
+          "id": "version_05_medium_05"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_011_proof_noproperty.png",
+          "id": "version_05_medium_01"
+        }
+      ],
+      [
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_006_noproof_property.png",
+          "id": "version_05_small_02"
+        },
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_007_noproof_noproperty.png",
+          "id": "version_05_small_01"
+        },
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_005_proof_noproperty.png",
+          "id": "version_05_small_05"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_024_proof_noproperty.png",
+          "id": "version_05_large_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_027_noproof_noproperty.png",
+          "id": "version_05_large_01"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_023_proof_property.png",
+          "id": "version_05_large_05"
+        }
+      ],
+      [
+        {
+          "source": "graph_018",
+          "vertices": 54,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_018_proof_property.png",
+          "id": "version_05_medium_03"
+        },
+        {
+          "source": "graph_013",
+          "vertices": 39,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_013_noproof_property.png",
+          "id": "version_05_medium_02"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_019_noproof_noproperty.png",
+          "id": "version_05_medium_04"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_029_noproof_noproperty.png",
+          "id": "version_05_large_04"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_030_noproof_property.png",
+          "id": "version_05_large_03"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_021_proof_noproperty.png",
+          "id": "version_05_large_02"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_004_noproof_noproperty.png",
+          "id": "version_06_small_05"
+        },
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_010_noproof_property.png",
+          "id": "version_06_small_03"
+        },
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_007_noproof_property.png",
+          "id": "version_06_small_06"
+        },
+        {
+          "source": "graph_016",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_016_proof_noproperty.png",
+          "id": "version_06_medium_05"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_019_noproof_property.png",
+          "id": "version_06_medium_03"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_020_proof_property.png",
+          "id": "version_06_medium_01"
+        }
+      ],
+      [
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_005_proof_property.png",
+          "id": "version_06_small_02"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_001_proof_noproperty.png",
+          "id": "version_06_small_01"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_006_noproof_noproperty.png",
+          "id": "version_06_small_04"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_029_noproof_property.png",
+          "id": "version_06_large_04"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_021_proof_property.png",
+          "id": "version_06_large_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_027_proof_noproperty.png",
+          "id": "version_06_large_01"
+        }
+      ],
+      [
+        {
+          "source": "graph_018",
+          "vertices": 54,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_018_noproof_noproperty.png",
+          "id": "version_06_medium_02"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_017_proof_property.png",
+          "id": "version_06_medium_06"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_011_proof_noproperty.png",
+          "id": "version_06_medium_04"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_025_proof_property.png",
+          "id": "version_06_large_02"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_023_noproof_noproperty.png",
+          "id": "version_06_large_05"
+        },
+        {
+          "source": "graph_026",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_026_noproof_property.png",
+          "id": "version_06_large_03"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_007_proof_noproperty.png",
+          "id": "version_07_small_03"
+        },
+        {
+          "source": "graph_002",
+          "vertices": 33,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_002_proof_property.png",
+          "id": "version_07_small_04"
+        },
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_004_noproof_noproperty.png",
+          "id": "version_07_small_05"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_014_noproof_property.png",
+          "id": "version_07_medium_01"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_019_proof_property.png",
+          "id": "version_07_medium_04"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_017_proof_noproperty.png",
+          "id": "version_07_medium_02"
+        }
+      ],
+      [
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_005_noproof_property.png",
+          "id": "version_07_small_02"
+        },
+        {
+          "source": "graph_001",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_001_noproof_property.png",
+          "id": "version_07_small_01"
+        },
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_008_proof_noproperty.png",
+          "id": "version_07_small_06"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_029_proof_property.png",
+          "id": "version_07_large_03"
+        },
+        {
+          "source": "graph_026",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_026_noproof_property.png",
+          "id": "version_07_large_05"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_024_noproof_noproperty.png",
+          "id": "version_07_large_02"
+        }
+      ],
+      [
+        {
+          "source": "graph_018",
+          "vertices": 54,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_018_proof_property.png",
+          "id": "version_07_medium_03"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_011_noproof_noproperty.png",
+          "id": "version_07_medium_06"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_020_noproof_noproperty.png",
+          "id": "version_07_medium_05"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_021_noproof_property.png",
+          "id": "version_07_large_01"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_027_proof_noproperty.png",
+          "id": "version_07_large_06"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_025_noproof_noproperty.png",
+          "id": "version_07_large_04"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_010_proof_noproperty.png",
+          "id": "version_08_small_03"
+        },
+        {
+          "source": "graph_005",
+          "vertices": 11,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_005_proof_property.png",
+          "id": "version_08_small_02"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_006_noproof_property.png",
+          "id": "version_08_small_01"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_017_noproof_noproperty.png",
+          "id": "version_08_medium_02"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_019_noproof_property.png",
+          "id": "version_08_medium_05"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_014_proof_property.png",
+          "id": "version_08_medium_03"
+        }
+      ],
+      [
+        {
+          "source": "graph_009",
+          "vertices": 12,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_009_proof_noproperty.png",
+          "id": "version_08_small_06"
+        },
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_008_noproof_noproperty.png",
+          "id": "version_08_small_05"
+        },
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_007_proof_property.png",
+          "id": "version_08_small_04"
+        },
+        {
+          "source": "graph_021",
+          "vertices": 76,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_021_proof_noproperty.png",
+          "id": "version_08_large_01"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_023_proof_property.png",
+          "id": "version_08_large_05"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_024_noproof_property.png",
+          "id": "version_08_large_04"
+        }
+      ],
+      [
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_015_proof_noproperty.png",
+          "id": "version_08_medium_01"
+        },
+        {
+          "source": "graph_011",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_011_noproof_noproperty.png",
+          "id": "version_08_medium_06"
+        },
+        {
+          "source": "graph_013",
+          "vertices": 39,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_013_proof_noproperty.png",
+          "id": "version_08_medium_04"
+        },
+        {
+          "source": "graph_029",
+          "vertices": 67,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_029_noproof_noproperty.png",
+          "id": "version_08_large_06"
+        },
+        {
+          "source": "graph_022",
+          "vertices": 79,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_022_proof_property.png",
+          "id": "version_08_large_02"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_030_noproof_property.png",
+          "id": "version_08_large_03"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_003",
+          "vertices": 25,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_003_noproof_property.png",
+          "id": "version_09_small_01"
+        },
+        {
+          "source": "graph_002",
+          "vertices": 33,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_002_proof_property.png",
+          "id": "version_09_small_02"
+        },
+        {
+          "source": "graph_006",
+          "vertices": 26,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_006_proof_noproperty.png",
+          "id": "version_09_small_03"
+        },
+        {
+          "source": "graph_014",
+          "vertices": 63,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_014_noproof_noproperty.png",
+          "id": "version_09_medium_04"
+        },
+        {
+          "source": "graph_018",
+          "vertices": 54,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_018_proof_noproperty.png",
+          "id": "version_09_medium_02"
+        },
+        {
+          "source": "graph_020",
+          "vertices": 61,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_020_proof_noproperty.png",
+          "id": "version_09_medium_03"
+        }
+      ],
+      [
+        {
+          "source": "graph_009",
+          "vertices": 12,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_009_noproof_noproperty.png",
+          "id": "version_09_small_06"
+        },
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_007_noproof_property.png",
+          "id": "version_09_small_04"
+        },
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_008_proof_property.png",
+          "id": "version_09_small_05"
+        },
+        {
+          "source": "graph_023",
+          "vertices": 84,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_023_proof_property.png",
+          "id": "version_09_large_06"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_027_proof_property.png",
+          "id": "version_09_large_05"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_024_proof_noproperty.png",
+          "id": "version_09_large_04"
+        }
+      ],
+      [
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_015_noproof_noproperty.png",
+          "id": "version_09_medium_05"
+        },
+        {
+          "source": "graph_016",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_016_noproof_property.png",
+          "id": "version_09_medium_06"
+        },
+        {
+          "source": "graph_012",
+          "vertices": 58,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_012_proof_property.png",
+          "id": "version_09_medium_01"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_030_noproof_property.png",
+          "id": "version_09_large_02"
+        },
+        {
+          "source": "graph_028",
+          "vertices": 70,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_028_proof_noproperty.png",
+          "id": "version_09_large_03"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_025_noproof_noproperty.png",
+          "id": "version_09_large_01"
+        }
+      ]
+    ],
+    [
+      [
+        {
+          "source": "graph_008",
+          "vertices": 22,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_008_noproof_noproperty.png",
+          "id": "version_10_small_01"
+        },
+        {
+          "source": "graph_003",
+          "vertices": 25,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_003_proof_property.png",
+          "id": "version_10_small_05"
+        },
+        {
+          "source": "graph_007",
+          "vertices": 28,
+          "size": "small",
+          "condition": "proof_noproperty",
+          "image": "graph_007_proof_noproperty.png",
+          "id": "version_10_small_03"
+        },
+        {
+          "source": "graph_013",
+          "vertices": 39,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_013_noproof_property.png",
+          "id": "version_10_medium_06"
+        },
+        {
+          "source": "graph_015",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "noproof_property",
+          "image": "graph_015_noproof_property.png",
+          "id": "version_10_medium_02"
+        },
+        {
+          "source": "graph_017",
+          "vertices": 60,
+          "size": "medium",
+          "condition": "noproof_noproperty",
+          "image": "graph_017_noproof_noproperty.png",
+          "id": "version_10_medium_05"
+        }
+      ],
+      [
+        {
+          "source": "graph_004",
+          "vertices": 13,
+          "size": "small",
+          "condition": "noproof_property",
+          "image": "graph_004_noproof_property.png",
+          "id": "version_10_small_02"
+        },
+        {
+          "source": "graph_009",
+          "vertices": 12,
+          "size": "small",
+          "condition": "noproof_noproperty",
+          "image": "graph_009_noproof_noproperty.png",
+          "id": "version_10_small_04"
+        },
+        {
+          "source": "graph_010",
+          "vertices": 16,
+          "size": "small",
+          "condition": "proof_property",
+          "image": "graph_010_proof_property.png",
+          "id": "version_10_small_06"
+        },
+        {
+          "source": "graph_030",
+          "vertices": 71,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_030_proof_property.png",
+          "id": "version_10_large_06"
+        },
+        {
+          "source": "graph_024",
+          "vertices": 85,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_024_noproof_property.png",
+          "id": "version_10_large_05"
+        },
+        {
+          "source": "graph_022",
+          "vertices": 79,
+          "size": "large",
+          "condition": "proof_noproperty",
+          "image": "graph_022_proof_noproperty.png",
+          "id": "version_10_large_02"
+        }
+      ],
+      [
+        {
+          "source": "graph_016",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_property",
+          "image": "graph_016_proof_property.png",
+          "id": "version_10_medium_01"
+        },
+        {
+          "source": "graph_019",
+          "vertices": 42,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_019_proof_noproperty.png",
+          "id": "version_10_medium_04"
+        },
+        {
+          "source": "graph_018",
+          "vertices": 54,
+          "size": "medium",
+          "condition": "proof_noproperty",
+          "image": "graph_018_proof_noproperty.png",
+          "id": "version_10_medium_03"
+        },
+        {
+          "source": "graph_025",
+          "vertices": 83,
+          "size": "large",
+          "condition": "noproof_noproperty",
+          "image": "graph_025_noproof_noproperty.png",
+          "id": "version_10_large_04"
+        },
+        {
+          "source": "graph_026",
+          "vertices": 70,
+          "size": "large",
+          "condition": "noproof_property",
+          "image": "graph_026_noproof_property.png",
+          "id": "version_10_large_01"
+        },
+        {
+          "source": "graph_027",
+          "vertices": 86,
+          "size": "large",
+          "condition": "proof_property",
+          "image": "graph_027_proof_property.png",
+          "id": "version_10_large_03"
+        }
+      ]
+    ]
+  ]
+}
