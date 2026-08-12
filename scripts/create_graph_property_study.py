@@ -306,7 +306,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                 "verificationPrompt": settings.verification_prompt,
                 "yesLabel": settings.yes_label,
                 "noLabel": settings.no_label,
-                "graphPath": f'assets/graphs/{trial["image"]}',
+                "graphPath": f'{settings.study_id}/assets/graphs/{trial["image"]}',
                 "graphLabel": f'{settings.title} graph {trial["source"]}',
                 "durationMs": graph_duration_ms(trial["vertices"]),
                 "nodeCount": trial["vertices"],
