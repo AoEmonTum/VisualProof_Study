@@ -152,7 +152,7 @@
 <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">Looks like a Hamiltonian cycle but does not contain one</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        Reusing a link means the cycle is not Hamiltonian. One node has only one link so to reach it you have to use it and then there is no way to leave it without using the same link twice. So this graph does not contain a Hamiltonian cycle.
+        At first glance this graph may seem like it has a Hamiltionian cycle as all nodes but two can be connected using links only once. But for the hamiltonian cycle property every single node has to be included in the cycle and there is no way to include the two highlighted nodes without using a link twice. 
       </p>
 <img src="hamiltonian-cycle-study-10/assets/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a non-Hamiltonian cycle">
     </div>
