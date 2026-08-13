@@ -23,35 +23,35 @@
   "components": {
     "consent": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-8/assets/consent.md",
+      "path": "visual-proof-pilot-study/assets/consent.md",
       "response": [],
       "nextButtonText": "I agree",
       "nextButtonLocation": "belowStimulus"
     },
     "intro": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-8/assets/intro.md",
+      "path": "visual-proof-pilot-study/assets/intro.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
     "outro": {
       "type": "markdown",
-      "path": "visual-proof-study-pilot-8/assets/outro.md",
+      "path": "visual-proof-pilot-study/assets/outro.md",
       "response": [],
       "nextButtonText": "Finish",
       "nextButtonLocation": "belowStimulus"
     },
     "bipartite-study-10_property_explanation": {
       "type": "markdown",
-      "path": "assets/bipartite-study-10/property_explanation.md",
+      "path": "visual-proof-pilot-studyassets/bipartite-study-10/property_explanation.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
     "bipartite-study-10_study_start": {
       "type": "markdown",
-      "path": "assets/bipartite-study-10/study_start.md",
+      "path": "visual-proof-pilot-study/assets/bipartite-study-10/study_start.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
@@ -4918,14 +4918,14 @@
     },
     "hamiltonian-cycle-study-10_property_explanation": {
       "type": "markdown",
-      "path": "assets/hamiltonian-cycle-study-10/property_explanation.md",
+      "path": "visual-proof-pilot-study/assets/hamiltonian-cycle-study-10/property_explanation.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
     "hamiltonian-cycle-study-10_study_start": {
       "type": "markdown",
-      "path": "assets/hamiltonian-cycle-study-10/study_start.md",
+      "path": "visual-proof-pilot-study/assets/hamiltonian-cycle-study-10/study_start.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
@@ -9792,14 +9792,14 @@
     },
     "cut-vertex-study-10_property_explanation": {
       "type": "markdown",
-      "path": "assets/cut-vertex-study-10/property_explanation.md",
+      "path": "visual-proof-pilot-study/assets/cut-vertex-study-10/property_explanation.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
     },
     "cut-vertex-study-10_study_start": {
       "type": "markdown",
-      "path": "assets/cut-vertex-study-10/study_start.md",
+      "path": "visual-proof-pilot-study/assets/cut-vertex-study-10/study_start.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"

@@ -138,7 +138,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         The highlighted cycle visits every node exactly once.
       </p>
-<img src="visual-proof-study-pilot-8/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a Hamiltonian cycle">
+<img src="visual-proof-pilot-study/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a Hamiltonian cycle">
     </div>
 
 <div class="study-figure">
@@ -146,7 +146,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         In this graph it is impossible to find a cycle that visits every node exactly once and returns to the starting node. So this graph does not contain a Hamiltonian cycle. (Try to find one yourself :)
       </p>
-<img src="visual-proof-study-pilot-8/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a cycle that skips a node">
+<img src="visual-proof-pilot-study/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a cycle that skips a node">
     </div>
 
 <div class="study-figure">
@@ -154,7 +154,7 @@
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
         Reusing a link means the cycle is not Hamiltonian. One node has only one link so to reach it you have to use it and then there is no way to leave it without using the same link twice. So this graph does not contain a Hamiltonian cycle.
       </p>
-<img src="visual-proof-study-pilot-8/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a non-Hamiltonian cycle">
+<img src="visual-proof-pilot-study/assets/hamiltonian-cycle-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a non-Hamiltonian cycle">
     </div>
   </div>
 </div>

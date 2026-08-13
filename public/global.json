@@ -4,7 +4,7 @@
     "bipartite-study-10",
     "hamiltonian-cycle-study-10",
     "cut-vertex-study-10",
-    "visual-proof-study-pilot-8"
+    "visual-proof-pilot-study"
   ],
   "configs": {
     "bipartite-study-10": {
@@ -16,8 +16,8 @@
     "cut-vertex-study-10": {
       "path": "cut-vertex-study-10/config.json"
     },
-    "visual-proof-study-pilot-8": {
-      "path": "visual-proof-study-pilot-8/components_config.json"
+    "visual-proof-pilot-study": {
+      "path": "visual-proof-pilot-study/components_config.json"
     }
   }
 }

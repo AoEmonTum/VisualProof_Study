@@ -41,6 +41,7 @@
 
 .study-grid {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     margin-top: 22px;
 }
@@ -102,44 +103,51 @@
 
 <div class="study-shell">
   <div class="study-hero">
-    <div class="study-kicker">Bipartite</div>
-    <div class="study-title">The bipartite property</div>
+    <div class="study-kicker">Cut vertex</div>
+    <div class="study-title">The cut vertex property</div>
     <p class="study-lead">
-      A graph is bipartite if its nodes can be split into two groups so that every link goes from one group to the other and no links exist within the same group.
+      A cut vertex is a node whose removal splits the graph into two or more connected components. A connected component is a group of nodes that are all connected to each other by paths of links.
     </p>
-<div class="study-grid">
+
+ <div class="study-grid">
       <div class="study-card">
-        <h3>What makes a graph bipartite?</h3>
-        <ul>
-          <li>The nodes can be divided into two groups, without any links within a group.</li>
-          <li>You can color the nodes in such a way that adjacent nodes always have different colors.</li>
-          <li>All loops in the graph have an even number of nodes.</li>
-        </ul>
+        <h3>What is a connected component?</h3>
+        <p>
+          It is a group of nodes that are all connected to each other by paths of links.
+        </p>
+      </div>
+      <div class="study-card">
+        <h3>What makes a node a cut vertex?</h3>
+        <p>
+          If removing that node makes the graph split into separate parts, the node is a cut vertex.
+        </p>
       </div>
     </div>
 
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Dividing into two groups</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        Every link goes from one side to the other. There is no link that connects two nodes on the same side.
-      </p>
-<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a bipartite graph">
+ <div class="study-note">
+      You can think of a cut vertex as a train station where all routes between two regions pass through. If the station closes, passengers can no longer travel between the regions.
     </div>
 
 <div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Two-coloring</h3>
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A graph with a cut vertex.</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The graph can be colored with two colors so that no two linked nodes have the same color.
+        The highlighted node connects two parts of the graph that would otherwise be separate.
       </p>
-<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_property.png" alt="Example of a graph that is not bipartite">
+<img src="visual-proof-pilot-study/assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_property.png" alt="Example of a graph with a cut vertex">
     </div>
 
 <div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Odd loop</h3>
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">After removing the highlighted node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The highlighted nodes and links form a loop with an odd number of nodes. Since bipartite graphs contain only even loops, this graph is not bipartite.
+        The graph now has separate connected components. The graph is no longer connected, so the removed node was a cut vertex.
       </p>
-<img src="visual-proof-study-pilot-8/assets/bipartite-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of an odd loop">
+<img src="visual-proof-pilot-study/assets/cut-vertex-study-10/graphs/tutorial_graph_001_proof_noproperty.png" alt="Graph after removing the splitting node">
+    </div>
+<div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing some other node</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
+        The graph now still is connected. So this node was not a cut vertex.
+      </p>
+<img src="visual-proof-pilot-study/assets/cut-vertex-study-10/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Graph after removing a random node">
     </div>
   </div>
-</div>
