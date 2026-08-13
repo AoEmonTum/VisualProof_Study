@@ -44,7 +44,7 @@
     },
     "bipartite-study-10_property_explanation": {
       "type": "markdown",
-      "path": "visual-proof-pilot-studyassets/bipartite-study-10/property_explanation.md",
+      "path": "visual-proof-pilot-study/assets/bipartite-study-10/property_explanation.md",
       "response": [],
       "nextButtonText": "Next",
       "nextButtonLocation": "belowStimulus"
