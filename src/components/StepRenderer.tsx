@@ -58,9 +58,16 @@ export function StepRenderer() {
 
   const { developmentModeEnabled, dataCollectionEnabled } = useMemo(() => modes, [modes]);
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   // No default value for withSidebar since it's a required field in uiConfig
   const sidebarOpen = useMemo(() => (((analysisHasScreenRecording && analysisCanPlayScreenRecording) || currentComponent === 'end') ? false : (componentConfig.withSidebar ?? studyConfig.uiConfig.withSidebar)), [analysisHasScreenRecording, analysisCanPlayScreenRecording, currentComponent, componentConfig.withSidebar, studyConfig.uiConfig.withSidebar]);
-  const sidebarWidth = useMemo(() => componentConfig?.sidebarWidth ?? studyConfig.uiConfig.sidebarWidth ?? 300, [componentConfig, studyConfig]);
+  const sidebarWidth = windowWidth < 740 ? 0 : windowWidth * windowWidth * 0.0001;
   const showTitleBar = useMemo(() => componentConfig.showTitleBar ?? studyConfig.uiConfig.showTitleBar ?? true, [componentConfig, studyConfig]);
 
   const asideOpen = useMemo(() => developmentModeEnabled && showStudyBrowser, [developmentModeEnabled, showStudyBrowser]);

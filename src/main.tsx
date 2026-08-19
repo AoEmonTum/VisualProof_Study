@@ -9,8 +9,8 @@ import '@mantine/notifications/styles.css';
 import { GlobalConfigParser } from './GlobalConfigParser';
 
 const studyGreen = [
-  '#43A047', '#43A047', '#43A047', '#43A047', '#43A047',
-  '#43A047', '#43A047', '#43A047', '#43A047', '#43A047',
+  '#3b6fc2', '#3b6fc2', '#3b6fc2', '#3b6fc2', '#3b6fc2',
+  '#3b6fc2', '#3b6fc2', '#3b6fc2', '#3b6fc2', '#3b6fc2',
 ] as const;
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

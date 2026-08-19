@@ -110,7 +110,13 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
     setConfidenceTouched(true);
   };
 
-  const confidenceMarks = [1, 2, 3, 4, 5].map((value) => ({ value, label: `${value}` }));
+  const confidenceMarks = [
+    { value: 1, label: 'Very low confidence' },
+    { value: 2, label: '2' },
+    { value: 3, label: '3' },
+    { value: 4, label: '4' },
+    { value: 5, label: 'Very confident' },
+  ];
 
   return (
     <Stack gap="lg" w="100%">
@@ -220,12 +226,14 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
         </Group>
 
         <Collapse in={decision !== undefined}>
-          <Stack gap="sm" mt="xl">
+          <Stack gap="sm" mt="md">
             <Text fw={600} c="gray.8">
               How confident are you in your answer?
             </Text>
 
             <Slider
+              w = "90%"
+              mx = "auto"
               min={1}
               max={5}
               step={1}
@@ -235,6 +243,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
               label={null}
               styles={{
                 markLabel: { fontSize: 12 },
+                root: {marginBottom: 10},
               }}
             />
           </Stack>
