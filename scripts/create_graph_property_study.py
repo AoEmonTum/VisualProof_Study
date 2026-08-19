@@ -10,11 +10,10 @@ import random
 from shutil import copy2, rmtree
 from typing import Callable
 
-RESPONSE_TIME_MS = 6_000
 # Set to True before generation to automatically continue when the timer ends.
 AUTO_ADVANCE_ON_TIMEOUT = False
 NUM_STUDY_VERSIONS = 10
-GRAPHS_PER_SIZE = 6
+GRAPHS_PER_SIZE = 4
 VISUALIZATIONS = (
     "proof_property",
     "noproof_property",
@@ -80,7 +79,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         return graphs
 
     def create_versions(available_graphs: list[dict]) -> list[list[list[dict]]]:
-        """Create ten 18-trial plans with balanced stimuli and size blocks."""
+        """Create ten 12-trial plans with balanced stimuli and size blocks."""
         graphs_by_size = {
             size: [graph for graph in available_graphs if graph["size"] == size]
             for size in ("small", "medium", "large")
@@ -90,26 +89,14 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                 raise ValueError(
                     f"Need at least {GRAPHS_PER_SIZE} {size} graphs, found {len(graphs)}"
                 )
-
-        def extra_visualizations() -> list[list[str]]:
-            # Every size gets all four visualizations once. The two additional
-            # visualizations per size yield a total distribution of 4, 4, 5, 5.
-            repeated = random.sample(VISUALIZATIONS, 2)
-            extras = [*VISUALIZATIONS, *repeated]
-            while True:
-                random.shuffle(extras)
-                pairs = [extras[index:index + 2] for index in range(0, len(extras), 2)]
-                if all(pair[0] != pair[1] for pair in pairs):
-                    return pairs
-
         versions = []
         for version_index in range(1, NUM_STUDY_VERSIONS + 1):
             size_order = ["small", "medium", "large"]
             random.shuffle(size_order)
             trials_by_size = {}
-            for size, extras in zip(size_order, extra_visualizations()):
+            for size in size_order:
                 selected = random.sample(graphs_by_size[size], GRAPHS_PER_SIZE)
-                conditions = [*VISUALIZATIONS, *extras]
+                conditions = list(VISUALIZATIONS)
                 random.shuffle(conditions)
                 trials = []
                 for trial_index, (graph, condition) in enumerate(zip(selected, conditions), start=1):
@@ -121,20 +108,26 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                     })
                 trials_by_size[size] = trials
 
-            # Each size occurs in two of the three groups. Thus every group
-            # contains exactly two sizes and six graphs (three of each size).
             for _ in range(10_000):
                 groups = [[], [], []]
-                for size, group_indices in (("small", (0, 1)), ("medium", (0, 2)), ("large", (1, 2))):
+
+                for size in ("small", "medium", "large"):
                     trials = list(trials_by_size[size])
                     random.shuffle(trials)
-                    groups[group_indices[0]].extend(trials[:3])
-                    groups[group_indices[1]].extend(trials[3:])
-                if all({trial["condition"] for trial in group} == set(VISUALIZATIONS) for group in groups):
+
+                    groups[0].append(trials[0])
+                    groups[1].append(trials[1])
+                    groups[2].append(trials[2])
+                    groups[random.randrange(3)].append(trials[3])
+
+                if all(
+                    {trial["condition"] for trial in group} == set(VISUALIZATIONS)
+                    for group in groups
+                ):
                     versions.append(groups)
                     break
             else:
-                raise RuntimeError("Could not construct groups with all visualizations")
+                raise RuntimeError("Could not construct balanced groups")
         return versions
 
     def copy_main_stimuli(versions: list[list[list[dict]]]) -> None:
@@ -170,89 +163,27 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
     def write_intro(tutorial: dict[str, dict]) -> None:
         study_start_markdown = f"""
 <style>
-.study-shell {{
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 8px 20px 36px;
-    color: #1f2937;
-}}
+.study-shell {{ max-width: 1120px; margin: 0 auto; padding: 8px 20px 36px; color: #1f2937;}}
 
-.study-hero {{
-    padding: 28px 30px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%);
-    border: 1px solid #dce7f5;
-    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);
-}}
+.study-hero {{ padding: 28px 30px; border-radius: 24px; background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%); border: 1px solid #dce7f5; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);}}
 
-.study-kicker {{
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #3461d9;
-}}
+.study-kicker {{ font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3461d9;}}
 
-.study-title {{
-    margin: 10px 0 10px;
-    font-size: 34px;
-    line-height: 1.1;
-    font-weight: 750;
-    color: #10213a;
-}}
+.study-title {{ margin: 10px 0 10px; font-size: 34px; line-height: 1.1; font-weight: 750; color: #10213a;}}
 
-.study-lead {{
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.8;
-    color: #354255;
-    max-width: 72ch;
-}}
+.study-lead {{ margin: 0; font-size: 17px; line-height: 1.8; color: #354255; max-width: 72ch;}}
 
-.study-stack {{
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-    margin-top: 22px;
-}}
+.study-stack {{ display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 22px;}}
 
-.study-card {{
-    padding: 14px 16px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #dce7f5;
-}}
+.study-card {{ padding: 14px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.9); border: 1px solid #dce7f5;}}
 
-.study-card h3 {{
-    margin: 0 0 8px;
-    font-size: 18px;
-    line-height: 1.3;
-    color: #10213a;
-}}
+.study-card h3 {{ margin: 0 0 8px; font-size: 18px; line-height: 1.3; color: #10213a;}}
 
-.study-card p,
-.study-card li {{
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.75;
-    color: #445469;
-}}
+.study-card p, .study-card li {{ margin: 0; font-size: 15px; line-height: 1.75; color: #445469;}}
 
-.study-card ul {{
-    margin: 0;
-    padding-left: 18px;
-}}
+.study-card ul {{ margin: 0; padding-left: 18px;}}
 
-.study-note {{
-    margin-top: 18px;
-    padding: 16px 18px;
-    border-radius: 16px;
-    background: #f5f8fc;
-    border-left: 4px solid #3461d9;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #344457;
-}}
+.study-note {{ margin-top: 18px; padding: 16px 18px; border-radius: 16px; background: #f5f8fc; border-left: 4px solid #3461d9; font-size: 15px; line-height: 1.7; color: #344457;}}
 </style>
 
 <div class="study-shell">
@@ -260,14 +191,14 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
     <div class="study-kicker">Study Start</div>
     <div class="study-title">The {settings.property_name} part of the study begins now</div>
     <p class="study-lead">
-      In this part, you will decide whether each graph has the {settings.property_name} property. Please answer as quickly as possible while trying to be as accurate as you can.
+      In this part, you will decide whether each graph has the {settings.property_name} property. 
     </p>
 
 <div class="study-stack">
       <div class="study-card">
         <h3>What will happen?</h3>
         <ul>
-          <li>You will be shown <strong>18 graphs</strong>, one after another.</li>
+          <li>You will be shown <strong>12 graphs</strong>, one after another.</li>
           <li>For every graph, you will answer the same question by selecting <strong>Yes</strong> or <strong>No</strong>.</li>
           <li>Please answer as quickly as possible while trying to be as accurate as you can.</li>
         </ul>
@@ -279,6 +210,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
           <li>Each graph will be displayed for <strong>6-11 seconds</strong> depending on its size.</li>
           <li>After the graph disappears, but you will still be able to answer the question.</li>
           <li>After answering, you will be asked how confident you are that your answer was correct.</li>
+          <li>The time limit is designed to have a quick look at each graph and prevent excessive analysis of the graph.</li>
         </ul>
       </div>
     </div>
