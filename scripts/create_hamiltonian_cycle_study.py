@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "hamiltonian-cycle-comp"
+STUDY_ID = "hamiltonian-cycle-compo"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
