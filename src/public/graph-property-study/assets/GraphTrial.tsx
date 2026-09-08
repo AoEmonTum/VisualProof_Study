@@ -45,6 +45,7 @@ function findStoredAnswer(answers: StimulusParams<GraphTrialParameters>['answers
 }
 
 export default function GraphTrial({ parameters, setAnswer, answers }: StimulusParams<GraphTrialParameters>) {
+  const graphUrl = `${import.meta.env.BASE_URL}${parameters.graphPath}`;
   const storedAnswer = useMemo(
     () => findStoredAnswer(answers, parameters.componentName),
     [answers, parameters.componentName],
@@ -170,7 +171,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
         >
           {graphVisible ? (
             <img
-              src={parameters.graphPath}
+              src={graphUrl}
               alt={parameters.graphLabel}
               style={{
                 display: 'block',
