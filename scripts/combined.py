@@ -17,7 +17,7 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "VisualProof_study_prolific"
+STUDY_ID = "VisualProof_study_public"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
