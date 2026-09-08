@@ -17,14 +17,14 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "VisualProof_Study"
+STUDY_ID = "VisualProof_study_prolific"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite-part", "bipartite-part"),
-    ("hamiltonian-cycle-part", "hamiltonian-cycle-part"),
-    ("cut-vertex-part", "cut-vertex-part"),
+    ("bipartite", "bipartite"),
+    ("hamiltonian-cycle", "hamiltonian-cycle"),
+    ("cut-vertex", "cut-vertex"),
 )
 
 
@@ -52,6 +52,8 @@ def rewrite_asset_paths(value: object, source_study_id: str, section: str) -> ob
     """Point copied source-study assets at this combined study's assets."""
     if isinstance(value, str):
         return value.replace(
+            f"/{source_study_id}/assets/", f"/{STUDY_ID}/assets/{section}/"
+        ).replace(
             f"{source_study_id}/assets/", f"assets/{section}/"
         )
     if isinstance(value, list):
@@ -80,6 +82,8 @@ def load_section(section: str, source_study_id: str) -> tuple[dict, list]:
     for markdown_path in target_assets_dir.rglob("*.md"):
         markdown_path.write_text(
             markdown_path.read_text(encoding="utf-8").replace(
+                f"/{source_study_id}/assets/", f"/{STUDY_ID}/assets/{source_study_id}/"
+            ).replace(
                 f"{source_study_id}/assets/", f"{STUDY_ID}/assets/{source_study_id}/"
             ),
             encoding="utf-8",
@@ -203,43 +207,41 @@ def write_intro_and_outro() -> None:
   <div class="study-hero">
     <div class="study-kicker">Consent</div>
     <div class="study-title">Before we begin</div>
-    <p class="study-lead">
-      Please read the information below carefully. If you continue with the study, this will count as your informed consent.
-    </p>
-
-<div class="study-stack">
+    <p class="study-lead">This voluntary study is conducted by the Visualization Research Lab at the Technical University of Munich. Please read the information below carefully before deciding whether you would like to participate.</p>
+    <div class="study-stack">
       <div class="study-card">
         <h3>Purpose</h3>
-        <p>
-          The purpose of this study is to learn how people understand graph drawings and recognize graph properties in visualizations.
-        </p>
+        <p>The purpose of this study is to learn how people understand different visual representations of networks and recognize certain properties in them.</p>
       </div>
       <div class="study-card">
         <h3>What you will do</h3>
-        <p>
-          You will look at graph drawings, answer a short yes-or-no question for each one, and then rate how confident you are.
-        </p>
+        <p>You will look at visual representations of networks, answer a short yes-or-no question for each one, and then rate how confident you are in your answer.</p>
+        <p>To ensure that the visualizations can be viewed properly, please complete the study on a desktop, laptop computer or tablet rather than on a phone.</p>
       </div>
       <div class="study-card">
         <h3>Duration</h3>
-        <p>
-          The study takes about 10 to 15 minutes.
-        </p>
+        <p>The study takes about 10 to 15 minutes.</p>
       </div>
       <div class="study-card">
         <h3>Data collected</h3>
         <ul>
           <li>Your answers</li>
           <li>Your response times</li>
+          <li>Your confidence ratings</li>
         </ul>
       </div>
-    </div>
-
-<div class="study-note">
-      Participation is voluntary. You may stop at any time. Continuing to the next page means that you agree to take part in the study.
+      <div class="study-card">
+        <h3>Risks and participation</h3>
+        <p>No harm or distress is expected as a result of participating in this study. Participation is entirely voluntary, and you may stop participating at any time without giving a reason.</p>
+      </div>
+      <div class="study-card">
+        <h3>Questions or concerns</h3>
+        <p>If you have any questions or concerns about the study, please contact Maximiliano Macanas at max.macanas@tum.de .</p>
+      </div>
     </div>
   </div>
 </div>
+
 """
     (ASSETS_DIR / "consent.md").write_text(consent_markdown, encoding="utf-8")
 
@@ -325,28 +327,36 @@ def write_intro_and_outro() -> None:
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
         Here we can see a group of seven people visualized on a white plane and positioned randomly. Their friendships are represented by lines connecting them. It's easy to see that Lara and Ben are friends as well as that Ida and Mia are not. But what about other properties of this group of people? Is there a person that connects these people, that without them, the group would be split into two? This is a much harder question to answer by just looking at the graph. The freedom to position the people in the space is a challenge, as different arrangements can make certain properties of the group easier or harder to recognize.
       </p>
-    </div>
-
+</div>
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The same group arranged differently</h3>
       <img src="{STUDY_ID}/assets/socialNetwork/2.png" alt="Organized social network graph">
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        By arranging the same people differently, it can become easier to answer questions about certain properties of the group. For example, it is now easier to see that without Zoë, the group would be split into two. So there is a person that connects the two groups of friends.
+        By arranging the same people differently, it can become easier to answer questions about certain properties of the group. For example, it is now easier to see that without Zoë, the group would be split into two. So there is a person that connects the two groups of friends (Sam and Mia as one group and Ben, Lara, Ida and Tom as the other).
       </p>
-    </div>
+</div>
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The graphs in computer science</h3>
+      <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 16px;">
+      <img src="{STUDY_ID}/assets/socialNetwork/2.png" alt="Organized social network graph">
       <img src="{STUDY_ID}/assets/socialNetwork/3.png" alt="Abstract social network graph">
+      </div>
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        If we now strip away the visual details such as the names of the people, and we depict a person as a node, we can see that the graph is now an abstract representation of the social network. This is how graphs are used in computer science: they are abstract representations of relationships between objects. The objects are represented by nodes and the relationships by links.
+        If we now strip away the visual details such as the names of the people, and we depict a person as a disk which we call node, we can see that the graph is now an abstract representation of the social network. This is how graphs are used in computer science: they are abstract representations of relationships between objects. The objects are represented by nodes and the relationships by lines/links between these nodes.
       </p>
-    </div>
+</div>
+<div class="study-example">
+  <h3>Terminology: Paths and Cycles</h3>
+  <p>A path is a way of getting from one node to another by following links. In our example, if Sam is friends with Zoë, Zoë is friends with Tom and Tom is friends with Ida, you can get from Sam to Ida through Zoë and Tom. This sequence of connections is a path. So there is a path from Sam to Ida.</p>
+  <p>A cycle is a path that starts and ends at the same node. In our example, Sam is friends with Zoë, Zoë is friends with Mia and Mia is friends with Sam. We have a cycle.</p>
+</div>
+
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The study</h3>
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        In this study we will be focusing on three properties of graphs: bipartiteness, Hamiltonian cycles, and cut vertices. We will introduce and explain each property and then you will be asked to answer questions about graphs that either have or do not have the property. 
+        In this study we will be focusing on three properties of graphs. We will introduce and explain each property and then you will be asked to answer questions about graphs that either have or do not have the property. 
       </p>
-    </div>
+</div>
 <div class="study-note">
         Let's start with the first property! Click on "Next" to continue.
     </div>
@@ -357,12 +367,16 @@ def write_intro_and_outro() -> None:
     (ASSETS_DIR / "intro.md").write_text(intro_markdown, encoding="utf-8")
 
     (ASSETS_DIR / "outro.md").write_text(
-        """# Thank you!
+    """# Thank you!
 
 Thank you for completing the study. Your contribution is greatly appreciated.
+
+Before finishing, we would like to ask a few optional questions about your background and your experience with the study. Your answers will help us interpret the results and improve the study.
+
+If you are interested in the results of the study, you can optionally leave your email address below. We will contact you when the results are available.
 """,
-        encoding="utf-8",
-    )
+    encoding="utf-8",
+)
 
 
 def main() -> None:
@@ -392,7 +406,74 @@ def main() -> None:
         "outro": {
             "type": "markdown",
             "path": f"{STUDY_ID}/assets/outro.md",
-            "response": [],
+            "response": [
+                {
+                    "id": "age",
+                    "prompt": "What is your age? (optional)",
+                    "type": "radio",
+                    "options": [
+                        "Under 18 years", "18-30 years", "30-60 years", "+60 years",
+                    ],
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "education",
+                    "prompt": "What is the highest degree or level of education you have completed? (optional)",
+                    "type": "radio",
+                    "withOther": True,
+                    "options": [
+                        "Less than high school", "High school diploma or equivalent",
+                        "Bachelor's degree or equivalent", "Master's degree or equivalent",
+                        "Doctoral degree or equivalent",
+                    ],
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "advanced_knowledge",
+                    "prompt": "Did you know about graphs in advance? (optional)",
+                    "type": "longText",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "difficulties",
+                    "prompt": "What, if anything, did you find difficult during the study? (optional)",
+                    "type": "longText",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "decision_strategy",
+                    "prompt": "How did you decide whether a graph had the requested property? (optional)",
+                    "type": "longText",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "unclear_aspects",
+                    "prompt": "Was anything in the study unclear? If so, please describe it. (optional)",
+                    "type": "longText",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "additional_feedback",
+                    "prompt": "Do you have any additional feedback? (optional)",
+                    "type": "longText",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
+                    "id": "email",
+                    "prompt": "Email address (optional)",
+                    "type": "shortText",
+                    "placeholder": "your@email.com",
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+            ],
             "nextButtonText": "Finish",
             "nextButtonLocation": "belowStimulus",
         },

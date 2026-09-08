@@ -76,32 +76,40 @@
 
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">Our social network example</h3>
-      <img src="VisualProof_Study/assets/socialNetwork/1.png" alt="Social network graph">
+      <img src="VisualProof_study/assets/socialNetwork/1.png" alt="Social network graph">
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
         Here we can see a group of seven people visualized on a white plane and positioned randomly. Their friendships are represented by lines connecting them. It's easy to see that Lara and Ben are friends as well as that Ida and Mia are not. But what about other properties of this group of people? Is there a person that connects these people, that without them, the group would be split into two? This is a much harder question to answer by just looking at the graph. The freedom to position the people in the space is a challenge, as different arrangements can make certain properties of the group easier or harder to recognize.
       </p>
-    </div>
-
+</div>
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The same group arranged differently</h3>
-      <img src="VisualProof_Study/assets/socialNetwork/2.png" alt="Organized social network graph">
+      <img src="VisualProof_study/assets/socialNetwork/2.png" alt="Organized social network graph">
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        By arranging the same people differently, it can become easier to answer questions about certain properties of the group. For example, it is now easier to see that without Zoë, the group would be split into two. So there is a person that connects the two groups of friends.
+        By arranging the same people differently, it can become easier to answer questions about certain properties of the group. For example, it is now easier to see that without Zoë, the group would be split into two. So there is a person that connects the two groups of friends (Sam and Mia as one group and Ben, Lara, Ida and Tom as the other).
       </p>
-    </div>
+</div>
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The graphs in computer science</h3>
-      <img src="VisualProof_Study/assets/socialNetwork/3.png" alt="Abstract social network graph">
+      <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 16px;">
+      <img src="VisualProof_study/assets/socialNetwork/2.png" alt="Organized social network graph">
+      <img src="VisualProof_study/assets/socialNetwork/3.png" alt="Abstract social network graph">
+      </div>
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        If we now strip away the visual details such as the names of the people, and we depict a person as a node, we can see that the graph is now an abstract representation of the social network. This is how graphs are used in computer science: they are abstract representations of relationships between objects. The objects are represented by nodes and the relationships by links.
+        If we now strip away the visual details such as the names of the people, and we depict a person as a disk which we call node, we can see that the graph is now an abstract representation of the social network. This is how graphs are used in computer science: they are abstract representations of relationships between objects. The objects are represented by nodes and the relationships by lines/links between these nodes.
       </p>
-    </div>
+</div>
+<div class="study-example">
+  <h3>Terminology: Paths and Cycles</h3>
+  <p>A path is a way of getting from one node to another by following links. In our example, if Sam is friends with Zoë, Zoë is friends with Tom and Tom is friends with Ida, you can get from Sam to Ida through Zoë and Tom. This sequence of connections is a path. So there is a path from Sam to Ida.</p>
+  <p>A cycle is a path that starts and ends at the same node. In our example, Sam is friends with Zoë, Zoë is friends with Mia and Mia is friends with Sam. We have a cycle.</p>
+</div>
+
 <div class="study-example">
       <h3 style="margin:0;font-size:18px;color:#10213a;">The study</h3>
       <p style="margin:12px 0 0;font-size:15px;line-height:1.75;color:#445469;">
-        In this study we will be focusing on three properties of graphs: bipartiteness, Hamiltonian cycles, and cut vertices. We will introduce and explain each property and then you will be asked to answer questions about graphs that either have or do not have the property. 
+        In this study we will be focusing on three properties of graphs. We will introduce and explain each property and then you will be asked to answer questions about graphs that either have or do not have the property. 
       </p>
-    </div>
+</div>
 <div class="study-note">
         Let's start with the first property! Click on "Next" to continue.
     </div>

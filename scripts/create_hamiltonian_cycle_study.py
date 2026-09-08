@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "hamiltonian-cycle-part"
+STUDY_ID = "hamiltonian-cycle"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -118,58 +118,28 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
 
 <div class="study-shell">
   <div class="study-hero">
-    <div class="study-kicker">Hamiltonian Cycle</div>
-    <div class="study-title">The Hamiltonian Cycle Property</div>
-    <p class="study-lead">
-      A graph has a Hamiltonian cycle if there exists a cycle that visits every node exactly once and then returns to the starting node.
-      If a node is skipped, repeated, or the same link is used twice, the graph does not contain a Hamiltonian cycle.
-    </p>
-
-<div class="study-grid">
-      <div class="study-card">
-        <h3>What makes it Hamiltonian?</h3>
-        <ul>
-          <li>Every node appears exactly once in the cycle.</li>
-          <li>The cycle closes by returning to the starting node.</li>
-          <li>A link is used at most once.</li>
-        </ul>
-      </div>
-    <div class="study-card">
-        <h3>What makes it not Hamiltonian?</h3>
-        <ul>
-          <li>A node is left out of the cycle.</li>
-          <li>A node is visited more than once.</li>
-          <li>A link is used more than once.</li>
-        </ul>
-      </div>
+    <div class="study-kicker">Hamiltonian cycle</div>
+    <div class="study-title">The Hamiltonian property</div>
+    <p class="study-lead">Think of planning a tour through several cities. You want to start in one city, visit every other city exactly once, and finally return to where you started. The connections between the cities represent the links of a network, and the cities represent its nodes.</p>
+    <div class="study-card" style="margin-top: 24px;">
+      <h3>Cycles and Hamiltonian cycles</h3>
+      <p>A cycle is a path through nodes (in our example the cities) that starts and ends at the same node. If we continue with our example, a cycle that visits every city in the network exactly once is called a Hamiltonian cycle. A network is called Hamiltonian if it contains a Hamiltonian cycle.</p>
     </div>
-
-<div class="study-note">
-      The key idea is simple: follow one closed path that touches every node once and only once and use each link at most once.
-    </div>
-
-<div class="study-figure">
+    <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A Hamiltonian cycle</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The highlighted cycle visits every node exactly once.
-      </p>
-<img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a Hamiltonian cycle">
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">The highlighted cycle starts at a node, visits every other node exactly once, and finally returns to the starting node. Therefore, the network contains a Hamiltonian cycle.</p>
+      <img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a Hamiltonian cycle">
     </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A known example for a graph without a Hamiltonian cycle</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        In this graph it is impossible to find a cycle that visits every node exactly once and returns to the starting node. So this graph does not contain a Hamiltonian cycle. (Try to find one yourself :)
-      </p>
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Example of a cycle that skips a node">
+    <div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A more difficult example</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">At first glance, this network may appear to contain a Hamiltonian cycle. However, the two highlighted nodes cannot both be included in the same cycle without visiting another node more than once. Therefore, the network does not contain a Hamiltonian cycle.</p>
+      <img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Example of a network without a Hamiltonian cycle">
     </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Looks like it has a Hamiltonian cycle but does not contain one</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-    At first glance, this graph may seem like it has a Hamiltonian cycle, as all but two nodes can be connected using links only once. But for the Hamiltonian cycle property, every single node has to be included in the cycle, and there is no way to include the two highlighted nodes without using a link twice.      </p>
-<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Example of a non-Hamiltonian cycle">
-    </div>
+    <div class="study-figure">
+          <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network without a Hamiltonian cycle</h3>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this network, it is impossible to find a cycle that visits every node exactly once and returns to the starting node. Therefore, this network does not contain a Hamiltonian cycle. (Try to find one yourself :))</p>
+          <img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Example of a network without a Hamiltonian cycle">
+        </div>
   </div>
 </div>
 """

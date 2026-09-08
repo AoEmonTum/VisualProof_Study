@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "cut-vertex-part"
+STUDY_ID = "cut-vertex"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -120,52 +120,31 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
   <div class="study-hero">
     <div class="study-kicker">Cut vertex</div>
     <div class="study-title">The cut vertex property</div>
-    <p class="study-lead">
-      A cut vertex is a node whose removal would split the graph into two or more connected components. 
-    </p>
-
- <div class="study-grid">
-      <div class="study-card">
-        <h3>What is a connected component?</h3>
-        <p>
-          It is a group of nodes that are all connected to each other by paths of links.
-        </p>
-      </div>
-      <div class="study-card">
-        <h3>What makes a node a cut vertex?</h3>
-        <p>
-          If removing that node makes the graph split into separate parts, the node is a cut vertex.
-        </p>
-      </div>
+    <p class="study-lead">Imagine a train network with two regions. All routes between the two regions pass through one particular station. If that station closes, passengers can no longer travel from one region to the other. A node can play the same role in a network.</p>
+    <div class="study-card" style="margin-top: 24px;">
+          <h3>The cut vertex</h3>
+          <p>This "train station"-node whose removal separates the network is called a cut vertex.</p>
+        </div>
+    <div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network with a cut vertex</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">The highlighted node connects two parts of the network. As long as it is present, you can travel along the links from any node in the network to any other node.</p>
+      <img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Network with a highlighted node connecting two parts">
     </div>
-
- <div class="study-note">
-      You can think of a cut vertex as a train station where all routes between two regions pass through. If the station closes, passengers can no longer travel between the regions.
-    </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A graph with a cut vertex.</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The highlighted node connects two parts of the graph that would otherwise be separate.
-      </p>
-<img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a graph with a cut vertex">
-    </div>
-
-<div class="study-figure">
+    <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">After removing the highlighted node</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The graph now has separate connected components. The graph is no longer connected, so the removed node was a cut vertex.
-      </p>
-<img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Graph after removing the splitting node">
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">Now that the highlighted node has been removed, there is no longer a path between the two parts of the network. The highlighted node was the only connection between them.</p>
+      <img src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Network after removing the highlighted node">
     </div>
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing some other node</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The graph now still is connected. So this node was not a cut vertex.
-      </p>
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Graph after removing a random node">
+    <div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing a different node</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">Removing any other node does not separate the network. There is still a path (a way to travel through the links) between every remaining part of the network, so this node is not a cut vertex.</p>
+      <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 16px;">
+        <img style="width: calc(50% - 12px); height: auto; display: block;" src="{study_id}/assets/graphs/{img["noproof_property"]}" alt="Original network">
+        <img style="width: calc(50% - 12px); height: auto; display: block;" src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Network after removing a node that is not a cut vertex">
+      </div>
     </div>
   </div>
+</div>
 """
     (assets_dir / "property_explanation.md").write_text(markdown, encoding="utf-8")
 

@@ -1,23 +1,27 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "bipartite-part",
-    "hamiltonian-cycle-part",
-    "cut-vertex-part",
-    "VisualProof_Study"
+    "bipartite",
+    "hamiltonian-cycle",
+    "cut-vertex",
+    "VisualProof_study",
+    "VisualProof_study_prolific"
   ],
   "configs": {
-    "bipartite-part": {
-      "path": "bipartite-part/config.json"
+    "bipartite": {
+      "path": "bipartite/config.json"
     },
-    "hamiltonian-cycle-part": {
-      "path": "hamiltonian-cycle-part/config.json"
+    "hamiltonian-cycle": {
+      "path": "hamiltonian-cycle/config.json"
     },
-    "cut-vertex-part": {
-      "path": "cut-vertex-part/config.json"
+    "cut-vertex": {
+      "path": "cut-vertex/config.json"
     },
-    "VisualProof_Study": {
-      "path": "VisualProof_Study/components_config.json"
+    "VisualProof_study": {
+      "path": "VisualProof_study/components_config.json"
+    },
+    "VisualProof_study_prolific": {
+      "path": "VisualProof_study_prolific/components_config.json"
     }
   }
 }

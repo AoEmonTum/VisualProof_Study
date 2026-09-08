@@ -101,8 +101,8 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
 
   const handleDecision = (value: 'yes' | 'no') => {
     setDecision(value);
-    setConfidence(undefined);
-    setConfidenceTouched(false);
+    setConfidence(3);
+    setConfidenceTouched(true);
   };
 
   const handleConfidenceChange = (value: number) => {
@@ -167,8 +167,8 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
               alt={parameters.graphLabel}
               style={{
                 display: 'block',
-                maxWidth: '100%',
-                maxHeight: '60vh',
+                width: '400px',
+                height: '400px',
                 objectFit: 'contain',
                 transition: 'opacity 220ms ease',
               }}

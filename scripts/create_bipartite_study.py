@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, create_study
 
 
-STUDY_ID = "bipartite-part"
+STUDY_ID = "bipartite"
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -119,42 +119,29 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
   <div class="study-hero">
     <div class="study-kicker">Bipartite</div>
     <div class="study-title">The bipartite property</div>
-    <p class="study-lead">
-      A graph is bipartite if its nodes can be split into two groups so that every link goes from one group to the other and no links exist within the same group.
-    </p>
-<div class="study-grid">
-      <div class="study-card">
-        <h3>What makes a graph bipartite?</h3>
-        <ul>
-          <li>The nodes can be divided into two groups, without any links within a group.</li>
-          <li>You can color the nodes in such a way that adjacent nodes always have different colors.</li>
-          <li>All loops in the graph have an even number of nodes.</li>
-        </ul>
-      </div>
+    <p class="study-lead">To understand what the bipartite property means, let's consider an example: Imagine a network that shows people and the movies they have watched. One group of nodes represents people, and the other group represents movies. A link connects a person to a movie if that person has watched that movie.</p>
+    <div class="study-card" style="margin-top: 24px;">
+      <h3>Two groups</h3>
+      <p>Every node belongs to one of two groups: people or movies. Links only connect nodes from different groups. There are no links between two people or between two movies.</p>
     </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Dividing into two groups</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        Every link goes from one side to the other. There is no link that connects two nodes on the same side.
-      </p>
-<img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a bipartite graph">
+    <div class="study-card" style="margin-top: 24px;">
+      <h3>The bipartite property</h3>
+      <p>A network is called bipartite if its nodes can be divided into two groups like in our example so that every link connects a node from one group to a node from the other group.</p>
     </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Two-coloring</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The graph can be colored with two colors so that no two linked nodes have the same color.
-      </p>
-<img src="{study_id}/assets/graphs/{img["noproof_property"]}" alt="Example of a graph that is not bipartite">
+    <div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A bipartite network</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this example, the nodes can be separated into two groups. Every link goes from one group to the other, and no two nodes within the same group are directly linked. The left side could represent people, and the right side movies.</p>
+      <img src="{study_id}/assets/graphs/{img["proof_property"]}" alt="Example of a bipartite network">
     </div>
-
-<div class="study-figure">
-      <h3 style="margin: 0; font-size: 18px; color: #10213a;">Odd loop</h3>
-      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">
-        The highlighted nodes and links form a loop with an odd number of nodes. Since bipartite graphs contain only even loops, this graph is not bipartite.
-      </p>
-<img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Example of an odd loop">
+    <div class="study-figure">
+          <h3 style="margin: 0; font-size: 18px; color: #10213a;">Another bipartite network</h3>
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">This is another example of a bipartite network. The nodes are not arranged in a way that makes the two groups obvious, but if you color the nodes with two different colors, you can see the two groups. You can imagine the green nodes as the people and the blue nodes as the movies. If you watch closely no movie is linked to an other movie and no person is linked to another person</p>
+          <img src="{study_id}/assets/graphs/{img["noproof_property"]}" alt="Example of a bipartite network">
+        </div>
+    <div class="study-figure">
+      <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network that is not bipartite</h3>
+      <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this network, it is not possible to divide all nodes into two groups so that every link connects nodes from different groups. This is because there is a cycle of odd length. (As remainder: a cycle is a path that starts and ends at the same node) If there is a cycle of odd length, and you try to assign each node in that cycle to a group this will create a contradiction: The first node could be assigned to the people, the second node to the movies, the third node back to the people, the fourth node to the movies, the fifth node back to the people, and when going back to the first node you would have to assign it to the movies, which would create a contradiction as we said the first node sould be assigned to the people. </p>
+      <img src="{study_id}/assets/graphs/{img["noproof_noproperty"]}" alt="Example of a network that is not bipartite">
     </div>
   </div>
 </div>

@@ -103,7 +103,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                     trials.append({
                         **graph,
                         "condition": condition,
-                        "image": f'{graph["source"]}_{condition}.png',
+                        "image": f'{graph["source"]}_{condition}.svg',
                         "id": f"version_{version_index:02d}_{size}_{trial_index:02d}",
                     })
                 trials_by_size[size] = trials
@@ -134,7 +134,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         for version in versions:
             for group in version:
                 for trial in group:
-                    source = stimuli_dir / trial["source"] / f'{trial["condition"]}.png'
+                    source = stimuli_dir / trial["source"] / f'{trial["condition"]}.svg'
                     if not source.is_file():
                         raise FileNotFoundError(f"Missing stimulus image: {source}")
                     copy2(source, graphs_dir / trial["image"])
@@ -149,16 +149,43 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
             "noproof_noproperty",
         ):
             tutorial_image = tutorial_dir / "graph_001" / f"{condition}.png"
-            source = tutorial_image if tutorial_image.is_file() else stimuli_dir / "graph_001" / f"{condition}.png"
+            source = tutorial_image if tutorial_image.is_file() else stimuli_dir / "graph_001" / f"{condition}.svg"
 
             if not source.is_file():
                 raise FileNotFoundError(f"Missing reference image: {source}")
 
-            target_name = f"tutorial_graph_001_{condition}.png"
+            target_name = f"tutorial_graph_001_{condition}{source.suffix}"
             copy2(source, graphs_dir / target_name)
             images[condition] = target_name
 
         return {"graph_001": {"source": "graph_001", "images": images}}
+
+    def create_tutorial_trials() -> list[dict]:
+        """Copy the two fixed tutorial stimuli and return their trial definitions."""
+        tutorial_specification = (
+            ("graph_003", "proof_property"),
+            ("graph_002", "proof_noproperty"),
+        )
+        trials = []
+        for source_graph, condition in tutorial_specification:
+            source_dir = tutorial_dir / source_graph
+            metadata = json.loads((source_dir / "metadata.json").read_text(encoding="utf-8"))
+            source = source_dir / f"{condition}.svg"
+            if not source.is_file():
+                raise FileNotFoundError(f"Missing tutorial stimulus image: {source}")
+
+            image = f"tutorial_{source_graph}_{condition}.svg"
+            copy2(source, graphs_dir / image)
+            vertices = metadata["vertices"]
+            trials.append({
+                "source": source_graph,
+                "vertices": vertices,
+                "size": graph_size(vertices),
+                "condition": condition,
+                "image": image,
+                "id": f"tutorial_{source_graph}_{condition}",
+            })
+        return trials
 
     def write_intro(tutorial: dict[str, dict]) -> None:
         study_start_markdown = f"""
@@ -191,7 +218,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
     <div class="study-kicker">Study Start</div>
     <div class="study-title">The {settings.property_name} part of the study begins now</div>
     <p class="study-lead">
-      In this part, you will decide whether each graph has the {settings.property_name} property. 
+      In this part, you will decide whether each graph has the {settings.property_name} property.
     </p>
 
 <div class="study-stack">
@@ -200,6 +227,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         <ul>
           <li>You will be shown <strong>12 graphs</strong>, one after another.</li>
           <li>For every graph, you will answer the same question by selecting <strong>Yes</strong> or <strong>No</strong>.</li>
+          <li>The question will be the following: <strong>Does this graph have the {settings.property_name} property?</strong></li>
           <li>Please answer as quickly as possible while trying to be as accurate as you can.</li>
         </ul>
       </div>
@@ -208,7 +236,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         <h3>Time limit</h3>
         <ul>
           <li>Each graph will be displayed for <strong>6-11 seconds</strong> depending on its size.</li>
-          <li>After the graph disappears, but you will still be able to answer the question.</li>
+          <li>After the display time, the graph disappears. You will still be able to answer the question.</li>
           <li>After answering, you will be asked how confident you are that your answer was correct.</li>
           <li>The time limit is designed to have a quick look at each graph and prevent excessive analysis of the graph.</li>
         </ul>
@@ -223,6 +251,15 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 </div>
 """
         (assets_dir / "study_start.md").write_text(study_start_markdown, encoding="utf-8")
+
+        tutorial_end_markdown = f"""
+<div style="max-width: 760px; margin: 40px auto; padding: 32px; border: 1px solid #dce7f5; border-radius: 24px; background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%); color: #1f2937; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);">
+  <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3461d9;">Tutorial complete</div>
+  <h1 style="margin: 10px 0; font-size: 32px; color: #10213a;">The actual study begins now</h1>
+  <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #354255;">The two graphs you just completed were a tutorial. The actual {settings.property_name} study starts now.</p>
+</div>
+"""
+        (assets_dir / "tutorial_end.md").write_text(tutorial_end_markdown, encoding="utf-8")
         settings.write_intro(assets_dir, settings.study_id, tutorial)
 
     def trial_component(trial: dict, tutorial: bool) -> dict:
@@ -238,7 +275,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                 "verificationPrompt": settings.verification_prompt,
                 "yesLabel": settings.yes_label,
                 "noLabel": settings.no_label,
-                "graphPath": f'{settings.study_id}/assets/graphs/{trial["image"]}',
+                "graphPath": f'/{settings.study_id}/assets/graphs/{trial["image"]}',
                 "graphLabel": f'{settings.title} graph {trial["source"]}',
                 "durationMs": graph_duration_ms(trial["vertices"]),
                 "nodeCount": trial["vertices"],
@@ -260,14 +297,19 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
             stale_file.unlink(missing_ok=True)
         for stale_file in stale_dir.glob("version_*.md"):
             stale_file.unlink(missing_ok=True)
-    for stale_file in (assets_dir / "property_explanation.md", assets_dir / "study_start.md"):
+    for stale_file in (
+        assets_dir / "property_explanation.md",
+        assets_dir / "study_start.md",
+        assets_dir / "tutorial_end.md",
+    ):
         stale_file.unlink(missing_ok=True)
     # Remove generated practice-only assets from earlier versions of the studies.
     for stale_file in (
+        *graphs_dir.glob("tutorial_graph_001_*"),
         *assets_dir.glob("tutorial_graph_002_*.md"),
         *assets_dir.glob("tutorial_graph_003_*.md"),
-        *graphs_dir.glob("tutorial_graph_002_*.png"),
-        *graphs_dir.glob("tutorial_graph_003_*.png"),
+        *graphs_dir.glob("tutorial_graph_002_*"),
+        *graphs_dir.glob("tutorial_graph_003_*"),
         assets_dir / "tutorial_start.md",
     ):
         stale_file.unlink(missing_ok=True)
@@ -275,10 +317,12 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
     versions = create_versions(available_graphs)
     copy_main_stimuli(versions)
     tutorial = copy_reference_stimuli()
+    tutorial_trials = create_tutorial_trials()
     write_intro(tutorial)
     components: dict = {
         "property_explanation": {"type": "markdown", "path": f"{settings.study_id}/assets/property_explanation.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
         "study_start": {"type": "markdown", "path": f"{settings.study_id}/assets/study_start.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
+        "tutorial_end": {"type": "markdown", "path": f"{settings.study_id}/assets/tutorial_end.md", "response": [], "nextButtonText": "Next", "nextButtonLocation": "belowStimulus"},
     }
     version_blocks = []
     for version_index, groups in enumerate(versions, start=1):
@@ -298,6 +342,8 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         for group in version:
             for trial in group:
                 components[trial["id"]] = trial_component(trial, False)
+    for trial in tutorial_trials:
+        components[trial["id"]] = trial_component(trial, True)
     config = {
         "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/StudyConfigSchema.json",
         "studyMetadata": {"title": settings.title, "version": "0.2.0", "authors": ["Visual Proof Study Team"], "date": "2026-07-28", "description": f"Counterbalanced {settings.property_name} graph verification study.", "organizations": ["Technische Universitat Munchen"]},
@@ -308,6 +354,12 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
             "components": [
                 "property_explanation",
                 "study_start",
+                {
+                    "id": "tutorial",
+                    "order": "fixed",
+                    "components": [trial["id"] for trial in tutorial_trials],
+                },
+                "tutorial_end",
                 {"id": "study_version", "order": "random", "numSamples": 1, "components": version_blocks},
             ],
         },
