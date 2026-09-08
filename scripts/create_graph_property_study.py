@@ -245,7 +245,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 
 <div class="study-note">
       <strong>Ready?</strong><br>
-      When you are ready, press <strong>Next</strong> to begin.
+      The first two graphs will be a tutorial run with no time limit. After that a you will see a slide to continue to the actual study. When you are ready, press <strong>Next</strong> to begin.
     </div>
   </div>
 </div>

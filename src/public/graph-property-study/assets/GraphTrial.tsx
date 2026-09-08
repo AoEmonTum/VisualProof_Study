@@ -55,6 +55,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
   const [confidenceTouched, setConfidenceTouched] = useState<boolean>(storedAnswer?.confidence !== undefined);
   const [graphVisible, setGraphVisible] = useState(true);
   const [remainingMs, setRemainingMs] = useState(parameters.durationMs);
+  const isTimedTrial = parameters.phase === 'study';
 
   useEffect(() => {
     setAnswer({
@@ -69,6 +70,10 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
   }, [confidence, confidenceTouched, decision, setAnswer]);
 
   useEffect(() => {
+    if (!isTimedTrial) {
+      return undefined;
+    }
+
     const start = Date.now();
     const interval = window.setInterval(() => {
       setRemainingMs(Math.max(0, parameters.durationMs - (Date.now() - start)));
@@ -82,7 +87,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
       window.clearInterval(interval);
       window.clearTimeout(timeout);
     };
-  }, [parameters.durationMs]);
+  }, [isTimedTrial, parameters.durationMs]);
 
   const confidencePercent = (remainingMs / parameters.durationMs) * 100;
   const canContinue = decision !== undefined && confidenceTouched && confidence !== undefined;
@@ -145,9 +150,11 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
 
         </Group>
 
-        <Box mb="sm">
-          <Progress value={confidencePercent} color="blue" size="sm" radius="xl" />
-        </Box>
+        {isTimedTrial && (
+          <Box mb="sm">
+            <Progress value={confidencePercent} color="blue" size="sm" radius="xl" />
+          </Box>
+        )}
 
         <Box
           style={{

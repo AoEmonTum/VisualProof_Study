@@ -17,14 +17,14 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "VisualProof_study_public"
+STUDY_ID = "VisualProofsForGraphPropertiesStudy"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite", "bipartite"),
-    ("hamiltonian-cycle", "hamiltonian-cycle"),
-    ("cut-vertex", "cut-vertex"),
+    ("bipartite-component", "bipartite-component"),
+    ("hamiltonian-cycle-component", "hamiltonian-cycle-component"),
+    ("cut-vertex-component", "cut-vertex-component"),
 )
 
 
@@ -408,6 +408,17 @@ def main() -> None:
             "path": f"{STUDY_ID}/assets/outro.md",
             "response": [
                 {
+                    "id": "advanced_knowledge",
+                    "prompt": "Did you know about graphs before the study? (optional)",
+                    "type": "radio",
+                    "options": [
+                        "Yes",
+                        "No",
+                    ],
+                    "required": False,
+                    "location": "belowStimulus",
+                },
+                {
                     "id": "age",
                     "prompt": "What is your age? (optional)",
                     "type": "radio",
@@ -427,13 +438,6 @@ def main() -> None:
                         "Bachelor's degree or equivalent", "Master's degree or equivalent",
                         "Doctoral degree or equivalent",
                     ],
-                    "required": False,
-                    "location": "belowStimulus",
-                },
-                {
-                    "id": "advanced_knowledge",
-                    "prompt": "Did you know about graphs in advance? (optional)",
-                    "type": "longText",
                     "required": False,
                     "location": "belowStimulus",
                 },

@@ -1,31 +1,27 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.3/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "bipartite",
-    "hamiltonian-cycle",
-    "cut-vertex",
-    "VisualProof_study",
-    "VisualProof_study_prolific",
-    "VisualProof_study_public"
+    "bipartite-component",
+    "hamiltonian-cycle-component",
+    "cut-vertex-component",
+    "VisualProofsForGraphPropertiesStudy",
+    "VisualProofsForGraphPropertiesStudy_prolific"
   ],
   "configs": {
-    "bipartite": {
-      "path": "bipartite/config.json"
+    "bipartite-component": {
+      "path": "bipartite-component/config.json"
     },
-    "hamiltonian-cycle": {
-      "path": "hamiltonian-cycle/config.json"
+    "hamiltonian-cycle-component": {
+      "path": "hamiltonian-cycle-component/config.json"
     },
-    "cut-vertex": {
-      "path": "cut-vertex/config.json"
+    "cut-vertex-component": {
+      "path": "cut-vertex-component/config.json"
     },
-    "VisualProof_study": {
-      "path": "VisualProof_study/components_config.json"
+    "VisualProofsForGraphPropertiesStudy": {
+      "path": "VisualProofsForGraphPropertiesStudy/components_config.json"
     },
-    "VisualProof_study_prolific": {
-      "path": "VisualProof_study_prolific/components_config.json"
-    },
-    "VisualProof_study_public": {
-      "path": "VisualProof_study_public/components_config.json"
+    "VisualProofsForGraphPropertiesStudy_prolific": {
+      "path": "VisualProofsForGraphPropertiesStudy_prolific/components_config.json"
     }
   }
 }
