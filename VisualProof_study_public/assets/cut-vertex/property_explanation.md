@@ -113,19 +113,19 @@
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network with a cut vertex</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">The highlighted node connects two parts of the network. As long as it is present, you can travel along the links from any node in the network to any other node.</p>
-      <img src="VisualProof_study/assets/cut-vertex/graphs/tutorial_graph_001_proof_property.png" alt="Network with a highlighted node connecting two parts">
+      <img src="VisualProof_study_public/assets/cut-vertex/graphs/tutorial_graph_001_proof_property.png" alt="Network with a highlighted node connecting two parts">
     </div>
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">After removing the highlighted node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">Now that the highlighted node has been removed, there is no longer a path between the two parts of the network. The highlighted node was the only connection between them.</p>
-      <img src="VisualProof_study/assets/cut-vertex/graphs/tutorial_graph_001_proof_noproperty.png" alt="Network after removing the highlighted node">
+      <img src="VisualProof_study_public/assets/cut-vertex/graphs/tutorial_graph_001_proof_noproperty.png" alt="Network after removing the highlighted node">
     </div>
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">Removing a different node</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">Removing any other node does not separate the network. There is still a path (a way to travel through the links) between every remaining part of the network, so this node is not a cut vertex.</p>
       <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 16px;">
-        <img style="width: calc(50% - 12px); height: auto; display: block;" src="VisualProof_study/assets/cut-vertex/graphs/tutorial_graph_001_noproof_property.png" alt="Original network">
-        <img style="width: calc(50% - 12px); height: auto; display: block;" src="VisualProof_study/assets/cut-vertex/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Network after removing a node that is not a cut vertex">
+        <img style="width: calc(50% - 12px); height: auto; display: block;" src="VisualProof_study_public/assets/cut-vertex/graphs/tutorial_graph_001_noproof_property.png" alt="Original network">
+        <img style="width: calc(50% - 12px); height: auto; display: block;" src="VisualProof_study_public/assets/cut-vertex/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Network after removing a node that is not a cut vertex">
       </div>
     </div>
   </div>

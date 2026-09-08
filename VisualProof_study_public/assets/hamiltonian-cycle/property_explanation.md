@@ -113,17 +113,17 @@
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A Hamiltonian cycle</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">The highlighted cycle starts at a node, visits every other node exactly once, and finally returns to the starting node. Therefore, the network contains a Hamiltonian cycle.</p>
-      <img src="VisualProof_study/assets/hamiltonian-cycle/graphs/tutorial_graph_001_proof_property.png" alt="Example of a Hamiltonian cycle">
+      <img src="VisualProof_study_public/assets/hamiltonian-cycle/graphs/tutorial_graph_001_proof_property.png" alt="Example of a Hamiltonian cycle">
     </div>
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A more difficult example</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">At first glance, this network may appear to contain a Hamiltonian cycle. However, the two highlighted nodes cannot both be included in the same cycle without visiting another node more than once. Therefore, the network does not contain a Hamiltonian cycle.</p>
-      <img src="VisualProof_study/assets/hamiltonian-cycle/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a network without a Hamiltonian cycle">
+      <img src="VisualProof_study_public/assets/hamiltonian-cycle/graphs/tutorial_graph_001_proof_noproperty.png" alt="Example of a network without a Hamiltonian cycle">
     </div>
     <div class="study-figure">
           <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network without a Hamiltonian cycle</h3>
           <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this network, it is impossible to find a cycle that visits every node exactly once and returns to the starting node. Therefore, this network does not contain a Hamiltonian cycle. (Try to find one yourself :))</p>
-          <img src="VisualProof_study/assets/hamiltonian-cycle/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a network without a Hamiltonian cycle">
+          <img src="VisualProof_study_public/assets/hamiltonian-cycle/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a network without a Hamiltonian cycle">
         </div>
   </div>
 </div>

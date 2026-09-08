@@ -116,17 +116,17 @@
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A bipartite network</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this example, the nodes can be separated into two groups. Every link goes from one group to the other, and no two nodes within the same group are directly linked. The left side could represent people, and the right side movies.</p>
-      <img src="VisualProof_study/assets/bipartite/graphs/tutorial_graph_001_proof_property.png" alt="Example of a bipartite network">
+      <img src="VisualProof_study_public/assets/bipartite/graphs/tutorial_graph_001_proof_property.png" alt="Example of a bipartite network">
     </div>
     <div class="study-figure">
           <h3 style="margin: 0; font-size: 18px; color: #10213a;">Another bipartite network</h3>
           <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">This is another example of a bipartite network. The nodes are not arranged in a way that makes the two groups obvious, but if you color the nodes with two different colors, you can see the two groups. You can imagine the green nodes as the people and the blue nodes as the movies. If you watch closely no movie is linked to an other movie and no person is linked to another person</p>
-          <img src="VisualProof_study/assets/bipartite/graphs/tutorial_graph_001_noproof_property.png" alt="Example of a bipartite network">
+          <img src="VisualProof_study_public/assets/bipartite/graphs/tutorial_graph_001_noproof_property.png" alt="Example of a bipartite network">
         </div>
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network that is not bipartite</h3>
       <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">In this network, it is not possible to divide all nodes into two groups so that every link connects nodes from different groups. This is because there is a cycle of odd length. (As remainder: a cycle is a path that starts and ends at the same node) If there is a cycle of odd length, and you try to assign each node in that cycle to a group this will create a contradiction: The first node could be assigned to the people, the second node to the movies, the third node back to the people, the fourth node to the movies, the fifth node back to the people, and when going back to the first node you would have to assign it to the movies, which would create a contradiction as we said the first node sould be assigned to the people. </p>
-      <img src="VisualProof_study/assets/bipartite/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a network that is not bipartite">
+      <img src="VisualProof_study_public/assets/bipartite/graphs/tutorial_graph_001_noproof_noproperty.png" alt="Example of a network that is not bipartite">
     </div>
   </div>
 </div>

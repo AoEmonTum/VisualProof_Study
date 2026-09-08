@@ -5,7 +5,8 @@
     "hamiltonian-cycle",
     "cut-vertex",
     "VisualProof_study",
-    "VisualProof_study_prolific"
+    "VisualProof_study_prolific",
+    "VisualProof_study_public"
   ],
   "configs": {
     "bipartite": {
@@ -22,6 +23,9 @@
     },
     "VisualProof_study_prolific": {
       "path": "VisualProof_study_prolific/components_config.json"
+    },
+    "VisualProof_study_public": {
+      "path": "VisualProof_study_public/components_config.json"
     }
   }
 }
