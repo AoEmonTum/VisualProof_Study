@@ -4,10 +4,10 @@
     "bipartite-compo",
     "hamiltonian-cycle-compo",
     "cut-vertex-compo",
-    "VisualProofs_For_GraphProperties_Study"
+    "VisualProofCertificates_Study",
+    "VisualProofCertificates_Study_prolific"
   ],
   "configs": {
-    
     "bipartite-compo": {
       "path": "bipartite-compo/config.json"
     },
@@ -17,8 +17,11 @@
     "cut-vertex-compo": {
       "path": "cut-vertex-compo/config.json"
     },
-    "VisualProofs_For_GraphProperties_Study": {
-      "path": "VisualProofs_For_GraphProperties_Study/components_config.json"
+    "VisualProofCertificates_Study": {
+      "path": "VisualProofCertificates_Study/components_config.json"
+    },
+    "VisualProofCertificates_Study_prolific": {
+      "path": "VisualProofCertificates_Study_prolific/components_config.json"
     }
   }
 }

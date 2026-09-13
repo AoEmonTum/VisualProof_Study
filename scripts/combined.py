@@ -17,7 +17,7 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "VisualProofs_For_GraphProperties_Study"
+STUDY_ID = "VisualProofCertificates_Study_prolific"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
@@ -207,7 +207,7 @@ def write_intro_and_outro() -> None:
   <div class="study-hero">
     <div class="study-kicker">Consent</div>
     <div class="study-title">Before we begin</div>
-    <p class="study-lead">This voluntary study is conducted by the Visualization Research Lab at the Technical University of Munich. Please read the information below carefully before deciding whether you would like to participate.</p>
+    <p class="study-lead">This voluntary study is conducted by the chair of efficient algorithms at the Technical University of Munich. Please read the information below carefully before deciding whether you would like to participate.</p>
     <div class="study-stack">
       <div class="study-card">
         <h3>Purpose</h3>
@@ -374,6 +374,19 @@ Thank you for completing the study. Your contribution is greatly appreciated.
 Before finishing, we would like to ask a few optional questions about your background and your experience with the study. Your answers will help us interpret the results and improve the study.
 
 If you are interested in the results of the study, you can optionally leave your email address below. We will contact you when the results are available.
+
+For questions about the study, please contact [max.macanas@tum.de](mailto:max.macanas@tum.de).
+""",
+    encoding="utf-8",
+)
+
+    (ASSETS_DIR / "section_break.md").write_text(
+    """
+<div style="max-width: 760px; margin: 40px auto; padding: 32px; border: 1px solid #dce7f5; border-radius: 24px; background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%); color: #1f2937; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);">
+  <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3461d9;">Section complete</div>
+  <h1 style="margin: 10px 0; font-size: 32px; color: #10213a;">You have completed this section</h1>
+  <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #354255;">You may take a short break before continuing with the next graph property. When you are ready, click <strong>Next</strong>.</p>
+</div>
 """,
     encoding="utf-8",
 )
@@ -481,6 +494,13 @@ def main() -> None:
             "nextButtonText": "Finish",
             "nextButtonLocation": "belowStimulus",
         },
+        "section_break": {
+            "type": "markdown",
+            "path": f"{STUDY_ID}/assets/section_break.md",
+            "response": [],
+            "nextButtonText": "Next",
+            "nextButtonLocation": "belowStimulus",
+        },
     }
     sections = []
     for section, source_study_id in PROPERTY_STUDIES:
@@ -521,6 +541,11 @@ def main() -> None:
                     "order": "latinSquare",
                     "numSamples": 3,
                     "components": sections,
+                    "interruptions": [{
+                        "firstLocation": 1,
+                        "spacing": 2,
+                        "components": ["section_break"],
+                    }],
                 },
                 "outro",
             ],
