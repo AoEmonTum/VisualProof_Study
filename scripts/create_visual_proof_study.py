@@ -3,10 +3,26 @@
 
 from pathlib import Path
 
-from create_graph_property_study import StudySettings, create_study
+from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "cut-vertex-compo"
+STUDY_ID = "cut-vertex-c"
+
+CUT_VERTEX_FOUND_MESSAGE = (
+    "This graph has a cut vertex. The highlighted node is the cut vertex: "
+    "removing it splits the graph into two or more parts."
+)
+CUT_VERTEX_NOT_FOUND_MESSAGE = (
+    "This graph has no cut vertex. There is no node whose removal would "
+    "split the graph into separate parts."
+)
+
+TUTORIAL_FEEDBACK = {
+    "proof_property": TutorialFeedback(expected="yes", highlight=True, message=CUT_VERTEX_FOUND_MESSAGE),
+    "noproof_property": TutorialFeedback(expected="yes", highlight=True, message=CUT_VERTEX_FOUND_MESSAGE),
+    "proof_noproperty": TutorialFeedback(expected="no", highlight=False, message=CUT_VERTEX_NOT_FOUND_MESSAGE),
+    "noproof_noproperty": TutorialFeedback(expected="no", highlight=False, message=CUT_VERTEX_NOT_FOUND_MESSAGE),
+}
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -164,5 +180,6 @@ if __name__ == "__main__":
             no_label="No",
             sidebar_explanation="A cut vertex is a node whose removal splits a connected component into two or more connected components.",
             write_intro=write_intro,
+            tutorial_feedback=TUTORIAL_FEEDBACK,
         ),
     )

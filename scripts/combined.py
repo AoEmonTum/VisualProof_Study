@@ -17,14 +17,14 @@ from shutil import copytree, rmtree
 ROOT = Path(__file__).resolve().parents[1]
 SOCIAL_NETWORK_DIR = ROOT.parent.parent / "graph_tests" / "socialNetwork"
 PUBLIC_DIR = ROOT / "public"
-STUDY_ID = "VisualProofCertificates_Study_prolific"
+STUDY_ID = "VisualProof_Certificates_prolific"
 STUDY_DIR = PUBLIC_DIR / STUDY_ID
 ASSETS_DIR = STUDY_DIR / "assets"
 GLOBAL_CONFIG_PATH = PUBLIC_DIR / "global.json"
 PROPERTY_STUDIES = (
-    ("bipartite-compo", "bipartite-compo"),
-    ("hamiltonian-cycle-compo", "hamiltonian-cycle-compo"),
-    ("cut-vertex-compo", "cut-vertex-compo"),
+    ("bipartite-c", "bipartite-c"),
+    ("hamiltonian-cycle-c", "hamiltonian-cycle-c"),
+    ("cut-vertex-c", "cut-vertex-c"),
 )
 
 
@@ -408,6 +408,7 @@ def main() -> None:
             "response": [],
             "nextButtonText": "I agree",
             "nextButtonLocation": "belowStimulus",
+            "minScreenWidth": 768,
         },
         "intro": {
             "type": "markdown",

@@ -3,10 +3,36 @@
 
 from pathlib import Path
 
-from create_graph_property_study import StudySettings, create_study
+from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "bipartite-compo"
+STUDY_ID = "bipartite-c"
+
+BIPARTITE_MESSAGE = (
+    "This graph is bipartite. No odd cycles exist in this graph, so its nodes "
+    "can be split into two groups with every link going from one group to the other."
+)
+
+TUTORIAL_FEEDBACK = {
+    "proof_property": TutorialFeedback(expected="yes", highlight=False, message=BIPARTITE_MESSAGE),
+    "noproof_property": TutorialFeedback(expected="yes", highlight=False, message=BIPARTITE_MESSAGE),
+    "proof_noproperty": TutorialFeedback(
+        expected="no",
+        highlight=True,
+        message=(
+            "This graph is not bipartite. The highlighted node connects two nodes "
+            "from the same group, which makes it impossible to split the graph into two groups."
+        ),
+    ),
+    "noproof_noproperty": TutorialFeedback(
+        expected="no",
+        highlight=True,
+        message=(
+            "This graph is not bipartite. The highlighted cycle has an odd length, "
+            "which makes it impossible to split the graph into two groups."
+        ),
+    ),
+}
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -135,8 +161,11 @@ def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> N
     </div>
     <div class="study-figure">
           <h3 style="margin: 0; font-size: 18px; color: #10213a;">Another bipartite network</h3>
-          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">This is another example of a bipartite network. The nodes are not arranged in a way that makes the two groups obvious, but if you color the nodes with two different colors, you can see the two groups. You can imagine the green nodes as the people and the blue nodes as the movies. If you watch closely no movie is linked to an other movie and no person is linked to another person</p>
-          <img src="{study_id}/assets/graphs/{img["noproof_property"]}" alt="Example of a bipartite network">
+          <p style="margin: 8px 0 0; font-size: 15px; line-height: 1.75; color: #445469;">This is another example of the same bipartite network as above. The nodes are not arranged in a way that makes the two groups obvious at first glance, but if you imagine the nodes with two different colors, you will see the two groups. The green nodes could represent the people and the blue nodes as the movies. If you watch closely no movie is linked to an other movie and no person is linked to another person</p>
+          <div style="display: flex; justify-content: center; gap: 24px; align-items: center; margin-top: 16px;">
+                <img style="width: calc(50% - 12px); height: auto; display: block;" src="{study_id}/assets/graphs/{img["proof_noproperty"]}" alt="Network uncolored">
+                <img style="width: calc(50% - 12px); height: auto; display: block;" src="{study_id}/assets/graphs/{img["noproof_property"]}" alt="Network colored">
+            </div>
         </div>
     <div class="study-figure">
       <h3 style="margin: 0; font-size: 18px; color: #10213a;">A network that is not bipartite</h3>
@@ -165,5 +194,6 @@ if __name__ == "__main__":
             no_label="No",
             sidebar_explanation="A bipartite graph is a graph whose nodes can be split into two groups so that every link goes from one group to the other.",
             write_intro=write_intro,
+            tutorial_feedback=TUTORIAL_FEEDBACK,
         ),
     )

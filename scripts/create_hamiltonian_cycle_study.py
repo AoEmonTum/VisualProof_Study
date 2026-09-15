@@ -3,10 +3,26 @@
 
 from pathlib import Path
 
-from create_graph_property_study import StudySettings, create_study
+from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "hamiltonian-cycle-compo"
+STUDY_ID = "hamiltonian-cycle-c"
+
+HAMILTONIAN_FOUND_MESSAGE = (
+    "This graph contains a Hamiltonian cycle. The highlighted cycle visits "
+    "every node exactly once and returns to its starting node."
+)
+HAMILTONIAN_NOT_FOUND_MESSAGE = (
+    "This graph does not contain a Hamiltonian cycle. The two highlighted "
+    "nodes cannot both be part of a cycle without visiting another node more than once."
+)
+
+TUTORIAL_FEEDBACK = {
+    "proof_property": TutorialFeedback(expected="yes", highlight=True, message=HAMILTONIAN_FOUND_MESSAGE),
+    "noproof_property": TutorialFeedback(expected="yes", highlight=True, message=HAMILTONIAN_FOUND_MESSAGE),
+    "proof_noproperty": TutorialFeedback(expected="no", highlight=True, message=HAMILTONIAN_NOT_FOUND_MESSAGE),
+    "noproof_noproperty": TutorialFeedback(expected="no", highlight=True, message=HAMILTONIAN_NOT_FOUND_MESSAGE),
+}
 
 
 def write_intro(assets_dir: Path, study_id: str, tutorial: dict[str, dict]) -> None:
@@ -161,5 +177,6 @@ if __name__ == "__main__":
             no_label="No",
             sidebar_explanation="A Hamiltonian cycle is a cycle that visits every node exactly once and returns to the starting node.",
             write_intro=write_intro,
+            tutorial_feedback=TUTORIAL_FEEDBACK,
         ),
     )

@@ -279,6 +279,8 @@ export interface UIConfig {
   nextButtonEnableTime?: number;
   /** The time in milliseconds to wait before the next button is disabled. */
   nextButtonDisableTime?: number;
+  /** The minimum viewport width, in pixels, required to proceed. Below this width, the next button is disabled and a warning is shown instead. */
+  minScreenWidth?: number;
   /** The text that is displayed on the previous button. */
   previousButtonText?: string;
   /** Whether to redirect a timed out participant to a rejection page. This only works for components where the `nextButtonDisableTime` field is set. */
@@ -1029,6 +1031,8 @@ export interface BaseIndividualComponent {
   nextButtonEnableTime?: number;
   /** The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig. */
   nextButtonDisableTime?: number;
+  /** The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead. */
+  minScreenWidth?: number;
   /** The time in milliseconds after which the participant is automatically advanced to the next component without saving answers from the current component. */
   nextButtonAutoAdvanceTime?: number;
   /** The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000. */

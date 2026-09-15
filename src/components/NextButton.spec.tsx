@@ -134,4 +134,48 @@ describe('NextButton', () => {
     expect(mockGoToNextStep).toHaveBeenCalledTimes(2);
     expect(mockGoToNextStep).toHaveBeenLastCalledWith(false);
   });
+
+  test('disables the next button and shows a warning when the viewport is narrower than minScreenWidth', () => {
+    const config = {
+      type: 'markdown',
+      response: [],
+      minScreenWidth: window.innerWidth + 1000,
+    } as unknown as IndividualComponent;
+
+    act(() => {
+      root.render(
+        <NextButton
+          config={config}
+          checkAnswer={null}
+        />,
+      );
+    });
+
+    const button = container.querySelector('button');
+    expect(button).not.toBeNull();
+    expect(button?.hasAttribute('disabled')).toBe(true);
+    expect(container.textContent).toContain('too small to complete this study');
+  });
+
+  test('does not disable the next button when the viewport satisfies minScreenWidth', () => {
+    const config = {
+      type: 'markdown',
+      response: [],
+      minScreenWidth: window.innerWidth - 100,
+    } as unknown as IndividualComponent;
+
+    act(() => {
+      root.render(
+        <NextButton
+          config={config}
+          checkAnswer={null}
+        />,
+      );
+    });
+
+    const button = container.querySelector('button');
+    expect(button).not.toBeNull();
+    expect(button?.hasAttribute('disabled')).toBe(false);
+    expect(container.textContent).not.toContain('too small to complete this study');
+  });
 });

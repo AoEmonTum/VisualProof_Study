@@ -80,8 +80,8 @@
             "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
             "type": "object"
           },
-          "nextButtonDisableTime": {
-            "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+          "minScreenWidth": {
+            "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
             "type": "number"
           },
           "nextButtonAutoAdvanceTime": {
@@ -94,6 +94,10 @@
           },
           "nextButtonAutoAdvanceWarningTime": {
             "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+            "type": "number"
+          },
+          "nextButtonDisableTime": {
+            "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
             "type": "number"
           },
           "nextButtonEnableTime": {
@@ -956,8 +960,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -970,6 +974,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -1231,8 +1239,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -1245,6 +1253,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -1761,8 +1773,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -1775,6 +1787,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -2331,8 +2347,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -2345,6 +2361,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -2753,8 +2773,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -2767,6 +2787,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -3571,8 +3595,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -3585,6 +3609,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -3738,8 +3766,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -3752,6 +3780,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -3913,8 +3945,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -3927,6 +3959,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {
@@ -4084,8 +4120,8 @@
           "description": "The meta data for the component. This is used to identify and provide additional information for the component in the admin panel.",
           "type": "object"
         },
-        "nextButtonDisableTime": {
-          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
+        "minScreenWidth": {
+          "description": "The minimum viewport width, in pixels, required to proceed. If present, will override the minimum screen width setting in the uiConfig. Below this width, the next button is disabled and a warning is shown instead.",
           "type": "number"
         },
         "nextButtonAutoAdvanceTime": {
@@ -4098,6 +4134,10 @@
         },
         "nextButtonAutoAdvanceWarningTime": {
           "description": "The time in milliseconds before auto-advance when the warning message is shown. Defaults to 30000.",
+          "type": "number"
+        },
+        "nextButtonDisableTime": {
+          "description": "The time in milliseconds to wait before the next button is disabled. If present, will override the next button disable time setting in the uiConfig.",
           "type": "number"
         },
         "nextButtonEnableTime": {

@@ -1,5 +1,5 @@
 import {
-  Box, Button, Collapse, Group, Paper, Progress, Slider, Stack, Text, Title,
+  Alert, Box, Button, Collapse, Group, Paper, Progress, Slider, Stack, Text, Title,
 } from '@mantine/core';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -26,6 +26,9 @@ type GraphTrialParameters = {
   visualization: string;
   sourceGraph: string;
   phase: 'tutorial' | 'study';
+  feedbackMessage?: string;
+  feedbackExpected?: 'yes' | 'no';
+  feedbackImagePath?: string;
 };
 
 function findStoredAnswer(answers: StimulusParams<GraphTrialParameters>['answers'], componentName: string): TrialAnswer | null {
@@ -46,6 +49,9 @@ function findStoredAnswer(answers: StimulusParams<GraphTrialParameters>['answers
 
 export default function GraphTrial({ parameters, setAnswer, answers }: StimulusParams<GraphTrialParameters>) {
   const graphUrl = `${import.meta.env.BASE_URL}${parameters.graphPath}`;
+  const feedbackImageUrl = parameters.feedbackImagePath
+    ? `${import.meta.env.BASE_URL}${parameters.feedbackImagePath}`
+    : undefined;
   const storedAnswer = useMemo(
     () => findStoredAnswer(answers, parameters.componentName),
     [answers, parameters.componentName],
@@ -92,6 +98,10 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
 
   const confidencePercent = (remainingMs / parameters.durationMs) * 100;
   const canContinue = decision !== undefined && confidenceTouched && confidence !== undefined;
+
+  const showFeedback = parameters.phase === 'tutorial' && decision !== undefined;
+  const isCorrect = decision === parameters.feedbackExpected;
+  const displayedImageUrl = showFeedback && feedbackImageUrl ? feedbackImageUrl : graphUrl;
 
   useEffect(() => {
     if (canContinue) {
@@ -171,7 +181,7 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
         >
           {graphVisible ? (
             <img
-              src={graphUrl}
+              src={displayedImageUrl}
               alt={parameters.graphLabel}
               style={{
                 display: 'block',
@@ -232,6 +242,17 @@ export default function GraphTrial({ parameters, setAnswer, answers }: StimulusP
             {parameters.noLabel}
           </Button>
         </Group>
+
+        {showFeedback && parameters.feedbackMessage && (
+          <Alert
+            mt="md"
+            radius="lg"
+            title={isCorrect ? 'Correct!' : 'Not quite'}
+            color={isCorrect ? 'green' : 'orange'}
+          >
+            {parameters.feedbackMessage}
+          </Alert>
+        )}
 
         <Collapse in={decision !== undefined}>
           <Stack gap="sm" mt="md">

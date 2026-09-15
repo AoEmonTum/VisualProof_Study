@@ -37,12 +37,30 @@ export function NextButton({
 
   const nextButtonDisableTime = config?.nextButtonDisableTime ?? studyConfig.uiConfig.nextButtonDisableTime;
   const nextButtonEnableTime = config?.nextButtonEnableTime ?? studyConfig.uiConfig.nextButtonEnableTime ?? 0;
+  const minScreenWidth = config?.minScreenWidth ?? studyConfig.uiConfig.minScreenWidth;
   const nextButtonAutoAdvanceTime = config?.nextButtonAutoAdvanceTime;
   const nextButtonAutoAdvanceWarningTime = config?.nextButtonAutoAdvanceWarningTime ?? DEFAULT_AUTO_ADVANCE_WARNING_TIME;
   const nextButtonAutoAdvanceWarningMessage = config?.nextButtonAutoAdvanceWarningMessage ?? DEFAULT_AUTO_ADVANCE_WARNING_MESSAGE;
 
   const [timer, setTimer] = useState<number | undefined>(undefined);
+  const [viewportWidth, setViewportWidth] = useState<number | undefined>(
+    () => (typeof window === 'undefined' ? undefined : window.innerWidth),
+  );
   const autoAdvanceTriggered = useRef(false);
+
+  useEffect(() => {
+    if (!minScreenWidth) {
+      return undefined;
+    }
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [minScreenWidth]);
+
+  const screenTooSmall = !!minScreenWidth && viewportWidth !== undefined && viewportWidth < minScreenWidth;
   // Use the current identifier so nested function-sequence items reset their timer state.
   useEffect(() => {
     autoAdvanceTriggered.current = false;
@@ -110,7 +128,7 @@ export function NextButton({
     };
   }, [disabled, isNextDisabled, buttonTimerSatisfied, goToNextStep, nextOnEnter]);
 
-  const nextButtonDisabled = disabled || isNextDisabled || !buttonTimerSatisfied;
+  const nextButtonDisabled = disabled || isNextDisabled || !buttonTimerSatisfied || screenTooSmall;
   const previousButtonText = config?.previousButtonText ?? studyConfig.uiConfig.previousButtonText ?? 'Previous';
 
   return (
@@ -132,6 +150,15 @@ export function NextButton({
           {label}
         </Button>
       </Group>
+      {screenTooSmall && (
+        <Alert mt="md" title="Screen too small" color="red" icon={<IconAlertTriangle />}>
+          Your screen is too small to complete this study. Please use a device with a
+          screen at least
+          {' '}
+          {minScreenWidth}
+          px wide, such as a desktop, laptop, or tablet.
+        </Alert>
+      )}
       {timer !== undefined && (
         <>
           {nextButtonEnableTime > 0 && timer < nextButtonEnableTime && (

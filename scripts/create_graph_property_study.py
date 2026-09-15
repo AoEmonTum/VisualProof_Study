@@ -23,6 +23,13 @@ VISUALIZATIONS = (
 TRIAL_COMPONENT_PATH = "graph-property-study/assets/GraphTrial.tsx"
 
 @dataclass(frozen=True)
+class TutorialFeedback:
+    expected: str
+    message: str
+    highlight: bool = False
+
+
+@dataclass(frozen=True)
 class StudySettings:
     study_id: str
     stimulus_folder: str
@@ -35,6 +42,7 @@ class StudySettings:
     no_label: str
     sidebar_explanation: str
     write_intro: Callable[[Path, str, dict[str, dict]], None]
+    tutorial_feedback: dict[str, TutorialFeedback]
 
 
 def create_study(script_path: Path, settings: StudySettings) -> None:
@@ -161,9 +169,11 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
         return {"graph_001": {"source": "graph_001", "images": images}}
 
     def create_tutorial_trials() -> list[dict]:
-        """Copy the two fixed tutorial stimuli and return their trial definitions."""
+        """Copy the four fixed tutorial stimuli and return their trial definitions."""
         tutorial_specification = (
             ("graph_003", "proof_property"),
+            ("graph_003", "noproof_noproperty"),
+            ("graph_002", "noproof_property"),
             ("graph_002", "proof_noproperty"),
         )
         trials = []
@@ -176,6 +186,16 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 
             image = f"tutorial_{source_graph}_{condition}.svg"
             copy2(source, graphs_dir / image)
+
+            feedback = settings.tutorial_feedback[condition]
+            feedback_image = None
+            if feedback.highlight:
+                feedback_source = source_dir / f"{condition}_tut.svg"
+                if not feedback_source.is_file():
+                    raise FileNotFoundError(f"Missing tutorial feedback image: {feedback_source}")
+                feedback_image = f"tutorial_{source_graph}_{condition}_tut.svg"
+                copy2(feedback_source, graphs_dir / feedback_image)
+
             vertices = metadata["vertices"]
             trials.append({
                 "source": source_graph,
@@ -184,6 +204,9 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
                 "condition": condition,
                 "image": image,
                 "id": f"tutorial_{source_graph}_{condition}",
+                "feedbackMessage": feedback.message,
+                "feedbackExpected": feedback.expected,
+                "feedbackImage": feedback_image,
             })
         return trials
 
@@ -245,7 +268,7 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 
 <div class="study-note">
       <strong>Ready?</strong><br>
-      The first two graphs will be a tutorial run with no time limit. After that a you will see a slide to continue to the actual study. When you are ready, press <strong>Next</strong> to begin.
+      The first four graphs will be a tutorial run with no time limit. After that a you will see a slide to continue to the actual study. When you are ready, press <strong>Next</strong> to begin.
     </div>
   </div>
 </div>
@@ -256,34 +279,42 @@ def create_study(script_path: Path, settings: StudySettings) -> None:
 <div style="max-width: 760px; margin: 40px auto; padding: 32px; border: 1px solid #dce7f5; border-radius: 24px; background: linear-gradient(135deg, #f7fbff 0%, #eef4ff 100%); color: #1f2937; box-shadow: 0 16px 36px rgba(15, 23, 42, 0.06);">
   <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #3461d9;">Tutorial complete</div>
   <h1 style="margin: 10px 0; font-size: 32px; color: #10213a;">The actual study begins now</h1>
-  <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #354255;">The two graphs you just completed were a tutorial. The actual {settings.property_name} study starts now.</p>
+  <p style="margin: 0; font-size: 17px; line-height: 1.8; color: #354255;">The four graphs you just completed were a tutorial. The actual {settings.property_name} study starts now. Remember: from now on there will be a time limit for each graph.</p>
 </div>
 """
         (assets_dir / "tutorial_end.md").write_text(tutorial_end_markdown, encoding="utf-8")
         settings.write_intro(assets_dir, settings.study_id, tutorial)
 
     def trial_component(trial: dict, tutorial: bool) -> dict:
+        parameters = {
+            "componentName": trial["id"],
+            "trialId": trial["id"],
+            "propertyName": settings.property_name,
+            "propertyDefinition": settings.property_definition,
+            "verificationPrompt": settings.verification_prompt,
+            "yesLabel": settings.yes_label,
+            "noLabel": settings.no_label,
+            "graphPath": f'/{settings.study_id}/assets/graphs/{trial["image"]}',
+            "graphLabel": f'{settings.title} graph {trial["source"]}',
+            "durationMs": graph_duration_ms(trial["vertices"]),
+            "nodeCount": trial["vertices"],
+            "graphSize": trial["size"],
+            "visualization": trial["condition"],
+            "sourceGraph": trial["source"],
+            "phase": "tutorial" if tutorial else "study",
+        }
+
+        if tutorial:
+            parameters["feedbackMessage"] = trial["feedbackMessage"]
+            parameters["feedbackExpected"] = trial["feedbackExpected"]
+            if trial["feedbackImage"]:
+                parameters["feedbackImagePath"] = f'/{settings.study_id}/assets/graphs/{trial["feedbackImage"]}'
+
         return {
             "type": "react-component",
             "path": TRIAL_COMPONENT_PATH,
             "response": [],
-            "parameters": {
-                "componentName": trial["id"],
-                "trialId": trial["id"],
-                "propertyName": settings.property_name,
-                "propertyDefinition": settings.property_definition,
-                "verificationPrompt": settings.verification_prompt,
-                "yesLabel": settings.yes_label,
-                "noLabel": settings.no_label,
-                "graphPath": f'/{settings.study_id}/assets/graphs/{trial["image"]}',
-                "graphLabel": f'{settings.title} graph {trial["source"]}',
-                "durationMs": graph_duration_ms(trial["vertices"]),
-                "nodeCount": trial["vertices"],
-                "graphSize": trial["size"],
-                "visualization": trial["condition"],
-                "sourceGraph": trial["source"],
-                "phase": "tutorial" if tutorial else "study",
-            },
+            "parameters": parameters,
             "meta": {
                 "condition": trial["condition"],
                 "sourceGraph": trial["source"],
