@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "cut-vertex-c"
+STUDY_ID = "cut-vertex-p"
 
 CUT_VERTEX_FOUND_MESSAGE = (
     "This graph has a cut vertex. The highlighted node is the cut vertex: "

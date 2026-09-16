@@ -6,15 +6,15 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "hamiltonian-cycle-c"
+STUDY_ID = "hamiltonian-cycle-p"
 
 HAMILTONIAN_FOUND_MESSAGE = (
     "This graph contains a Hamiltonian cycle. The highlighted cycle visits "
     "every node exactly once and returns to its starting node."
 )
 HAMILTONIAN_NOT_FOUND_MESSAGE = (
-    "This graph does not contain a Hamiltonian cycle. The two highlighted "
-    "nodes cannot both be part of a cycle without visiting another node more than once."
+    "This graph does not contain a Hamiltonian cycle. The highlighted "
+    "structure forces a closed cycle. Therefore, not all nodes can be visited exactly once.  "
 )
 
 TUTORIAL_FEEDBACK = {

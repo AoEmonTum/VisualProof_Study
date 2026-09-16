@@ -6,7 +6,7 @@ from pathlib import Path
 from create_graph_property_study import StudySettings, TutorialFeedback, create_study
 
 
-STUDY_ID = "bipartite-c"
+STUDY_ID = "bipartite-p"
 
 BIPARTITE_MESSAGE = (
     "This graph is bipartite. No odd cycles exist in this graph, so its nodes "
